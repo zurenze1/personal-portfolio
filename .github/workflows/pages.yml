@@ -1,4 +1,4 @@
-name: Publish personal site
+name: 个人作品集
 
 on:
   push:
