@@ -1,0 +1,1197 @@
+{
+  "observed_on": "2026-10-30",
+  "tenure": {
+    "start": "2022-10",
+    "end": "2023-12",
+    "role": "实习 · 参与选题 / 文案 / 拍摄 / 剪辑；与团队共同完成",
+    "source": "祖仁泽于2026-10-31本人确认",
+    "known_posts": 73,
+    "months": [
+      {
+        "month": "2022-10",
+        "count": 4
+      },
+      {
+        "month": "2022-11",
+        "count": 7
+      },
+      {
+        "month": "2022-12",
+        "count": 6
+      },
+      {
+        "month": "2023-01",
+        "count": 1
+      },
+      {
+        "month": "2023-02",
+        "count": 2
+      },
+      {
+        "month": "2023-03",
+        "count": 4
+      },
+      {
+        "month": "2023-04",
+        "count": 2
+      },
+      {
+        "month": "2023-05",
+        "count": 8
+      },
+      {
+        "month": "2023-06",
+        "count": 4
+      },
+      {
+        "month": "2023-07",
+        "count": 5
+      },
+      {
+        "month": "2023-08",
+        "count": 4
+      },
+      {
+        "month": "2023-09",
+        "count": 10
+      },
+      {
+        "month": "2023-10",
+        "count": 2
+      },
+      {
+        "month": "2023-11",
+        "count": 5
+      },
+      {
+        "month": "2023-12",
+        "count": 9
+      }
+    ],
+    "duration_n": 0,
+    "duration_median": null,
+    "likes_n": 73,
+    "likes_median_approx": 114000.0,
+    "publish_time_bins": [
+      {
+        "label": "0—6时",
+        "value": 0
+      },
+      {
+        "label": "6—12时",
+        "value": 2
+      },
+      {
+        "label": "12—15时",
+        "value": 0
+      },
+      {
+        "label": "15—18时",
+        "value": 12
+      },
+      {
+        "label": "18—24时",
+        "value": 59
+      }
+    ],
+    "duration_note": "73条原始时长均为00:00占位，未采信或绘图。",
+    "topics": [
+      {
+        "label": "其他主题",
+        "value": 30
+      },
+      {
+        "label": "庄子",
+        "value": 21
+      },
+      {
+        "label": "苏东坡",
+        "value": 13
+      },
+      {
+        "label": "艺术与审美",
+        "value": 8
+      },
+      {
+        "label": "访谈与对话",
+        "value": 1
+      }
+    ]
+  },
+  "account": {
+    "name": "意公子",
+    "snapshot": "2026-10-29",
+    "fans": 9687000,
+    "likes": 54178000,
+    "displayed_video_count": 369,
+    "indexed_links": 420,
+    "dated_sample_count": 259,
+    "source": "飞瓜快照与2026-10-30公开作品目录合并",
+    "douyin_url": "https://www.douyin.com/user/MS4wLjABAAAAZ4tsdtwes8aLJLES5I-Vg5tH3V8Z_G-PabQBFNOROrA",
+    "bilibili_url": "https://space.bilibili.com/1929837001"
+  },
+  "milestones": [
+    {
+      "date": "2022-09-27",
+      "value": 742,
+      "display": "742万",
+      "label": "入职前相邻报道",
+      "url": "https://lmtw.com/mzw/content/detail/id/218888"
+    },
+    {
+      "date": "2023-04-06",
+      "value": 866,
+      "display": ">866万",
+      "label": "任职期间报道",
+      "url": "https://finance.sina.com.cn/tech/csj/2023-04-06/doc-imypmcvn9576517.shtml"
+    },
+    {
+      "date": "2023-11-27",
+      "value": 925.7,
+      "display": "925.7万",
+      "label": "离职前相邻报道",
+      "url": "https://www.fjdaily.com/app/content/2023-11/27/content_2198695.html"
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2025-01",
+      "count": 27,
+      "likes": 358513,
+      "comments": 10286,
+      "shares": 23011,
+      "collects": 37005,
+      "status": "已读取",
+      "window": "2025/01/01-2025/01/31"
+    },
+    {
+      "month": "2025-02",
+      "count": 12,
+      "likes": 65714,
+      "comments": 2367,
+      "shares": 3012,
+      "collects": 6566,
+      "status": "已读取",
+      "window": "2025/02/01-2025/02/28"
+    },
+    {
+      "month": "2025-03",
+      "count": 1,
+      "likes": 6611,
+      "comments": 300,
+      "shares": 274,
+      "collects": 496,
+      "status": "已读取",
+      "window": "2025/03/01-2025/03/31"
+    },
+    {
+      "month": "2025-04",
+      "count": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "collects": 0,
+      "status": "已读取",
+      "window": "2025/04/01-2025/04/30"
+    },
+    {
+      "month": "2025-05",
+      "count": 4,
+      "likes": 263341,
+      "comments": 7685,
+      "shares": 27430,
+      "collects": 52211,
+      "status": "已读取",
+      "window": "2025/05/01-2025/05/31"
+    },
+    {
+      "month": "2025-06",
+      "count": 4,
+      "likes": 278226,
+      "comments": 7362,
+      "shares": 27038,
+      "collects": 63431,
+      "status": "已读取",
+      "window": "2025/06/01-2025/06/30"
+    },
+    {
+      "month": "2025-07",
+      "count": 4,
+      "likes": 339725,
+      "comments": 8216,
+      "shares": 54774,
+      "collects": 80547,
+      "status": "已读取",
+      "window": "2025/07/01-2025/07/31"
+    },
+    {
+      "month": "2025-08",
+      "count": 6,
+      "likes": 569242,
+      "comments": 16679,
+      "shares": 63711,
+      "collects": 146281,
+      "status": "已读取",
+      "window": "2025/08/01-2025/08/31"
+    },
+    {
+      "month": "2025-09",
+      "count": 3,
+      "likes": 307840,
+      "comments": 7530,
+      "shares": 12884,
+      "collects": 34719,
+      "status": "已读取",
+      "window": "2025/09/01-2025/09/30"
+    },
+    {
+      "month": "2025-10",
+      "count": 1,
+      "likes": 47144,
+      "comments": 2234,
+      "shares": 4434,
+      "collects": 9098,
+      "status": "已读取",
+      "window": "2025/10/01-2025/10/31"
+    },
+    {
+      "month": "2025-11",
+      "count": 3,
+      "likes": 150987,
+      "comments": 5343,
+      "shares": 9753,
+      "collects": 29460,
+      "status": "已读取",
+      "window": "2025/11/01-2025/11/30"
+    },
+    {
+      "month": "2025-12",
+      "count": 8,
+      "likes": 444103,
+      "comments": 19320,
+      "shares": 29108,
+      "collects": 67787,
+      "status": "已读取",
+      "window": "2025/12/01-2025/12/31"
+    },
+    {
+      "month": "2026-01",
+      "count": 4,
+      "likes": 265321,
+      "comments": 7965,
+      "shares": 38345,
+      "collects": 70914,
+      "status": "已读取",
+      "window": "2026/01/01-2026/01/31"
+    },
+    {
+      "month": "2026-02",
+      "count": 3,
+      "likes": 152259,
+      "comments": 4670,
+      "shares": 12650,
+      "collects": 25425,
+      "status": "已读取",
+      "window": "2026/02/01-2026/02/28"
+    },
+    {
+      "month": "2026-03",
+      "count": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "collects": 0,
+      "status": "已读取",
+      "window": "2026/03/01-2026/03/31"
+    },
+    {
+      "month": "2026-04",
+      "count": 0,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0,
+      "collects": 0,
+      "status": "已读取",
+      "window": "2026/04/01-2026/04/30"
+    },
+    {
+      "month": "2026-05",
+      "count": 1,
+      "likes": 33735,
+      "comments": 1371,
+      "shares": 1704,
+      "collects": 3337,
+      "status": "已读取",
+      "window": "2026/05/01-2026/05/31"
+    },
+    {
+      "month": "2026-06",
+      "count": 5,
+      "likes": 301342,
+      "comments": 4234,
+      "shares": 12436,
+      "collects": 18395,
+      "status": "已读取",
+      "window": "2026/06/01-2026/06/30"
+    },
+    {
+      "month": "2026-07",
+      "count": 5,
+      "likes": 140489,
+      "comments": 3932,
+      "shares": 7256,
+      "collects": 18802,
+      "status": "已读取",
+      "window": "2026/07/01-2026/07/31"
+    },
+    {
+      "month": "2026-08",
+      "count": 14,
+      "likes": 84082,
+      "comments": 2084,
+      "shares": 7612,
+      "collects": 22744,
+      "status": "已读取",
+      "window": "2026/08/01-2026/08/31"
+    },
+    {
+      "month": "2026-09",
+      "count": 7,
+      "likes": 220448,
+      "comments": 7695,
+      "shares": 17410,
+      "collects": 32591,
+      "status": "已读取",
+      "window": "2026/09/01-2026/09/30"
+    },
+    {
+      "month": "2026-10",
+      "count": 2,
+      "likes": 35188,
+      "comments": 2194,
+      "shares": 2309,
+      "collects": 6828,
+      "status": "已读取",
+      "window": "2026/10/01-2026/10/28"
+    }
+  ],
+  "audience": {
+    "fans": {
+      "gender": [
+        {
+          "label": "男性",
+          "value": 54.3
+        },
+        {
+          "label": "女性",
+          "value": 45.7
+        }
+      ],
+      "age": [
+        {
+          "label": "18-23",
+          "value": 3.89
+        },
+        {
+          "label": "24-30",
+          "value": 11.16
+        },
+        {
+          "label": "31-40",
+          "value": 41.33
+        },
+        {
+          "label": "41-50",
+          "value": 28.86
+        },
+        {
+          "label": "50+",
+          "value": 14.74
+        }
+      ],
+      "segments": [
+        {
+          "label": "新锐白领",
+          "value": 18.91
+        },
+        {
+          "label": "都市银发",
+          "value": 9.8
+        },
+        {
+          "label": "精致妈妈",
+          "value": 9.02
+        },
+        {
+          "label": "都市蓝领",
+          "value": 3.09
+        },
+        {
+          "label": "Z世代",
+          "value": 5.53
+        },
+        {
+          "label": "小镇青年",
+          "value": 12.2
+        },
+        {
+          "label": "资深中产",
+          "value": 26.76
+        },
+        {
+          "label": "小镇中老年",
+          "value": 14.69
+        }
+      ],
+      "devices": [
+        {
+          "label": "华为",
+          "value": 33.54
+        },
+        {
+          "label": "苹果",
+          "value": 29.21
+        },
+        {
+          "label": "OPPO",
+          "value": 11.02
+        },
+        {
+          "label": "vivo",
+          "value": 9.57
+        },
+        {
+          "label": "其他",
+          "value": 16.65
+        }
+      ],
+      "province": [
+        {
+          "label": "广东",
+          "value": 10.4
+        },
+        {
+          "label": "江苏",
+          "value": 7.5
+        },
+        {
+          "label": "山东",
+          "value": 6.8
+        },
+        {
+          "label": "河南",
+          "value": 6.6
+        },
+        {
+          "label": "浙江",
+          "value": 6.1
+        },
+        {
+          "label": "四川",
+          "value": 4.7
+        },
+        {
+          "label": "河北",
+          "value": 4.4
+        },
+        {
+          "label": "湖北",
+          "value": 4.3
+        },
+        {
+          "label": "陕西",
+          "value": 4.0
+        },
+        {
+          "label": "福建",
+          "value": 3.9
+        }
+      ],
+      "city": [
+        {
+          "label": "北京",
+          "value": 3.5
+        },
+        {
+          "label": "上海",
+          "value": 2.7
+        },
+        {
+          "label": "深圳",
+          "value": 2.3
+        },
+        {
+          "label": "成都",
+          "value": 2.2
+        },
+        {
+          "label": "广州",
+          "value": 2.1
+        },
+        {
+          "label": "西安",
+          "value": 2.0
+        },
+        {
+          "label": "重庆",
+          "value": 1.8
+        },
+        {
+          "label": "杭州",
+          "value": 1.7
+        },
+        {
+          "label": "武汉",
+          "value": 1.6
+        },
+        {
+          "label": "苏州",
+          "value": 1.6
+        }
+      ],
+      "city_tier": [
+        {
+          "label": "一线城市",
+          "value": 10.71
+        },
+        {
+          "label": "新一线城市",
+          "value": 21.29
+        },
+        {
+          "label": "二线城市",
+          "value": 18.87
+        },
+        {
+          "label": "三线城市",
+          "value": 21.4
+        },
+        {
+          "label": "四线城市",
+          "value": 17.32
+        },
+        {
+          "label": "五线城市",
+          "value": 10.39
+        }
+      ],
+      "price": [
+        {
+          "label": "0-25",
+          "value": 12.93
+        },
+        {
+          "label": "25-50",
+          "value": 20.0
+        },
+        {
+          "label": "50-100",
+          "value": 25.86
+        },
+        {
+          "label": "100-200",
+          "value": 17.74
+        },
+        {
+          "label": "200-500",
+          "value": 12.03
+        },
+        {
+          "label": "500+",
+          "value": 11.43
+        }
+      ],
+      "hours": [
+        {
+          "hour": 0,
+          "value": 3.2
+        },
+        {
+          "hour": 1,
+          "value": 1.46
+        },
+        {
+          "hour": 2,
+          "value": 0.84
+        },
+        {
+          "hour": 3,
+          "value": 0.37
+        },
+        {
+          "hour": 4,
+          "value": 0.3
+        },
+        {
+          "hour": 5,
+          "value": 0.56
+        },
+        {
+          "hour": 6,
+          "value": 1.51
+        },
+        {
+          "hour": 7,
+          "value": 3.27
+        },
+        {
+          "hour": 8,
+          "value": 3.48
+        },
+        {
+          "hour": 9,
+          "value": 3.81
+        },
+        {
+          "hour": 10,
+          "value": 3.68
+        },
+        {
+          "hour": 11,
+          "value": 4.56
+        },
+        {
+          "hour": 12,
+          "value": 5.25
+        },
+        {
+          "hour": 13,
+          "value": 4.47
+        },
+        {
+          "hour": 14,
+          "value": 3.89
+        },
+        {
+          "hour": 15,
+          "value": 4.47
+        },
+        {
+          "hour": 16,
+          "value": 3.91
+        },
+        {
+          "hour": 17,
+          "value": 3.94
+        },
+        {
+          "hour": 18,
+          "value": 4.43
+        },
+        {
+          "hour": 19,
+          "value": 6.62
+        },
+        {
+          "hour": 20,
+          "value": 7.66
+        },
+        {
+          "hour": 21,
+          "value": 10.11
+        },
+        {
+          "hour": 22,
+          "value": 10.82
+        },
+        {
+          "hour": 23,
+          "value": 7.4
+        }
+      ],
+      "content": [
+        {
+          "label": "随拍",
+          "value": 52.86,
+          "detail": "随拍 52.86% 日常vlog 34.84% 单人随拍 9.12% 人物图片轮播 4.5%"
+        },
+        {
+          "label": "人文社科",
+          "value": 8.91,
+          "detail": "人文社科 8.91% 人文综合 5.35% 书法 0.96% 历史 0.83%"
+        },
+        {
+          "label": "个人管理",
+          "value": 7.39,
+          "detail": "个人管理 7.39% 人际情感 3.43% 励志/鸡汤 1.78% 星座 0.99%"
+        },
+        {
+          "label": "时政社会",
+          "value": 3.71,
+          "detail": "时政社会 3.71% 民生 2.04% 国际新闻 0.43% 宣教科普 0.39%"
+        },
+        {
+          "label": "明星八卦",
+          "value": 2.71,
+          "detail": "明星八卦 2.71% 明星随拍资讯 2.67% 片场演绎 0.04%"
+        },
+        {
+          "label": "亲子",
+          "value": 2.71,
+          "detail": "亲子 2.71% 亲子随拍 2.28% 萌娃才艺 0.11% 育儿知识 0.11%"
+        },
+        {
+          "label": "体育",
+          "value": 2.12,
+          "detail": "体育 2.12% 钓鱼 0.59% 足球 0.45% 篮球 0.35%"
+        },
+        {
+          "label": "音乐",
+          "value": 2.12,
+          "detail": "音乐 2.12% 音乐演唱 1.61% 萨克斯 0.1% 二胡 0.1%"
+        },
+        {
+          "label": "萌宠",
+          "value": 2.0,
+          "detail": "萌宠 2% 猫vlog日常 0.71% 狗vlog日常 0.61% 家养宠物 0.29%"
+        },
+        {
+          "label": "美食",
+          "value": 1.93,
+          "detail": "美食 1.93% 普通美食展示 1.3% 餐厅探店 0.43% 路边小吃 0.1%"
+        }
+      ],
+      "brands": [
+        {
+          "label": "三資堂",
+          "value": 1.86
+        },
+        {
+          "label": "Three Squirrels/三只松鼠",
+          "value": 1.33
+        },
+        {
+          "label": "甄磨坊",
+          "value": 0.95
+        },
+        {
+          "label": "shiguangxue/时光学",
+          "value": 0.93
+        },
+        {
+          "label": "草本初色",
+          "value": 0.88
+        },
+        {
+          "label": "不集",
+          "value": 0.87
+        },
+        {
+          "label": "诺特兰德",
+          "value": 0.86
+        },
+        {
+          "label": "BKT",
+          "value": 0.78
+        },
+        {
+          "label": "心相印",
+          "value": 0.71
+        },
+        {
+          "label": "Dettol/滴露",
+          "value": 0.66
+        }
+      ],
+      "activity": null
+    },
+    "video": {
+      "gender": [
+        {
+          "label": "男性",
+          "value": 26.11
+        },
+        {
+          "label": "女性",
+          "value": 73.89
+        }
+      ],
+      "age": [
+        {
+          "label": "18-23",
+          "value": 23.82
+        },
+        {
+          "label": "24-30",
+          "value": 42.58
+        },
+        {
+          "label": "31-40",
+          "value": 29.58
+        },
+        {
+          "label": "41-50",
+          "value": 3.33
+        },
+        {
+          "label": "50+",
+          "value": 0.69
+        }
+      ],
+      "segments": [
+        {
+          "label": "新锐白领",
+          "value": 32.65
+        },
+        {
+          "label": "小镇青年",
+          "value": 23.26
+        },
+        {
+          "label": "精致妈妈",
+          "value": 15.27
+        },
+        {
+          "label": "Z世代",
+          "value": 13.3
+        },
+        {
+          "label": "资深中产",
+          "value": 5.79
+        },
+        {
+          "label": "都市蓝领",
+          "value": 5.68
+        },
+        {
+          "label": "小镇中老年",
+          "value": 2.81
+        },
+        {
+          "label": "都市银发",
+          "value": 1.23
+        }
+      ],
+      "province": [
+        {
+          "label": "广东",
+          "value": 8.5
+        },
+        {
+          "label": "浙江",
+          "value": 7.0
+        },
+        {
+          "label": "江苏",
+          "value": 6.9
+        },
+        {
+          "label": "山东",
+          "value": 5.5
+        },
+        {
+          "label": "四川",
+          "value": 5.5
+        },
+        {
+          "label": "北京",
+          "value": 5.4
+        },
+        {
+          "label": "陕西",
+          "value": 4.2
+        },
+        {
+          "label": "河北",
+          "value": 4.1
+        },
+        {
+          "label": "河南",
+          "value": 4.1
+        },
+        {
+          "label": "上海",
+          "value": 3.7
+        }
+      ],
+      "devices": [
+        {
+          "label": "苹果",
+          "value": 54.53
+        },
+        {
+          "label": "华为",
+          "value": 21.17
+        },
+        {
+          "label": "小米",
+          "value": 6.11
+        },
+        {
+          "label": "vivo",
+          "value": 4.87
+        },
+        {
+          "label": "其他",
+          "value": 13.32
+        }
+      ],
+      "activity": [
+        {
+          "label": "低活跃",
+          "value": 0.45
+        },
+        {
+          "label": "中低活跃",
+          "value": 2.67
+        },
+        {
+          "label": "中高活跃",
+          "value": 9.4
+        },
+        {
+          "label": "高活跃",
+          "value": 87.48
+        }
+      ],
+      "brands": [
+        {
+          "label": "三資堂",
+          "value": 1.83
+        },
+        {
+          "label": "Three Squirrels/三只松鼠",
+          "value": 1.51
+        },
+        {
+          "label": "甄磨坊",
+          "value": 1.16
+        },
+        {
+          "label": "诺特兰德",
+          "value": 0.97
+        },
+        {
+          "label": "不集",
+          "value": 0.85
+        },
+        {
+          "label": "草本初色",
+          "value": 0.84
+        },
+        {
+          "label": "shiguangxue/时光学",
+          "value": 0.83
+        },
+        {
+          "label": "心相印",
+          "value": 0.77
+        },
+        {
+          "label": "Dettol/滴露",
+          "value": 0.74
+        },
+        {
+          "label": "参半",
+          "value": 0.72
+        }
+      ]
+    }
+  },
+  "audience_snapshot": "2026-10-28画像 / 2026-10-29采集",
+  "audience_limits": [
+    "粉丝与视频观众为不同对象；不回填为2022—2023年画像。",
+    "样本量与抽样窗口未披露，偏好是平台模型口径。",
+    "与2026-10-11旧快照存在较大差异，原因未核，尚待官方后台交叉核验。"
+  ],
+  "xingtu": {
+    "fans": 8181000,
+    "quotes": [
+      {
+        "product": "植入视频",
+        "yuan": 150000
+      },
+      {
+        "product": "定制视频",
+        "yuan": 800000
+      },
+      {
+        "product": "共创主投稿",
+        "yuan": 100000
+      },
+      {
+        "product": "共创参与",
+        "yuan": 100000
+      }
+    ],
+    "orders_90d": 1,
+    "orders_30d": 1,
+    "recent15": {
+      "min_plays": 473000,
+      "max_plays": 4558000,
+      "mean_plays": 1427000
+    },
+    "business90d": {
+      "scope": "星图视频；不限指派；排除营销流量",
+      "median_plays": 4162000,
+      "completion_percent": 1.3,
+      "engagement_percent": 2.7,
+      "posts_display": "<5",
+      "mean_duration": 477.6,
+      "mean_likes": 105000,
+      "mean_comments": 5446,
+      "mean_shares": 7722
+    },
+    "predicted": {
+      "cpm": 167.1,
+      "cpe": 8.8,
+      "plays": 897000
+    },
+    "connected_levels": [
+      {
+        "label": "了解",
+        "value": 3893737
+      },
+      {
+        "label": "兴趣",
+        "value": 1162825
+      },
+      {
+        "label": "喜欢",
+        "value": 172503
+      },
+      {
+        "label": "追随",
+        "value": 318
+      }
+    ],
+    "connected_users": 5229383
+  },
+  "goods": [
+    {
+      "creator": "意公子",
+      "year": 2025,
+      "gmv_low": 500000,
+      "gmv_high": 1000000,
+      "gmv_display": "50万–100万",
+      "sales_display": "5000–2万",
+      "goods_count": 3,
+      "video_percent": 73.59,
+      "live_percent": 26.41
+    },
+    {
+      "creator": "意公子",
+      "year": 2026,
+      "gmv_low": 100000,
+      "gmv_high": 500000,
+      "gmv_display": "10万–50万",
+      "sales_display": "1000–5000",
+      "goods_count": 1,
+      "video_percent": 100,
+      "live_percent": 0
+    }
+  ],
+  "comparators": [
+    {
+      "name": "都靓的1001页",
+      "type": "内容接近",
+      "focus": "古诗词、诗人故事与情感表达",
+      "url": "https://www.douyin.com/video/6958356711639878926"
+    },
+    {
+      "name": "李蕾",
+      "type": "内容接近",
+      "focus": "文学经典与人物命运解读",
+      "url": "https://jingxuan.douyin.com/m/video/7648869568307350810"
+    },
+    {
+      "name": "戴建业",
+      "type": "内容接近",
+      "focus": "古典文学、诗词与生活化讲解",
+      "url": "https://m.thepaper.cn/newsDetail_forward_2587215?from=sohu"
+    },
+    {
+      "name": "房琪kiki",
+      "type": "相邻方向",
+      "focus": "文化旅行与情感表达",
+      "url": "https://weibo.com/u/2838117237?tabtype=home"
+    },
+    {
+      "name": "樊登",
+      "type": "相邻方向",
+      "focus": "读书、知识解读与生活应用",
+      "url": "https://dsp.feigua.cn/bloggeropen/E1A0F89730E07571"
+    },
+    {
+      "name": "河森堡",
+      "type": "相邻方向",
+      "focus": "文博、历史与知识故事",
+      "url": "https://weibo.com/u/5992829552"
+    },
+    {
+      "name": "安森垚",
+      "type": "相邻方向",
+      "focus": "历史、地理与跨文化知识",
+      "url": "https://www.bilibili.com/list/11498155/?bvid=BV1yJ9bYcE2E&oid=114091930688243"
+    },
+    {
+      "name": "渤海小吏",
+      "type": "叙事方法参考",
+      "focus": "中国历史人物与长篇故事",
+      "url": "https://www.bilibili.com/opus/745707830049243257"
+    },
+    {
+      "name": "历史调研室",
+      "type": "叙事方法参考",
+      "focus": "历史人物、事件与史料叙事",
+      "url": "https://www.bilibili.com/list/519872016?bvid=BV1LB4y1X7Nj&oid=597020205"
+    },
+    {
+      "name": "小约翰可汗",
+      "type": "叙事方法参考",
+      "focus": "历史人物、国家与组织故事",
+      "url": "https://www.sina.cn/media/7552181904"
+    }
+  ],
+  "selected": [
+    {
+      "id": "7153557301838777607",
+      "title": "黄州、惠州、儋州：苏东坡的注脚",
+      "date": "2022-10-12",
+      "url": "https://www.douyin.com/video/7153557301838777607",
+      "cover": "images/tenure-7153557301838777607.png"
+    },
+    {
+      "id": "7164696227425176865",
+      "title": "庄子：无可奈何的时候怎么办",
+      "date": "2022-11-11",
+      "url": "https://www.douyin.com/video/7164696227425176865",
+      "cover": "images/tenure-7164696227425176865.png"
+    },
+    {
+      "id": "7175837104646212903",
+      "title": "我并没有那么重要",
+      "date": "2022-12-11",
+      "url": "https://www.douyin.com/video/7175837104646212903",
+      "cover": "images/tenure-7175837104646212903.png"
+    },
+    {
+      "id": "7274845854148726050",
+      "title": "用擅长的，做热爱的事情",
+      "date": "2023-09-04",
+      "url": "https://www.douyin.com/video/7274845854148726050",
+      "cover": "images/tenure-7274845854148726050.png"
+    },
+    {
+      "id": "7286034999801892111",
+      "title": "庄子：停止内耗的关键",
+      "date": "2023-10-04",
+      "url": "https://www.douyin.com/video/7286034999801892111",
+      "cover": "images/tenure-7286034999801892111.png"
+    },
+    {
+      "id": "7316471693118082304",
+      "title": "庄子：换一个看世界的视角",
+      "date": "2023-12-25",
+      "url": "https://www.douyin.com/video/7316471693118082304",
+      "cover": "images/tenure-7316471693118082304.png"
+    }
+  ],
+  "limits": [
+    "73条为已取得明确发布日期的任职期间样本，不是本人独立制作数量，也不宣称账号当期全部产出。",
+    "420条是合并整理的去重作品链接，369条是飞瓜账号展示数，两者不是同一统计范围。",
+    "按发布月份分组的赞评转藏，是采集时累计互动，不是该月新发生的互动。",
+    "历史报道日不是粉丝后台采样日，不能用相邻节点计算本人涨粉贡献。",
+    "报价、第三方带货区间与实际结算、公司营收、个人所得分别理解。"
+  ]
+}

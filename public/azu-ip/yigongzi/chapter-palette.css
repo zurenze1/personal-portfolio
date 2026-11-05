@@ -1,0 +1,55 @@
+/* A varied chapter palette, with a distinct version for each season. */
+body{--palette-jade:233,239,229;--palette-blue:215,232,241;--palette-rose:241,222,222;--palette-lilac:228,224,240;--palette-green:16,57,43;--palette-indigo:33,57,79;--palette-plum:76,58,79;--weather-accent:135,181,177}
+body[data-season=spring]{--palette-jade:226,241,220;--palette-blue:222,236,241;--palette-rose:245,217,226;--palette-lilac:234,222,241;--palette-green:36,77,56;--palette-indigo:47,66,86;--palette-plum:89,62,87;--weather-accent:203,140,160;--season-saturation:1.12;--season-hue:-10deg}
+body[data-season=summer]{--palette-jade:233,239,229;--palette-blue:215,232,241;--palette-rose:241,222,222;--palette-lilac:228,224,240;--palette-green:16,57,43;--palette-indigo:33,57,79;--palette-plum:76,58,79;--weather-accent:112,173,180;--season-saturation:1;--season-hue:8deg}
+body[data-season=autumn]{--palette-jade:235,233,212;--palette-blue:224,228,231;--palette-rose:245,218,203;--palette-lilac:235,222,229;--palette-green:64,70,46;--palette-indigo:56,62,77;--palette-plum:101,65,66;--weather-accent:194,145,65;--season-saturation:1.02;--season-hue:-25deg}
+body[data-season=winter]{--palette-jade:222,237,235;--palette-blue:207,226,241;--palette-rose:234,225,238;--palette-lilac:220,225,244;--palette-green:28,62,68;--palette-indigo:34,51,81;--palette-plum:66,63,91;--weather-accent:151,183,215;--season-saturation:.72;--season-hue:24deg}
+body[data-season]{--season-paper:rgb(var(--palette-jade));--season-wash:rgba(var(--weather-accent),.12);--season-accent:rgb(var(--weather-accent));--section-rgb:var(--palette-jade)}
+/* The same chapter keeps its identity as its seasonal temperature changes. */
+#yg-data,.tenure-stage{--section-rgb:var(--palette-jade);--section-ink:#244b3e;--section-muted:#526e61}
+#profile,#ygd-later{--section-rgb:var(--palette-blue);--section-ink:#263f50;--section-muted:#526d7d}
+#business,#seasons{--section-rgb:var(--palette-rose);--section-ink:#4e3d4b;--section-muted:#78636d}
+#researchLibrary,#rl-recent{--section-rgb:var(--palette-lilac);--section-ink:#453b59;--section-muted:#6c6380}
+#audience,#proposal{--section-rgb:var(--palette-green);--section-ink:#edf0df;--section-muted:#c2d0c6}
+#methods{--section-rgb:var(--palette-indigo);--section-ink:#eef0e4;--section-muted:#c6d4dc}
+#rl-commercial{--section-rgb:var(--palette-plum);--section-ink:#f0e9ed;--section-muted:#d5c8d8}
+body[data-season] #top :is(#yg-data,#profile,.tenure-stage,#audience,#business,#methods,#researchLibrary,#proposal,#ygd-later,#seasons){color:var(--section-ink);background-color:rgb(var(--section-rgb));background-image:radial-gradient(ellipse at 8% 10%,rgba(var(--weather-accent),.12),transparent 64%);transition:background-color 1s ease,color .8s ease}
+body[data-season] :is(#yg-data,#profile,#audience,#business,#methods,#proposal,#ygd-later)>.chapter-landscape:after{background:linear-gradient(90deg,rgba(var(--section-rgb),.96),rgba(var(--section-rgb),.88) 58%,rgba(var(--section-rgb),.70)),linear-gradient(0deg,rgb(var(--section-rgb)),transparent 45%)}
+body[data-season] #profile>.chapter-landscape:after{background:linear-gradient(90deg,rgba(var(--section-rgb),.96),rgba(var(--section-rgb),.78)),linear-gradient(0deg,rgb(var(--section-rgb)),transparent 55%)}
+body[data-season] #audience>.chapter-landscape:after,body[data-season] #proposal>.chapter-landscape:after{background:linear-gradient(90deg,rgba(var(--section-rgb),.94),rgba(var(--section-rgb),.78)),linear-gradient(0deg,rgb(var(--section-rgb)),transparent 45%)}
+body[data-season] :is(#yg-data,#profile,.tenure-stage,#business,#ygd-later) :is(.ygd,.yg-update){color:var(--section-ink)}
+body[data-season] :is(#yg-data,#profile,.tenure-stage,#business,#ygd-later) :is(.ygd .note,.ygd small,.ygd .stamp){color:var(--section-muted)}
+#profile .section-head p{background:rgba(247,251,253,.68);color:var(--section-ink);border-color:#738ca166}
+#profile .profile-index button{background:rgba(247,251,253,.62);color:var(--section-ink);border-color:#8b9fab80}
+#profile .profile-index button[aria-selected=true]{background:#294a60;color:#edf4f4}
+#profile .profile-group,#profile .account-snapshot,#profile .profile-group article{border-color:#7f98a544}
+#profile .account-snapshot{background:rgba(248,251,253,.55)}
+#profile .profile-group article{background:transparent}
+#business .ygd-book-cover{background:rgba(250,241,244,.42)}
+#business .ygd-book-gallery figcaption span{color:var(--section-muted)}
+#business .creator-products article{color:var(--section-ink);border-color:#947a873d;background:transparent}
+#methods .portfolio-method-panel,#methods .yg-workflow{background:#edf3f4ed;color:#294650;border-color:#b9cdd666}
+#methods .yg-workflow :is(.yg-date,.yg-fine,.yg-flow-panel p){color:#4d6873}
+#methods .yg-flow button[aria-pressed=true]{background:#284e63;border-color:#284e63;color:#f2f5ee}
+#methods .scene-copy p,#methods .section-head p{color:#d5e2e7}
+#methods .portfolio-method-tabs button[aria-selected=true]{background:#dce9ed;color:#264254}
+#methods .section-head .section-num{color:#bfd0d7}
+body[data-season] #researchLibrary{--rl-paper:rgb(var(--palette-lilac));--rl-ink:#453b59;--rl-muted:#71677f;--rl-line:#bcb3ca}
+body[data-season] #researchLibrary #rl-recent{color:var(--section-ink);background:rgb(var(--section-rgb))}
+body[data-season] #researchLibrary #rl-recent::after{background:linear-gradient(90deg,rgba(var(--section-rgb),.97),rgba(var(--section-rgb),.84)),linear-gradient(0deg,rgb(var(--section-rgb)),transparent 45%)}
+body[data-season] #researchLibrary #rl-commercial{color:var(--section-ink);background:rgb(var(--section-rgb));--rl-ink:var(--section-ink);--rl-muted:var(--section-muted)}
+body[data-season] #researchLibrary #rl-commercial::after{background:linear-gradient(90deg,rgba(var(--section-rgb),.96),rgba(var(--section-rgb),.85)),linear-gradient(0deg,rgb(var(--section-rgb)),transparent 45%)}
+#researchLibrary #rl-commercial :is(.rl-price>strong,.rl-price strong span,.rl-order-facts strong){color:#f2e7ec}
+#researchLibrary #rl-commercial :is(.rl-eyebrow,.rl-index,.rl-fine,.rl-footnote){color:#d6c8db}
+#researchLibrary #rl-commercial .yg-channel-root{background:rgba(38,29,49,.3)}
+#researchLibrary #rl-commercial :is(.yg-update .yg-date,.yg-update .yg-fine,.yg-channel small){color:#d6cbdc}
+#researchLibrary #rl-commercial :is(.yg-channel h5,.yg-channel p,.yg-brand-example,.yg-brand-example p){color:#efe8ef}
+#researchLibrary #rl-recent :is(.rl-eyebrow,.rl-fine,.rl-section-lead){color:var(--section-muted)}
+body[data-season] #researchLibrary .rl-opening{background:linear-gradient(90deg,rgba(var(--palette-green),.96),rgba(var(--palette-green),.64)),var(--rl-scene) center/cover}
+body[data-season] #researchLibrary .rl-opening::after{background:none}
+#seasons .season-tabs button{background:rgba(255,250,250,.55);color:#58444e;border-color:#a894a066}
+#seasons .season-tabs button[aria-selected=true]{background:#4b425b;color:#f4edf4}
+.top{border-bottom:1px solid rgba(var(--weather-accent),.48)}
+#pageSeasonWeather{opacity:.86}
+.global-season-desc{font:10px/1.8 var(--sans);letter-spacing:.03em;margin:0 12px 9px;color:#d9e6df}
+@media(prefers-reduced-motion:reduce){body[data-season] :is(#yg-data,#profile,.tenure-stage,#audience,#business,#methods,#researchLibrary,#proposal,#ygd-later,#seasons){transition:none}}

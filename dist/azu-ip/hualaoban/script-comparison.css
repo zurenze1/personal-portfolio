@@ -1,0 +1,99 @@
+.hsc-section { border-top: 1px solid var(--line); }
+.hsc-lead { max-width: 700px; margin: 24px 0; color: var(--muted); }
+.hsc-notice { border-left: 3px solid #2c50d3; padding: 10px 16px; background: #e7edf8; font-size: 13px; line-height: 1.8; }
+.hsc-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 36px; }
+.hsc-card { display: grid; grid-template-columns: 145px 1fr; gap: 24px; border-top: 1px solid var(--ink); padding-top: 24px; }
+.hsc-card img { width: 145px; height: auto; aspect-ratio: 3/4; object-fit: cover; align-self: start; }
+.hsc-card h3 { font-family: var(--serif); font-size: 25px; line-height: 1.45; margin: 10px 0; }
+.hsc-card p { font-size: 13px; color: var(--muted); }
+.hsc-card button { border: 1px solid var(--ink); background: transparent; padding: 10px 16px; margin-top: 18px; min-height: 44px; }
+.hsc-card button:hover { background: var(--ink); color: var(--paper); }
+.hsc-kicker { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+#hsc-dialog { width: min(1180px, 94vw); max-width: 94vw; max-height: 91dvh; padding: 0; border: 1px solid var(--ink); background: var(--paper); color: var(--ink); }
+#hsc-dialog::backdrop { background: #141a25b8; backdrop-filter: blur(7px); }
+.hsc-dialog-shell { display: flex; flex-direction: column; max-height: 90dvh; }
+.hsc-dialog-head { padding: 12px 24px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 20px; flex: none; }
+.hsc-dialog-head h2 { font-family: var(--sans); font-size: 17px; line-height: 1.6; }
+.hsc-dialog-head small { display: block; color: var(--muted); font-size: 12px; }
+.hsc-close { border: 1px solid var(--ink); background: transparent; min-width: 72px; min-height: 44px; }
+.hsc-case-tabs { display: flex; padding: 0 24px; border-bottom: 1px solid var(--line); gap: 24px; flex: none; }
+.hsc-case-tabs button { padding: 8px 0; border: 0; border-bottom: 3px solid transparent; background: transparent; font-size: 13px; min-height: 44px; }
+.hsc-case-tabs [aria-selected=true] { border-bottom-color: var(--ink); }
+.hsc-dialog-body { overflow: auto; padding: 18px 24px 32px; overscroll-behavior: contain; }
+.hsc-dialog-body > .hsc-kicker { display: none; }
+.hsc-work-title { font-family: var(--serif); font-size: 24px; line-height: 1.5; margin: 4px 0; }
+.hsc-source-line { display: flex; flex-wrap: wrap; gap: 10px 24px; color: var(--muted); font-size: 12px; margin-bottom: 20px; }
+.hsc-source-line a,.hsc-evidence a { text-decoration: underline; text-underline-offset: 4px; }
+.hsc-decision-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 12px; }
+.hsc-choice-label { display: none; }
+.hsc-decision-tabs button { padding: 8px 12px; border: 1px solid var(--line); background: transparent; font-size: 12px; min-height: 40px; }
+.hsc-decision-tabs [aria-pressed=true] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.hsc-judgment { padding: 12px 16px; background: #e6ecf5; margin-bottom: 18px; }
+.hsc-judgment h4 { margin: 0 0 4px; font-size: 17px; font-weight: 500; }
+.hsc-judgment p { font-size: 13px; line-height: 1.7; }
+.hsc-references { display: block; margin-bottom: 6px; font-size: 11px; line-height: 1.5; color: #4b586e; }
+.hsc-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.hsc-pane { min-width: 0; padding: 20px; border-top: 2px solid #315ac7; background: #e7eefb; }
+.hsc-pane-published { border-top-color: #2850ae; background: #e7eefb; }
+.hsc-pane h4 { margin: 0 0 6px; font-size: 15px; font-weight: 600; }
+.hsc-pane > small { display: block; font-size: 12px; color: #4b586e; margin-bottom: 22px; }
+.hsc-paragraph + .hsc-paragraph { margin-top: 22px; }
+.hsc-paragraph h5 { font-size: 12px; font-weight: 500; margin: 0 0 8px; color: #4b586e; }
+.hsc-paragraph p { font-size: 15px; line-height: 1.95; overflow-wrap: anywhere; }
+.hsc-uncertain { text-decoration: underline wavy #2850ae; text-underline-offset: 4px; background: #dce7ff; }
+.hsc-uncertain sup { font-size: 9px; font-family: var(--sans); padding-left: 2px; white-space: nowrap; }
+.hsc-more { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }
+.hsc-more > summary { cursor: pointer; min-height: 44px; padding: 6px 0; font-size: 15px; }
+.hsc-more > p { color: var(--muted); font-size: 13px; margin: 12px 0 20px; }
+.hsc-full-pair + .hsc-full-pair { margin-top: 24px; }
+.hsc-evidence { font-size: 13px; line-height: 1.9; }
+.hsc-evidence li { margin-bottom: 10px; overflow-wrap: anywhere; }
+.hsc-diff-before { background: #f4dce3; }
+.hsc-diff-after { background: #dce7ff; }
+.hsc-rewrite-reason { font-size: 14px; margin-top: 18px; padding: 14px 0; }
+@media(max-width: 760px) {
+  .hsc-cards { grid-template-columns: 1fr; gap: 28px; }
+  .hsc-card { grid-template-columns: 96px minmax(0,1fr); gap: 18px; }
+  .hsc-card img { width: 96px; }
+  .hsc-card h3 { font-size: 22px; }
+  #hsc-dialog { width: 96vw; max-width: 96vw; max-height: 94dvh; }
+  .hsc-dialog-shell { max-height: 93dvh; }
+  .hsc-dialog-head { padding: 14px; gap: 10px; }
+  .hsc-dialog-head h2 { font-size: 15px; }
+  .hsc-dialog-head small { font-size: 11px; }
+  .hsc-case-tabs { padding: 0 14px; gap: 18px; }
+  .hsc-dialog-body { padding: 20px 14px 30px; }
+  .hsc-work-title { font-size: 25px; }
+  .hsc-work-title { font-size: 20px; line-height: 1.4; }
+  .hsc-decision-tabs { display: none; }
+  .hsc-choice-label { display: block; font-size: 12px; margin: 16px 0; }
+  .hsc-choice-label select { display: block; width: 100%; max-width: 100%; min-height: 44px; margin-top: 6px; border: 1px solid var(--ink); color: var(--ink); background: var(--paper); font-size: 13px; padding: 8px; }
+  .hsc-pair { grid-template-columns: 1fr; gap: 16px; }
+  .hsc-pane { padding: 16px; }
+  .hsc-judgment { padding: 16px; }
+  .hsc-decision-tabs button { flex: 1 1 42%; font-size: 11px; }
+}
+
+/* Keep the six reasons visible without repeating full script paragraphs. */
+.hsc-decisions-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:30px 0}.hsc-decisions-overview .hsc-judgment{margin:0}.hsc-full>summary{font-size:20px}.hsc-more[open]>summary{margin-bottom:24px}@media(max-width:650px){.hsc-decisions-overview{grid-template-columns:1fr}}
+
+/* Source frames lead; commentary stays out of the image grid. */
+.hsc-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:960px;margin:30px auto 0}
+.hsc-card{display:block;border:0;padding:0;min-width:0}
+.hsc-card .hsc-cover-button{display:block;position:relative;width:100%;margin:0;padding:0;border:0;background:#15181d;overflow:hidden}
+.hsc-card .hsc-cover-button img{width:100%;height:auto;aspect-ratio:323/430;object-fit:contain;transition:transform .35s ease}
+.hsc-card .hsc-cover-button:hover img{transform:scale(1.015)}
+.hsc-cover-action{position:absolute;right:14px;bottom:14px;padding:8px 14px;background:#14171be8;color:#fff;font-size:12px;line-height:1.5;border:1px solid #ffffff75}
+.hsc-frame-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 18px;margin:24px 0 32px}
+.hsc-frame{min-width:0}
+.hsc-frame>a{display:block;position:relative;background:#181b20;overflow:hidden}
+.hsc-frame img{width:100%;height:auto;object-fit:contain}
+.hsc-frame-play{position:absolute;right:9px;top:9px;padding:3px 8px;color:white;background:#14171bd9;font-size:10px;line-height:1.6}
+.hsc-frame figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:6px;margin-top:8px;font-size:12px;line-height:1.5}
+.hsc-frame figcaption strong{font-weight:500}
+.hsc-frame time{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.hsc-work-title{font-size:22px}
+.hsc-source-line{margin-bottom:12px}
+@media(max-width:650px){.hsc-frame-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 12px}.hsc-frame figcaption{flex-wrap:wrap;font-size:12px}.hsc-frame-play{right:6px;top:6px;font-size:9px}.hsc-cover-action{right:10px;bottom:10px}}
+@media(max-width:480px){.hsc-cards{grid-template-columns:1fr;max-width:330px;gap:24px}}
+@media(prefers-reduced-motion:reduce){.hsc-card .hsc-cover-button img{transition:none}.hsc-card .hsc-cover-button:hover img{transform:none}}

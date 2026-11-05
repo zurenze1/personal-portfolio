@@ -1,0 +1,68 @@
+/* Keep the approved seasonal palette; shorten the space between chapters. */
+#top.continuous-wash-ready .chapter-blend { height: 72px; }
+#top.continuous-wash-ready .chapter-blend.wash-same-tone { display: none; }
+#top.continuous-wash-ready .wash-inner-gap { height: 56px; }
+#top.continuous-wash-ready :is(#proposal, #yg-data, #audience, #ygd-later, #business, #business-model, #methods) {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+#top.continuous-wash-ready :is(.tenure-stage, #profile) { padding-bottom: 64px; }
+#top.continuous-wash-ready .tenure-stage #ygd-my-role { margin-top: 0; }
+#top.continuous-wash-ready #profile .section-head { min-height: 260px; padding-top: 44px; padding-bottom: 44px; }
+#top.continuous-wash-ready #seasons { padding-top: 64px; padding-bottom: 56px; }
+
+/* Currency and source labels remain readable without competing with prices. */
+.business-price-list dt { min-width: 0; }
+.business-price-list dt .price-context {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.business-price-list dd { flex-shrink: 0; white-space: nowrap; }
+.business-revenue-grid .commerce-sources { margin-top: 20px; font-size: 13px; line-height: 1.8; }
+.commerce-sources summary { cursor: pointer; min-height: 36px; }
+.commerce-sources p { font-size: 13px; line-height: 1.8; margin: 10px 0; }
+.commerce-sources a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
+.commerce-sources a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+
+/* Old dark-footer child colors must be replaced along with its light background. */
+body:has(#top.continuous-wash-ready) > footer.footer { color: #244b3e; padding: 36px 0 42px; }
+body:has(#top.continuous-wash-ready) > footer.footer :is(p, button, a, .mono) {
+  color: #244b3e;
+  opacity: 1;
+}
+body:has(#top.continuous-wash-ready) > footer.footer p { font-size: 15px; line-height: 1.8; }
+body:has(#top.continuous-wash-ready) > footer.footer a { font-size: 15px; line-height: 1.8; }
+body:has(#top.continuous-wash-ready) > footer.footer .mono { font-size: 13px; line-height: 1.8; }
+body:has(#top.continuous-wash-ready) > footer.footer button {
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 44px;
+  border-color: #55786b;
+  background: transparent;
+}
+body:has(#top.continuous-wash-ready) > footer.footer .wrap > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+}
+body:has(#top.continuous-wash-ready) > footer.footer a:focus-visible,
+body:has(#top.continuous-wash-ready) > footer.footer button:focus-visible {
+  outline: 2px solid #244b3e;
+  outline-offset: 5px;
+}
+@media (max-width: 760px) {
+  #top.continuous-wash-ready .chapter-blend { height: 44px; }
+  #top.continuous-wash-ready .wash-inner-gap { height: 36px; }
+  #top.continuous-wash-ready :is(#proposal, #yg-data, #audience, #ygd-later, #business, #business-model, #methods) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  #top.continuous-wash-ready :is(.tenure-stage, #profile) { padding-bottom: 48px; }
+  #top.continuous-wash-ready #profile .section-head { min-height: 0; padding-top: 40px; padding-bottom: 32px; }
+  #top.continuous-wash-ready #seasons { padding-top: 48px; padding-bottom: 40px; }
+  .business-price-list > div { flex-wrap: wrap; gap: 8px 16px; }
+  .business-price-list dd { margin-left: 0; }
+}

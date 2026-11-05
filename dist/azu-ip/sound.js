@@ -95,7 +95,7 @@ export function createSiteSound(){
   document.addEventListener('keydown',firstGesture,{capture:true});
   // Click is also an activation gesture on browsers that do not unlock at pointerdown.
   document.addEventListener('click',firstGesture,{capture:true});
-  const selector='.photo-trigger,.work-select,.toolbox-card,.song-art';
+  const selector='.photo-trigger,.work-select,.commission-card,.toolbox-card,.song-art';
   document.addEventListener('pointerover',event=>{
     if(event.pointerType==='touch')return;
     const target=event.target.closest?.(selector);

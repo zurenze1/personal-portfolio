@@ -1,0 +1,4 @@
+/media/hls/*.m3u8
+  Content-Type: application/vnd.apple.mpegurl
+/media/hls/*.m4s
+  Content-Type: video/iso.segment

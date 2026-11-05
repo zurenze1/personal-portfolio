@@ -1,0 +1,1219 @@
+{
+  "schema": "hualaoban-script-comparison/v1",
+  "created_at": "2026-11-01",
+  "source_schema_version": 2,
+  "source_sha256": "3611ce3d47f229c2acc3598537f827168cd3d7df5935f3d5c7dbbca0b9ac9a49",
+  "publication_status": "local_preview_only_full_transcript_rights_unconfirmed",
+  "notice": "初稿为本次依据发布成片反向整理，非历史版本；终稿依据已发布成片的字幕与口播整理，未逐句听校。",
+  "labels": {
+    "left": "初稿",
+    "left_subtitle": "本次依据发布成片反向整理，非历史版本",
+    "right": "终稿",
+    "right_subtitle": "依据已发布成片的字幕与口播整理，未逐句听校；非原作者文稿",
+    "change": "编辑判断",
+    "current_rewrite": "当前改写示范｜改写草稿，待本人试讲确认",
+    "comparison": "结构对照｜非历史修订记录"
+  },
+  "cases": [
+    {
+      "id": "lafa5",
+      "video_id": "7561699295905369404",
+      "title": "个性但不小众！这才是永不过时的时尚！",
+      "source_url": "https://www.douyin.com/video/7561699295905369404",
+      "author": "花老板HUALAOBAN",
+      "published_date": "2025-10-16",
+      "duration_seconds": 175.1,
+      "changes": [
+        {
+          "id": "D1",
+          "draft_paragraph_ids": [
+            "A1"
+          ],
+          "published_paragraph_ids": [
+            "P1"
+          ],
+          "change_type": "观众入口前置",
+          "reason": "让观众先认出自己的处境；不是品牌先露出必然无效。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D2",
+          "draft_paragraph_ids": [
+            "A2"
+          ],
+          "published_paragraph_ids": [
+            "P2"
+          ],
+          "change_type": "例子具体化",
+          "reason": "让抽象审美判断落到熟悉的单品与形象；效果待数据检验。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D3",
+          "draft_paragraph_ids": [
+            "A1",
+            "A2"
+          ],
+          "published_paragraph_ids": [
+            "P3"
+          ],
+          "change_type": "重排产品进入顺序",
+          "reason": "先建立选择标准，再把车纳入同一类问题。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D4",
+          "draft_paragraph_ids": [
+            "A3",
+            "A4"
+          ],
+          "published_paragraph_ids": [
+            "P4"
+          ],
+          "change_type": "补判断与画面的对应",
+          "reason": "不仅列细节，还解释细节怎样形成风格。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D5",
+          "draft_paragraph_ids": [
+            "A5"
+          ],
+          "published_paragraph_ids": [
+            "P5"
+          ],
+          "change_type": "让段落服务主线",
+          "reason": "车色段继续回应开头的审美问题。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D6",
+          "draft_paragraph_ids": [
+            "A6"
+          ],
+          "published_paragraph_ids": [
+            "P6"
+          ],
+          "change_type": "加入品牌规模信息",
+          "reason": "发布版选择用市场背景收束；品牌整体数据不能替换成车型销量。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        }
+      ],
+      "asr_corrections": [
+        {
+          "paragraph_id": "P4",
+          "from": "领。跑拉法。五",
+          "to": "零跑Lafa5",
+          "occurrences": 1,
+          "basis": "标题明确零跑Lafa5，抽帧067秒、094秒可见Lafa5车型标识；只归一化产品专名。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P4",
+          "from": "领跑拉法。五",
+          "to": "零跑Lafa5",
+          "occurrences": 2,
+          "basis": "同上；限定产品名，不替换句中动词领跑。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P4",
+          "from": "领跑拉法五",
+          "to": "零跑Lafa5",
+          "occurrences": 1,
+          "basis": "同上；限定产品名。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P4",
+          "from": "拉法。五",
+          "to": "Lafa5",
+          "occurrences": 1,
+          "basis": "标题与车型标识，专名归一化。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P4",
+          "from": "拉法五",
+          "to": "Lafa5",
+          "occurrences": 1,
+          "basis": "标题与车型标识，专名归一化。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P5",
+          "from": "领跑拉法五",
+          "to": "零跑Lafa5",
+          "occurrences": 1,
+          "basis": "同上；限定产品名。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        }
+      ],
+      "asr_doubtful_words": [
+        {
+          "raw": "dream car",
+          "status": "subtitle_pending",
+          "reason": "本轮字幕带未取得该英文词，保留待核标识；不凭ASR当精校字。"
+        },
+        {
+          "raw": "车型配置与品牌整体销量",
+          "status": "claim_not_independently_verified",
+          "reason": "已校准字幕内容与主语，不代表核实性能或销售事实。"
+        },
+        {
+          "raw": "无框车门把",
+          "status": "subtitle_confirmed_term_not_explained",
+          "reason": "0234帧明确此字幕；按原文保留，不擅自改为无框车门。术语实际含义与配置独立待核。"
+        }
+      ],
+      "drafts": [
+        {
+          "id": "A1",
+          "title": "提出题目",
+          "text": "今天想聊一种越来越常见的选择：把汽车也当成时尚单品来买。过去说到一个人的风格，我们主要看他穿什么、怎么搭。现在从日常穿搭到出行工具，大家都希望这些选择能表达自己的审美。零跑Lafa5这次的设计，就很适合放进这个话题里讨论。"
+        },
+        {
+          "id": "A2",
+          "title": "建立判断标准",
+          "text": "当然，时尚单品也不是越新越好。像白衬衫和复古针织Polo，放在不同的人、不同的场景里，都能穿出各自的感觉。它们值得留下来，是因为轮廓和搭配的可能性，不会只属于某一阵风。选车也可以从这个角度看：它是否有自己的特点，能不能融入日常，又能不能经得住反复看。"
+        },
+        {
+          "id": "A3",
+          "title": "介绍整体设计",
+          "text": "先看零跑Lafa5的整体轮廓。它用流畅的曲面组织车身，减少繁复线条带来的打断。配合高亮表面的处理，车身在不同角度下会呈现不同的光影。它想表达的年轻感，更多落在这种整体状态里，而不是只加几个醒目的装饰。"
+        },
+        {
+          "id": "A4",
+          "title": "展开细节",
+          "text": "再看灯组和车门。一体式前灯、贯穿式尾灯，让前后的视觉关系更明确。车身的弯道曲面和向前的姿态，则让整辆车在静止时也有力量感。把这些部分放在一起看，才知道一辆车的风格不是某一个零件决定的，而是整体比例和细节是否说着同一种语言。"
+        },
+        {
+          "id": "A5",
+          "title": "补充颜色",
+          "text": "颜色也是这套表达的一部分。成片展示了多种车色，既有醒目的，也有更容易放进日常环境里的。选颜色不只是挑当下最热的那个词，还要看它放在这辆车上是否合适，以及它和自己的生活能不能相处得来。"
+        },
+        {
+          "id": "A6",
+          "title": "回到生活方式",
+          "text": "所以，车和衣服其实可以放进同一套选择逻辑里：先知道自己喜欢什么样的状态，再看一件东西怎样帮助你表达它。零跑Lafa5能不能成为你的那件“大单品”，就可以从它的轮廓、细节和颜色开始判断。时尚最终还是要进入日常，变成你愿意一直使用、也愿意被它代表的选择。"
+        }
+      ],
+      "published": [
+        {
+          "id": "P1",
+          "title": "观众矛盾先出现（约0—16.25秒）",
+          "summary": "从衣柜塞满、出门却不知道穿什么的困扰切入，接着提出要用三件单品探讨“永不过时”。画面约12秒已出现车型拼贴，因此不能说品牌直到一分钟后才首次露出。",
+          "text": "明明衣柜塞到爆，出门却找不到一件能穿的？跟风买的潮流货全压箱底，可花的钱连句“你真会穿”都没捞着。你是不是也中了这时尚魔咒？不谈八卦，我是花老板。今天我们将通过3件时尚单品，一起探讨永不过时的时尚，到底藏在哪？",
+          "raw_text": "明明衣柜塞到爆出门，却找不到一件能穿的跟风买的潮流货，全牙相抵，可花的钱连句，你真会穿都没捞着，是不是也中了？这时尚魔咒不天八卦，我是花老板。今天我们将通过三件时尚单品一起探讨，永不过时的时尚到底藏在哪儿？",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 3.25,
+              "caption": "跟风买的潮流货全压箱底"
+            },
+            {
+              "second": 9.75,
+              "caption": "不谈八卦"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P2",
+          "title": "先用衣服让标准变具体（约16.25—40.25秒）",
+          "summary": "白衬衫与复古针织Polo不只是举例，而是帮助观众理解：一件单品能够跨风格使用，背后有一套选择原则。",
+          "text": "比如，你可以花大价钱投资一件永不过时的白衬衫。毕竟当年肯豆只用这一张图，就让网红辣妹秒变质感大女人，不仅引发全球时尚博主大跟风，连VOGUE都直夸高级。再比如，一件奢牌的复古针织Polo衫，之前是温网老钱们的固定搭配，现在又成了赛级白女的身份通行证。它能在Athflow的松弛、Tenniscore的活力和Preppy Style的学院感之间自如切换。",
+          "raw_text": "比如，你可以花大价钱投资一件永不过时的白衬衫，毕竟当年肯豆只用这一张图，就让网红辣妹秒变质感。大女人不仅引发全球时尚博主，大跟风连v都直夸高级。再比如，一件奢牌的复古针织polo衫，之前是温王老前们的固定搭配，现在又成了赛级白女的身份通行证，它能在un的松弛chinese的活力style的学院感之间自如切换，",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 26.25,
+              "caption": "连VOGUE都直夸高级"
+            },
+            {
+              "second": 30.25,
+              "caption": "之前是温网老钱们的固定搭配"
+            },
+            {
+              "second": 33.75,
+              "caption": "现在又成了赛级白女的身份通行证"
+            },
+            {
+              "second": 35.25,
+              "caption": "它能在 Athflow 的松弛"
+            },
+            {
+              "second": 36.75,
+              "caption": "Tenniscore 的活力"
+            },
+            {
+              "second": 38.25,
+              "caption": "和Preppy Style的学院感之间自如切换"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P3",
+          "title": "从穿搭接到汽车（约40.25—63.75秒）",
+          "summary": "把穿衣选择延伸到生活气质，再把汽车纳入大件时尚单品，给后面的汽车设计介绍一个共同问题。60—80秒窗口明确讲到零跑Lafa5。",
+          "text": "而它们之所以能跨越风格周期，是因为它们提供的是一种穿搭的底层逻辑。真正的时尚，从来不只是你穿什么、怎么穿，更多是一种从内到外的生活气质。从你的购物车，再到你的车。如今，一辆车早已不只是出门时的代步工具，而是你超大件的时尚单品。它必须经典，能融入任何场景，同时也必须够质感，能承载你的审美。",
+          "raw_text": "而他们之所以能跨越风格周期，是因为他们提供的是一种穿搭的底层逻辑。真正的时尚从来不只是你穿什么怎么穿，更多是一种从内到外的生活气质，从你的购物车再到你的车。如今，一辆车早已不只是出门时的代步工具，而是你超大件的时尚单品，它必须经典融入任何场景。同时也必须够质感，能承载你的审美。",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 40.25,
+              "caption": "而它们之所以能跨越风格周期"
+            },
+            {
+              "second": 43.75,
+              "caption": "是一种穿搭的底层逻辑"
+            },
+            {
+              "second": 51.25,
+              "caption": "从你的购物车"
+            },
+            {
+              "second": 52.75,
+              "caption": "再到你的车"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P4",
+          "title": "将审美落到车型细节（约63.75—130.25秒）",
+          "summary": "先讲年轻表达和设计方向，再依次用车身曲面、表面质感、灯、车门与姿态承接。画面给到对应局部，避免只有抽象赞美。",
+          "text": "当零跑Lafa5出现在慕尼黑国际车展的时候，它几乎成了全球年轻人的下一辆【字幕待核：ASR为dream car】。而这份肯定，靠的是一场由内到外的设计革新。零跑Lafa5联合鲁迅美术学院开展了一场美学共赏，将纯粹、向上、愉悦的概念融进了设计DNA。从全网首曝的Lafa5内饰，到Lafa5 Ultra的实车外观，每一处细节都是科技自然美学的最新演绎。Lafa5不仅回应了年轻用户的自我表达需求，更呈现出一种年轻的美。其实从它的名字就能看出来，不只是一辆车，它更是年轻人们的精神主张。科技不为炫技，而是为了更好地融入生活。零跑Lafa5以飞驰弯道曲面将科技美学贯彻始终。它以极致流畅的弧面取代了繁复的线条，搭配高亮钢琴烤漆，更是营造出一种不费力的高级感。一体式前灯加贯穿式尾灯，像点睛的未来主义配饰，让个性时尚有了更先锋的时代表达。而无框车门把的加入，更是把精致到细节的仪式感一次性给到位。整体设计主打一个安静的爆发力。车身像一张拉满的弓，配合凹凸有致的弯道曲面，让零跑Lafa5时刻保持蓄势待发的姿态。",
+          "raw_text": "当领。跑拉法。五、出现在慕尼黑国际车展的时候，它几乎成了全球年轻人的下一辆dream car.而这份肯定靠的是一场由内到外的设计革新领跑拉法。五、联合鲁迅美术学院开展的一场美学共赏，将纯粹向上愉悦的概念融进了设计。D n a从全网首曝的拉法。五、内饰到拉法五欧tra的实车外观，每一处细节都是科技自然美学的最新演绎拉ve.五、不仅回应了年轻用户的自我表达需求，更呈现出一种年轻的美。其实，从它的名字就能看出来，不只是一辆车，它更是年轻人们的精神，主张科技，不畏炫技，而是为了更好的融入生活。领跑拉法。五、以飞驰弯道曲面将科技美学贯彻始终，它以极致流畅的湖面取代了繁复的线条，搭配高亮钢琴烤漆，更是营造出一种不费力的高级感。一体式前灯加贯穿式尾灯，向点睛的未来主义配饰，让个性时尚有了更先锋的时代表达，而无框车门板的加入，更是把精致到细节的仪式感，一次性给到位，整体设计主打一个安静的爆发力。车身像一张拉满了弓，配合、凹凸有致的弯道曲面，让领跑拉法五时刻保持蓄势待发的姿态，",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 63.75,
+              "caption": "当零跑Lafa5"
+            },
+            {
+              "second": 72.75,
+              "caption": "零跑Lafa5联合鲁迅美术学院"
+            },
+            {
+              "second": 81.75,
+              "caption": "到Lafa5 Ultra的实车外观"
+            },
+            {
+              "second": 96.75,
+              "caption": "科技不为炫技"
+            },
+            {
+              "second": 103.75,
+              "caption": "它以极致流畅的弧面"
+            },
+            {
+              "second": 110.75,
+              "caption": "一体式前灯+贯穿式尾灯"
+            },
+            {
+              "second": 116.75,
+              "caption": "而无框车门把的加入"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P5",
+          "title": "从外形走向色彩（约130.25—147.25秒）",
+          "summary": "接着讲车色，把“不过时”的主题继续放进颜色选择里；字幕有色卡轮换。完整六色名称仍需校清，不能照抄ASR同音词。",
+          "text": "不止于型，一件永不过时的时尚单品，还能经得住色彩的考验。零跑Lafa5的六款车色，没有盲目跟风某一年的特定色，而是精准抓住了趋势的内核。电掣黄、风驰灰、摩根粉、星夜蓝、星河银、金属黑，每种颜色都在精准回应着时代的审美。",
+          "raw_text": "不止于行一件永不过时的时尚单品，还能经得住色彩的考验。领跑拉法五的六款车色，没有盲目跟风某一年的特定色，而是精准抓住了趋势的内核变。赤黄风池灰摩根粉星夜蓝星河银金属黑，每种颜色都在精准，回应着。时代的审美",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 130.25,
+              "caption": "不止于型"
+            },
+            {
+              "second": 134.75,
+              "caption": "零跑Lafa5的六款车色"
+            },
+            {
+              "second": 144.75,
+              "caption": "每种颜色都在精准回应着时代的审美"
+            },
+            {
+              "second": null,
+              "caption": "电掣黄"
+            },
+            {
+              "second": null,
+              "caption": "风驰灰"
+            },
+            {
+              "second": null,
+              "caption": "摩根粉"
+            },
+            {
+              "second": null,
+              "caption": "星夜蓝"
+            },
+            {
+              "second": null,
+              "caption": "星河银"
+            },
+            {
+              "second": null,
+              "caption": "金属黑"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P6",
+          "title": "用市场与生活表达收尾（约147.25—175.1秒）",
+          "summary": "加入品牌整体市场表现与交付数字，最后回到出行体验。数字未做独立业务核证；品牌整体数据不能说成Lafa5车型销量。",
+          "text": "颜值是入场券，实力才是话语权。零跑进入欧洲市场不满一年，就成了中国新势力品牌销量top级别的存在。在国内，单9月就交付达66657台，更是连续七个月领跑中国新势力。这次国庆销量更是再创新高，十一假期同比增长62%。零跑始终坚持用产品说话，赢得真实的市场认可。让每一次出行，不只是物理距离上的移动，而是一场与同频搭子共赴人生新体验的探索。",
+          "raw_text": "颜值是入场券，实力才是话语权领跑进入欧洲市场，不满一年，就成了中国新势力品牌销量top级别的存在。在国内单九月就交付达六万六千六百五十七台，或是连续七个月领跑中国新势力，这次国庆销量更是再创新高。十一假期同比增长百分之六十二，领跑始终坚持用产品说话，赢得真实的市场认可，让每一次出行不只是物理距离上的移动，而是一场以同频搭子共赴人生新体验的探索。",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 149.75,
+              "caption": "零跑进入欧洲市场不满一年"
+            },
+            {
+              "second": 155.25,
+              "caption": "单9月就交付达66657台"
+            },
+            {
+              "second": 158.75,
+              "caption": "更是连续七个月领跑中国新势力"
+            },
+            {
+              "second": 163.25,
+              "caption": "十一假期同比增长62%"
+            },
+            {
+              "second": 171.75,
+              "caption": "而是一场与同频搭子"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        }
+      ],
+      "reading": {
+        "audio_status": "已有完整音频ASR；本轮未重新完整校听",
+        "visual_status": "本轮查看12帧拼图；既有证据另有6帧及4个20秒ASR定位窗口。非连续完整视觉复看。"
+      },
+      "rewrite": {
+        "label": "当前改写示范｜改写草稿，待本人试讲确认",
+        "created_at": "2026-11-01",
+        "before": [
+          {
+            "text": "今天想聊",
+            "changed": true
+          },
+          {
+            "text": "一",
+            "changed": false
+          },
+          {
+            "text": "种越来越常见的选择：把汽车也当成时尚单品来",
+            "changed": true
+          },
+          {
+            "text": "买。",
+            "changed": false
+          },
+          {
+            "text": "过去说",
+            "changed": true
+          },
+          {
+            "text": "到",
+            "changed": false
+          },
+          {
+            "text": "一个",
+            "changed": false
+          },
+          {
+            "text": "人的风格，我们主要看他穿",
+            "changed": true
+          },
+          {
+            "text": "什么",
+            "changed": false
+          },
+          {
+            "text": "、怎么搭。现在从日常穿搭到出行工具，大家都希望这些选择能表达自己的审美。零跑Lafa5这次",
+            "changed": true
+          },
+          {
+            "text": "的设计，",
+            "changed": false
+          },
+          {
+            "text": "就很适合",
+            "changed": true
+          },
+          {
+            "text": "放进",
+            "changed": false
+          },
+          {
+            "text": "这",
+            "changed": false
+          },
+          {
+            "text": "个",
+            "changed": false
+          },
+          {
+            "text": "话题里讨论",
+            "changed": true
+          },
+          {
+            "text": "。",
+            "changed": false
+          }
+        ],
+        "after": [
+          {
+            "text": "衣柜明明很满，出门还是觉得没衣服穿。问题可能不在你买得少，而在你每次只跟着",
+            "changed": true
+          },
+          {
+            "text": "一",
+            "changed": false
+          },
+          {
+            "text": "阵风",
+            "changed": true
+          },
+          {
+            "text": "买。",
+            "changed": false
+          },
+          {
+            "text": "白衬衫、针织Polo，",
+            "changed": true
+          },
+          {
+            "text": "到",
+            "changed": false
+          },
+          {
+            "text": "每天开的车，看着是三种不同的东西，其实都在回答",
+            "changed": true
+          },
+          {
+            "text": "一个",
+            "changed": false
+          },
+          {
+            "text": "问题：",
+            "changed": true
+          },
+          {
+            "text": "什么",
+            "changed": false
+          },
+          {
+            "text": "样",
+            "changed": true
+          },
+          {
+            "text": "的设计，",
+            "changed": false
+          },
+          {
+            "text": "能",
+            "changed": true
+          },
+          {
+            "text": "放进",
+            "changed": false
+          },
+          {
+            "text": "你的日常，又能让你一直看得顺眼？今天就用",
+            "changed": true
+          },
+          {
+            "text": "这",
+            "changed": false
+          },
+          {
+            "text": "三",
+            "changed": true
+          },
+          {
+            "text": "个",
+            "changed": false
+          },
+          {
+            "text": "例子聊聊",
+            "changed": true
+          },
+          {
+            "text": "。",
+            "changed": false
+          }
+        ],
+        "reason": "把题目从汽车介绍改成一个观众能认出的选择问题，保留三类单品的承诺。表达效果尚未试讲或测试。",
+        "author_status": "AI辅助当前草案，未由祖仁泽试讲确认"
+      }
+    },
+    {
+      "id": "songjia-eral",
+      "video_id": "7553538683322207548",
+      "title": "今年冬天，宋佳又有新的进行曲了",
+      "source_url": "https://www.douyin.com/video/7553538683322207548",
+      "author": "花老板HUALAOBAN",
+      "published_date": "2025-09-24",
+      "duration_seconds": 117.2,
+      "changes": [
+        {
+          "id": "D1",
+          "draft_paragraph_ids": [
+            "A1"
+          ],
+          "published_paragraph_ids": [
+            "P1"
+          ],
+          "change_type": "人物入口前置",
+          "reason": "先形成对人物的感受；适用于有匹配人物素材的选题。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D2",
+          "draft_paragraph_ids": [
+            "A2",
+            "A3"
+          ],
+          "published_paragraph_ids": [
+            "P2",
+            "P3"
+          ],
+          "change_type": "重排人物与产品关系",
+          "reason": "由人物状态引出产品怎样接住这种状态。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D3",
+          "draft_paragraph_ids": [
+            "A2",
+            "A3"
+          ],
+          "published_paragraph_ids": [
+            "P2",
+            "P3"
+          ],
+          "change_type": "让抽象感受落实到画面",
+          "reason": "产品轮廓、人物气质与画面应相互支撑，避免只换词夸高级。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D4",
+          "draft_paragraph_ids": [
+            "A4"
+          ],
+          "published_paragraph_ids": [
+            "P4"
+          ],
+          "change_type": "扩大叙事范围",
+          "reason": "从单人单件扩展到品牌整套方向。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D5",
+          "draft_paragraph_ids": [
+            "A5"
+          ],
+          "published_paragraph_ids": [
+            "P5"
+          ],
+          "change_type": "更换顾客代入方式",
+          "reason": "发布版更偏场景与品牌想象，练习稿更偏购买判断；两种目的不同。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        },
+        {
+          "id": "D6",
+          "draft_paragraph_ids": [
+            "A6"
+          ],
+          "published_paragraph_ids": [
+            "P6"
+          ],
+          "change_type": "更换收尾层级",
+          "reason": "发布版用品牌态度收尾，练习稿用日常适配收尾；是取舍而非必然优劣。",
+          "claim_type": "current_editorial_comparison_not_historical_revision",
+          "performance_proven": false
+        }
+      ],
+      "asr_corrections": [
+        {
+          "paragraph_id": "P1",
+          "from": "内衣女性",
+          "to": "内娱女星",
+          "occurrences": 1,
+          "basis": "000秒抽帧字幕为据说内娱女星；保留据说，不认定事实。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P1",
+          "from": "宋家",
+          "to": "宋佳",
+          "occurrences": 2,
+          "basis": "标题与018秒等抽帧字幕明确为宋佳，统一人名。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P2",
+          "from": "宋家",
+          "to": "宋佳",
+          "occurrences": 1,
+          "basis": "标题与018秒等抽帧字幕明确为宋佳，统一人名。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P2",
+          "from": "进行取",
+          "to": "进行曲",
+          "occurrences": 1,
+          "basis": "标题及018秒字幕明确为进行曲。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P3",
+          "from": "宋家",
+          "to": "宋佳",
+          "occurrences": 1,
+          "basis": "标题与018秒等抽帧字幕明确为宋佳，统一人名。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        },
+        {
+          "paragraph_id": "P4",
+          "from": "最新一件羽绒服",
+          "to": "最新一季羽绒服",
+          "occurrences": 1,
+          "basis": "064秒抽帧字幕可见她们带着品牌最新一季羽绒服。",
+          "scope": "专名或可读字幕校订，不等于已逐句校听"
+        }
+      ],
+      "asr_doubtful_words": [
+        {
+          "raw": "品牌功能与秀场等表述",
+          "status": "claim_not_independently_verified",
+          "reason": "已按字幕整理，字幕可读不等于性能、活动主张已独立验证。"
+        }
+      ],
+      "drafts": [
+        {
+          "id": "A1",
+          "title": "品牌与人物入题",
+          "text": "今年冬天，艾莱依和宋佳的这组造型，可以放在一起好好看。它们想讨论的是一件很具体的事：羽绒服除了穿得暖，能不能也穿出利落的感觉？从宋佳身上的风衣款，到成片展示的其他系列，这次的视觉方向都在回应这个问题。"
+        },
+        {
+          "id": "A2",
+          "title": "产品轮廓说明",
+          "text": "先看这件风衣款羽绒服。领型、腰带和整体轮廓，保留了风衣那种有秩序的感觉；换上羽绒服的体量之后，穿搭的重点也没有只剩下厚度。看它要看全身，也要看转身、行走时的状态，才能理解这件衣服想表达的风度。"
+        },
+        {
+          "id": "A3",
+          "title": "人物选择的理由",
+          "text": "宋佳很适合把这个方向穿出来。她给人的印象一直是大方、利落，又带着自己的力量感。衣服和她放在一起，能把成熟感和松弛感接起来。这里最值得看的，是人物状态怎样帮助观众理解一件衣服，而不只是记住谁穿了它。"
+        },
+        {
+          "id": "A4",
+          "title": "从一件衣服到系列方向",
+          "text": "再看成片里的其他造型，风衣式的利落和猎装式的随性，是两种不同的方向。前者能让人联想到都市、通勤，后者把工装与户外的感觉带进日常。巴黎场景里的连续造型，也让这个方向不再只停在宋佳一个人的穿搭上。"
+        },
+        {
+          "id": "A5",
+          "title": "回到顾客怎样选择",
+          "text": "真正值得拿来判断的，是这套风格放到自己的生活里是否合适。你需要的是更规整的通勤轮廓，还是更随性的日常搭配？同一件外套能配什么内搭，穿到哪些场景？产品的保暖、防风与面料表现，还要看具体款式的信息，不能只凭造型下结论。"
+        },
+        {
+          "id": "A6",
+          "title": "收束品牌主张",
+          "text": "所以，宋佳和这组衣服相配的地方，是她们共同呈现出的那种状态：冬天也可以穿得从容、有自己的风格。把人物、衣服和生活放在一起看，品牌想表达的方向才会更清楚。最后还是要回到一件衣服本身，看它是否适合你，能不能进入你的日常。"
+        }
+      ],
+      "published": [
+        {
+          "id": "P1",
+          "title": "先把人物状态立起来（约0—17.25秒）",
+          "summary": "先从合照、气场和人物特征切入，突出宋佳与单一审美标准的差别，用人物片段迅速建立印象。具体身高与人物判断不作为本轮独立核实事实。",
+          "text": "据说内娱女星非必要不和她合照。她是内娱少有的白瘦幼审美的反面，身高173，面阔、五官大气。东北女孩特有的野性和自由，赋予她气质中矛盾的两极，她凛冽又热忱。因此，没有人能在宋佳的BGM里打败宋佳，她自己也不可以。",
+          "raw_text": "据说，内衣女性非必要不和她合照，她是内衣少有的白瘦又审美的反面，身高一七三面阔五官大气。东北女孩特有的野性和自由，赋予她气质中矛盾的良极，她凛冽又热忱。因此，没有人能在宋家的b g m里打败宋家，她自己也不可以",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 0.25,
+              "caption": "据说内娱女星"
+            },
+            {
+              "second": 3.75,
+              "caption": "白瘦幼审美的反面"
+            },
+            {
+              "second": 9.25,
+              "caption": "赋予她气质中矛盾的两极"
+            },
+            {
+              "second": 11.25,
+              "caption": "她凛冽又热忱"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P2",
+          "title": "从人物转到她的穿衣方式（约17.25—33.25秒）",
+          "summary": "通过冬日羽绒服形象和大女人感，把人物气场逐渐转成衣服问题。27秒抽帧可见花老板口播，之后回到产品造型。",
+          "text": "宋佳进行曲里的造型，永远扛打。春晚都过去这么久了，这张黑色羽绒服路透图又一次在冬天准时回归，成为过冬标准答案。不谈八卦，我是花老板。摆脱性感标签之后，她的风格介于高智感与精英感之间，是一种落落大方的大女人感。",
+          "raw_text": "宋家进行取里的造型，永远扛戴春晚都过去这么久了。这张黑色羽绒服度头图又一次在冬天准时回归，成为过冬的标准。答案不前。八卦我是花老板，摆脱性感标签之后，她的风格介于高质感与精英感之间，是一种落落大方的大女人感。",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 17.25,
+              "caption": "宋佳进行曲里的造型"
+            },
+            {
+              "second": 18.75,
+              "caption": "永远扛打"
+            },
+            {
+              "second": 20.75,
+              "caption": "这张黑色羽绒服路透图"
+            },
+            {
+              "second": 26.25,
+              "caption": "不谈八卦"
+            },
+            {
+              "second": 28.75,
+              "caption": "她的风格介于高智感与精英感之间"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P3",
+          "title": "让产品承接人物气质（约33.25—54.25秒）",
+          "summary": "风衣款羽绒服承接利落、松弛的状态，随后明确艾莱依合作与“温度、风度兼顾”的主张。45秒字幕能确认品牌已进入，不只是片尾露出。",
+          "text": "而当宋佳穿上风衣款羽绒服，她身上那股独特的气质，瞬间多了一层松弛与坚定。她不是在穿一件羽绒服，而是在诠释一件事：保暖，从不意味着牺牲风格。这一次，她与艾莱依再度携手，突破风格边界。一件风衣羽绒服，将飒爽和风度一并拿捏。风度与温度，从来不是单选题。而这份既要又要的底气，正是艾莱依给的。",
+          "raw_text": "而当宋家穿上风衣款羽绒服，她身上那股独特的气质瞬间又多了一层松弛与坚定。她不是在穿一件羽绒服，而是在诠释一件事保暖，从不意味着牺牲风格。这一次，她与艾莱依再度歇手，突破风格边界。一件风衣羽绒服将飒爽和风度一并拿捏风度与温度从来不是单选题，而这份既要又要的底气，正是艾莱依给",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 33.25,
+              "caption": "而当宋佳穿上风衣款羽绒服"
+            },
+            {
+              "second": 42.75,
+              "caption": "从不意味着牺牲风格"
+            },
+            {
+              "second": 44.75,
+              "caption": "她与艾莱依再度携手"
+            },
+            {
+              "second": 53.25,
+              "caption": "正是艾莱依给的"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P4",
+          "title": "扩展到品牌事件和设计方向（约54.25—90.75秒）",
+          "summary": "从宋佳身上一件衣服，扩展到巴黎场景、秀场与系列造型，继续围绕羽绒服的轮廓变化展开。",
+          "text": "作为时装羽绒服的破局者，艾莱依最近干了件狠事儿，直接把秀场搬到巴黎埃菲尔铁塔下。她们这次来巴黎秀场，可不是求认可，而是让世界看看中国品牌实力。她们带着品牌最新一季羽绒服，利落打破关于冬天的刻板规则，让“羽绒服等于米其林轮胎人”的标签彻底下线。巴黎只是起点，世界才是艾莱依的舞台。她为羽绒服撕掉的第一个标签，是臃肿。而接下来，是一场更深刻的变革。御风系列彻底打破了我们对羽绒服的审美局限，将大衣的利落与户外性能巧妙融合，让普通人在冬天满足保暖的同时，也能实现走路带风。职场内外，都市之间，一件足够让你从容出场。",
+          "raw_text": "作为时装羽绒服的破局者。艾莱依最近干了件狠事，直接把秀场搬到巴黎埃菲铁塔下。他们为此来巴黎秀场，而是求认可，而是让世界看看中国品牌实力。他们带着品牌最新一件羽绒服利落，打破关于冬天的刻板规则，让羽绒服等于米其林轮胎人的标签彻底下线。巴黎只是起点世界才是艾莱依的舞台，他为羽绒服撕掉的第一个标签是臃肿。而接下来是一场更深刻的变革。御风系列彻底打破了我们对羽绒服的审美局限，将大衣的利落与户外性能巧妙融合，让普通人在冬天满足保暖的同时，也能实现走路带风职场内外都市之间一件足够让你从容出场，",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 58.25,
+              "caption": "搬到巴黎埃菲尔铁塔下"
+            },
+            {
+              "second": 59.75,
+              "caption": "她们这次来巴黎秀场"
+            },
+            {
+              "second": 61.25,
+              "caption": "可不是求认可"
+            },
+            {
+              "second": 64.25,
+              "caption": "她们带着品牌最新一季羽绒服"
+            },
+            {
+              "second": 78.75,
+              "caption": "御风系列"
+            },
+            {
+              "second": 87.75,
+              "caption": "职场肉外"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P5",
+          "title": "将风格放入场景（约90.75—109.25秒）",
+          "summary": "猎装、Barn风及城市与户外的语境，给不同顾客一个想象穿着场景的入口。镜头能观察造型，不能证明功能测试结果。",
+          "text": "而猎装系列，更是直接打开一扇风格任意门。只需一件工装鹅绒服，便能精准拿捏今年最红的巴恩风热潮。用户外高性能面料代替传统亮面、涤纶面料，在保证防风保暖的同时，更把“人生是旷野”穿进现实。从城市行走到户外旅行，风格不设限，主打一个出门即出众。",
+          "raw_text": "而猎装系列更是直接打开一扇风格。任意门，只需一件工装鹅绒服，便能精准拿捏。今年最红的巴恩风热潮，用户外高性能面料代替传统亮面、涤纶面料，在保证防风保暖的同时，更把人生是旷野，穿进现实。从城市行走到户外旅行风格，不设线，主打一个出门即出众。",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 90.75,
+              "caption": "而猎装系列"
+            },
+            {
+              "second": 97.25,
+              "caption": "巴恩风热潮"
+            },
+            {
+              "second": 99.75,
+              "caption": "代替传统亮面、涤纶面料"
+            },
+            {
+              "second": 106.75,
+              "caption": "风格不设限"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        },
+        {
+          "id": "P6",
+          "title": "用品牌态度收尾（约109.25—117.2秒）",
+          "summary": "结尾把中国品牌的设计表达提到更大的审美讨论中，强化品牌认同；没有取得销售或转化实验，不能把这种收尾直接说成成交原因。",
+          "text": "以前穿国外大牌是融入，今天穿中国艾莱依是出众。我们早就不玩“像谁”那一套了。如今，中国品牌就是高级感的定义者。",
+          "raw_text": "以前穿国外大牌式融入今天穿中国艾莱依是出众，我们早就不玩向谁那一套了。如今中国品牌就是高级感的定义者。",
+          "reference_kind": "readable_reference",
+          "reference_note": "依据原ASR与字幕OCR整理；未逐句听校，不是原作者终稿文件。",
+          "subtitle_basis": [
+            {
+              "second": 109.25,
+              "caption": "以前穿国外大牌是融入"
+            },
+            {
+              "second": 110.75,
+              "caption": "今天穿中国艾莱依是出众"
+            },
+            {
+              "second": 112.75,
+              "caption": "我们早就不玩“像谁”那一套了"
+            },
+            {
+              "second": 115.75,
+              "caption": "就是高级感的定义者"
+            }
+          ],
+          "timing_quality": "OCR字幕首现帧辅助定位，抽样间隔0.5秒，时间约值；非口播逐字时间戳。"
+        }
+      ],
+      "reading": {
+        "audio_status": "已有完整音频ASR；本轮未重新完整校听",
+        "visual_status": "本轮查看12帧拼图；既有证据另有6帧及4个20秒ASR定位窗口。非连续完整视觉复看。"
+      },
+      "rewrite": {
+        "label": "当前改写示范｜改写草稿，待本人试讲确认",
+        "created_at": "2026-11-01",
+        "before": [
+          {
+            "text": "今年",
+            "changed": true
+          },
+          {
+            "text": "冬天，",
+            "changed": false
+          },
+          {
+            "text": "艾莱依",
+            "changed": true
+          },
+          {
+            "text": "和",
+            "changed": false
+          },
+          {
+            "text": "宋佳",
+            "changed": false
+          },
+          {
+            "text": "的",
+            "changed": true
+          },
+          {
+            "text": "这组造型，",
+            "changed": false
+          },
+          {
+            "text": "可以放在一起好好看。它们",
+            "changed": true
+          },
+          {
+            "text": "想",
+            "changed": false
+          },
+          {
+            "text": "讨论",
+            "changed": true
+          },
+          {
+            "text": "的是",
+            "changed": false
+          },
+          {
+            "text": "一件很具体的事",
+            "changed": true
+          },
+          {
+            "text": "：",
+            "changed": false
+          },
+          {
+            "text": "羽绒服",
+            "changed": false
+          },
+          {
+            "text": "除了穿得暖",
+            "changed": true
+          },
+          {
+            "text": "，",
+            "changed": false
+          },
+          {
+            "text": "能不能也",
+            "changed": true
+          },
+          {
+            "text": "穿出",
+            "changed": false
+          },
+          {
+            "text": "利落",
+            "changed": true
+          },
+          {
+            "text": "的",
+            "changed": false
+          },
+          {
+            "text": "感觉",
+            "changed": true
+          },
+          {
+            "text": "？",
+            "changed": false
+          },
+          {
+            "text": "从宋佳身上",
+            "changed": true
+          },
+          {
+            "text": "的",
+            "changed": false
+          },
+          {
+            "text": "风衣款",
+            "changed": true
+          },
+          {
+            "text": "，",
+            "changed": false
+          },
+          {
+            "text": "到成片展示",
+            "changed": true
+          },
+          {
+            "text": "的",
+            "changed": false
+          },
+          {
+            "text": "其他系列",
+            "changed": true
+          },
+          {
+            "text": "，",
+            "changed": false
+          },
+          {
+            "text": "这",
+            "changed": false
+          },
+          {
+            "text": "次的视觉方向都在回应这个问题",
+            "changed": true
+          },
+          {
+            "text": "。",
+            "changed": false
+          }
+        ],
+        "after": [
+          {
+            "text": "很多人一到",
+            "changed": true
+          },
+          {
+            "text": "冬天，",
+            "changed": false
+          },
+          {
+            "text": "就开始在暖",
+            "changed": true
+          },
+          {
+            "text": "和",
+            "changed": false
+          },
+          {
+            "text": "和利落之间做选择。看",
+            "changed": true
+          },
+          {
+            "text": "宋佳",
+            "changed": false
+          },
+          {
+            "text": "这组造型，",
+            "changed": false
+          },
+          {
+            "text": "我更",
+            "changed": true
+          },
+          {
+            "text": "想",
+            "changed": false
+          },
+          {
+            "text": "拆",
+            "changed": true
+          },
+          {
+            "text": "的是",
+            "changed": false
+          },
+          {
+            "text": "：",
+            "changed": false
+          },
+          {
+            "text": "同样是",
+            "changed": true
+          },
+          {
+            "text": "羽绒服",
+            "changed": false
+          },
+          {
+            "text": "，",
+            "changed": false
+          },
+          {
+            "text": "为什么她",
+            "changed": true
+          },
+          {
+            "text": "穿出",
+            "changed": false
+          },
+          {
+            "text": "来不是只有厚重感，而是一个人",
+            "changed": true
+          },
+          {
+            "text": "的",
+            "changed": false
+          },
+          {
+            "text": "状态",
+            "changed": true
+          },
+          {
+            "text": "？",
+            "changed": false
+          },
+          {
+            "text": "先看这件外套",
+            "changed": true
+          },
+          {
+            "text": "的",
+            "changed": false
+          },
+          {
+            "text": "领型、腰带和整体轮廓",
+            "changed": true
+          },
+          {
+            "text": "，",
+            "changed": false
+          },
+          {
+            "text": "再看这些细节怎么接住她",
+            "changed": true
+          },
+          {
+            "text": "的",
+            "changed": false
+          },
+          {
+            "text": "气质。人物和产品",
+            "changed": true
+          },
+          {
+            "text": "，",
+            "changed": false
+          },
+          {
+            "text": "要在",
+            "changed": true
+          },
+          {
+            "text": "这",
+            "changed": false
+          },
+          {
+            "text": "里接起来",
+            "changed": true
+          },
+          {
+            "text": "。",
+            "changed": false
+          }
+        ],
+        "reason": "把品牌介绍转成冬季穿衣问题，以可观察轮廓承接人物气质；仅为当前编辑提案，不宣称已经改善留存。",
+        "author_status": "AI辅助当前草案，未由祖仁泽试讲确认"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1183 @@
+{
+  "schema": "hualaoban-work-selection/v1",
+  "rule": "A OR B OR C",
+  "updated_on": "2026-11-05",
+  "employment": {
+    "start_month": "2025-03",
+    "start_day": null,
+    "end": "2026-10-20",
+    "filter_start_assumption": "2025-03-01",
+    "ranking_start": "2025-04-01",
+    "note": "3月具体入职日未确认；3月1日仅为图表按月筛选起点。排行排除3月待核作品。"
+  },
+  "recent_window": {
+    "start": "2026-07-01",
+    "end": "2026-10-31"
+  },
+  "metric_snapshot": "2026-10-31",
+  "coverage": {
+    "catalog": 595,
+    "dated": 203,
+    "date_unknown": 392,
+    "employment_dated_videos": 68,
+    "march_boundary": 2,
+    "window_known_views": 15,
+    "recent": 12,
+    "recent_in_employment": 10,
+    "recent_after_exit": 2
+  },
+  "rankings": {
+    "A": [
+      "7547670462312336700",
+      "7489333453977111865",
+      "7496770456767253817"
+    ],
+    "B": [
+      "7561699295905369404",
+      "7654134834776443313",
+      "7521307066273041724",
+      "7547670462312336700"
+    ]
+  },
+  "works": [
+    {
+      "id": "7547670462312336700",
+      "url": "https://www.douyin.com/video/7547670462312336700",
+      "title": "辛芷蕾拿的威尼斯影后含金量有多高？ 什么叫撕奖？vogue金九怎么输了？赵涛老师到底是谁？威尼斯红毯都谁封神了？哪些品牌压对了宝？",
+      "date": "2025-09-08",
+      "published_display": "2025-09-08 06:56",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 381000,
+          "display": "38.1万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "comments": {
+          "value": 2839,
+          "display": "2839",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 16000,
+          "display": "1.6万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "favorites": {
+          "value": 16000,
+          "display": "1.6万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "views": {
+          "value": 8913401,
+          "display": "8,913,401",
+          "source_id": "table-playback-readback",
+          "as_of": "2026-11-05",
+          "exactness": "integer-display"
+        }
+      },
+      "selection": [
+        "A",
+        "B"
+      ],
+      "ranks": {
+        "A": 1,
+        "B": 4
+      },
+      "playback_rank": {
+        "group": "原表补查样本",
+        "rank": 2
+      },
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7547670462312336700.jpg",
+      "playback_readback": {
+        "value": 8913401,
+        "as_of": "2026-11-05"
+      },
+      "contribution": {
+        "duties": [
+          "选题",
+          "资料整理",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7489333453977111865",
+      "url": "https://www.douyin.com/video/7489333453977111865",
+      "title": "XG这么怪 到底是谁在爱",
+      "date": "2025-04-04",
+      "published_display": "2025-04-04 01:58",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 183000,
+          "display": "18.3万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "comments": {
+          "value": 1061,
+          "display": "1061",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 8911,
+          "display": "8911",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 6347,
+          "display": "6347",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": null
+      },
+      "selection": [
+        "A"
+      ],
+      "ranks": {
+        "A": 2
+      },
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7489333453977111865.jpg",
+      "playback_readback": {
+        "value": 5855990,
+        "as_of": "2026-11-05"
+      },
+      "contribution": {
+        "duties": [
+          "选题",
+          "资料整理",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7496770456767253817",
+      "url": "https://www.douyin.com/video/7496770456767253817",
+      "title": "北美疯王已把毒手伸向闺女",
+      "date": "2025-04-24",
+      "published_display": "2025-04-24 02:58",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 177000,
+          "display": "17.7万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "comments": {
+          "value": 1674,
+          "display": "1674",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 23000,
+          "display": "2.3万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "favorites": {
+          "value": 11000,
+          "display": "1.1万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "views": null
+      },
+      "selection": [
+        "A"
+      ],
+      "ranks": {
+        "A": 3
+      },
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7496770456767253817.jpg",
+      "playback_readback": {
+        "value": 7130070,
+        "as_of": "2026-11-05"
+      },
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7561699295905369404",
+      "url": "https://www.douyin.com/video/7561699295905369404",
+      "title": "个性但不小众！这才是永不过时的时尚！",
+      "date": "2025-10-16",
+      "published_display": "2025-10-16 05:00",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 48000,
+          "display": "4.8万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "comments": {
+          "value": 1076,
+          "display": "1076",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 5802,
+          "display": "5802",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 6674,
+          "display": "6674",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 29521000,
+          "display": "2,952.1w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "B"
+      ],
+      "ranks": {
+        "B": 1
+      },
+      "playback_rank": {
+        "group": "同日播放样本",
+        "rank": 1
+      },
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7561699295905369404.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "资料整理",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7654134834776443313",
+      "url": "https://www.douyin.com/video/7654134834776443313",
+      "title": "白金发困住了她？Rosé rose的美貌好像失灵了，今年的Met Gala，她明明没翻车，甚至漂亮得体的，拿到了各大外媒统一的高分评价，但打开评论区，却是一水的差评“boring”。确实，三次征战Met Gala，主题年年变，可她却次次白金发黑白裙，甚至随便一个路人，都能预知她下次出席红毯是什么样子。她就像一个ai，永远给出最得体、最正确的回答，却忘了大家真正喜欢她的原因。所以问题不是她不再漂亮，而是为什么她的漂亮，观众不买帐了？",
+      "date": "2026-06-22",
+      "published_display": "2026-06-22 04:32",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 43000,
+          "display": "4.3万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "comments": {
+          "value": 640,
+          "display": "640",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 2128,
+          "display": "2128",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 2031,
+          "display": "2031",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 3717000,
+          "display": "371.7w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "B"
+      ],
+      "ranks": {
+        "B": 2
+      },
+      "playback_rank": {
+        "group": "同日播放样本",
+        "rank": 2
+      },
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7654134834776443313.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "资料整理",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7521307066273041724",
+      "url": "https://www.douyin.com/video/7521307066273041724",
+      "title": "赘胥又整新活了",
+      "date": "2025-06-29",
+      "published_display": "2025-06-29 05:52",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 156000,
+          "display": "15.6万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "comments": {
+          "value": 5574,
+          "display": "5574",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 35000,
+          "display": "3.5万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "favorites": {
+          "value": 12000,
+          "display": "1.2万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "views": {
+          "value": 14872983,
+          "display": "14,872,983",
+          "source_id": "table-playback-readback",
+          "as_of": "2026-11-05",
+          "exactness": "integer-display"
+        }
+      },
+      "selection": [
+        "B"
+      ],
+      "ranks": {
+        "B": 3
+      },
+      "playback_rank": {
+        "group": "原表补查样本",
+        "rank": 1
+      },
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7521307066273041724.jpg",
+      "playback_readback": {
+        "value": 14872983,
+        "as_of": "2026-11-05"
+      },
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7659346015313376762",
+      "url": "https://www.douyin.com/video/7659346015313376762",
+      "title": "C罗到底爱她啥？ 乔治娜重新定义的了灰姑娘童话，开局那点运气，不过是张入场券。能把天崩开局，续写成幸福结局，靠的可不是那双水晶鞋。",
+      "date": "2026-07-06",
+      "published_display": "2026-07-06 05:34",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 22000,
+          "display": "2.2万",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        },
+        "comments": {
+          "value": 104,
+          "display": "104",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 1512,
+          "display": "1512",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 1832,
+          "display": "1832",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 934000,
+          "display": "93.4w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7659346015313376762.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7661927534112115451",
+      "url": "https://www.douyin.com/video/7661927534112115451",
+      "title": "我们中国设计现在有多好看？ 在抖音时尚设计师大赛上，这个关于“源”的问题很引人深思，吕老师给出的答案我记了下来：守住缘起，并把它用商业的语言翻译出来，用这种方式把品牌的DNA传承下去。我想不仅是设计师，这也是给每一位创作者最好的解法：做自己和追流量不应该是单选题。",
+      "date": "2026-07-13",
+      "published_display": "2026-07-13 04:32",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 1452,
+          "display": "1452",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 21,
+          "display": "21",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 48,
+          "display": "48",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 131,
+          "display": "131",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 64000,
+          "display": "6.4w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7661927534112115451.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7663808227863781809",
+      "url": "https://www.douyin.com/video/7663808227863781809",
+      "title": "两个强势的人注定不能在一起吗？ 至少，在彼此的最佳赏味期，他们轰轰烈烈的爱过。",
+      "date": "2026-07-18",
+      "published_display": "2026-07-18 06:10",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 3523,
+          "display": "3523",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 52,
+          "display": "52",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 136,
+          "display": "136",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 372,
+          "display": "372",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 232000,
+          "display": "23.2w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7663808227863781809.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7665685697848866489",
+      "url": "https://www.douyin.com/video/7665685697848866489",
+      "title": "霉霉还是嫁给了“最普”的他 可就在大家都觉得，全世界公认的世女一，身家140亿的女富豪，会一辈子只享受恋爱不结婚时。霉霉不但嫁了，还嫁给了一位资产、名气、影响力，都不敌自己二十分之一，甚至还是个毫无艺术细胞和精神共鸣的粗线条体育生，姐夫到底凭什么？",
+      "date": "2026-07-23",
+      "published_display": "2026-07-23 07:35",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 4196,
+          "display": "4196",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 57,
+          "display": "57",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 299,
+          "display": "299",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 454,
+          "display": "454",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 197000,
+          "display": "19.7w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7665685697848866489.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7673141448158544817",
+      "url": "https://www.douyin.com/video/7673141448158544817",
+      "title": "alo来了，你会买吗？ 请露思是开局即巅峰，可alo之后呢？",
+      "date": "2026-08-12",
+      "published_display": "2026-08-12 09:47",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 2030,
+          "display": "2030",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 111,
+          "display": "111",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 547,
+          "display": "547",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 166,
+          "display": "166",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 199000,
+          "display": "19.9w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7673141448158544817.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7680526216693392497",
+      "url": "https://www.douyin.com/video/7680526216693392497",
+      "title": "这辈子没受过这么大委屈，施*洛*奇请给我一个解释",
+      "date": "2026-09-01",
+      "published_display": "2026-09-01 07:24",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 5597,
+          "display": "5597",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 528,
+          "display": "528",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 336,
+          "display": "336",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 251,
+          "display": "251",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 251000,
+          "display": "25.1w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7680526216693392497.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7683874525020673253",
+      "url": "https://www.douyin.com/video/7683874525020673253",
+      "title": "这哥们真要从卡戴珊家，拿到大结果了？ 大布们的魅力就在于，他能精准填补富家女心中那个与生俱来的洞。",
+      "date": "2026-09-10",
+      "published_display": "2026-09-10 07:57",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 3860,
+          "display": "3860",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 106,
+          "display": "106",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 450,
+          "display": "450",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 418,
+          "display": "418",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 188000,
+          "display": "18.8w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7683874525020673253.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7690819270431337851",
+      "url": "https://www.douyin.com/video/7690819270431337851",
+      "title": "北美的老钱新贵们是怎么做到无限回春的？？",
+      "date": "2026-09-29",
+      "published_display": "2026-09-29 06:29",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 358,
+          "display": "358",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 20,
+          "display": "20",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 34,
+          "display": "34",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 42,
+          "display": "42",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 164000,
+          "display": "16.4w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7690819270431337851.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7691975616564657905",
+      "url": "https://www.douyin.com/video/7691975616564657905",
+      "title": "中国高定设计师郭培：我的一切灵感源于祖国 如果有人问你，咱们中国有高定吗？你可以很自豪的回答，当然有！然后骄傲地报上她的名字，郭培。谷爱凌只要出席国际活动必穿她的礼服，伊万卡穿她的衣服参加国宴，那条让山东天后一战成名的煎饼装，也出自她手。 她的巴黎首展，让设计天才高田贤三先生，蹲在地上目不转睛的看。她在纽约办展，博物馆能拱手让出馆内最大的付费区域，只为供她陈列作品。 在经历世界各大知名博物馆的展演过后，郭培的作品，终于呈现在国内观众面前了，这次杭州丝绸博物馆的特展以《灵境花园》为题，将她40年设计生涯，一次性搬到了西子湖畔。 如果不是亲眼所见，你无法想象世界上还有人这么做衣服。 作为新中国第一代服装设计专业的毕业生，毕业后先后在两家企业做设计，那时只要是出自她的手稿 ，做出来的衣服就是爆款。有人慕名找她定制衣服，找的人多了，她就成立了工作室玫瑰坊。40年的积累，一针一线，绣出了在巴黎高定时装周惊艳世界的十个系列，化作了近三百位绣娘一针一线凝聚的东方刺绣荣光。 上世纪70年代，一个小女孩每天放学后的第一件事 ，就是帮视力不好的母亲穿针引线，这个看似简单的动作，却成了她最早的美学启蒙。“每一针都要恰到好处”这是母亲无声的教诲，也成了郭培一生坚守的设计哲学。 如今，郭培早已不再是那个，只能在穿针引线中想象一件华服的小女孩。而是真正成为了中华文化的传承者、引领者，而她最打动我的，永远都是采访时对我说的这句话：“我没有接受过一天国外的教育 我的一切灵感，都来源于祖国。”",
+      "date": "2026-10-02",
+      "published_display": "2026-10-02 03:53",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 2147,
+          "display": "2147",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 22,
+          "display": "22",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 190,
+          "display": "190",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 217,
+          "display": "217",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 91000,
+          "display": "9.1w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7691975616564657905.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7693545828631202417",
+      "url": "https://www.douyin.com/video/7693545828631202417",
+      "title": "受够老钱风的寡淡，拿破仑外套终于又流行了 当权志龙穿着拿破仑外套重回流行之巅，我就知道时尚圈变天了。Jennie将它从秀场带到舞台，柳智敏把它穿成ootd，Bella Hadid、Dua Lipa纷纷上身。快时尚一口气推出50款关于它的新品，现在愣是一件都抢不到，淘宝上的打板货都能卖到400多。这几年的老钱风、松弛感，大家是真受够了。高调惹眼、极繁风格的拿破仑外套，就是所有人对那个低调奢华时代的呐喊。现在，我只想穿那件人群中一眼就被看见的衣服。",
+      "date": "2026-10-06",
+      "published_display": "2026-10-06 09:27",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 718,
+          "display": "718",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 41,
+          "display": "41",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 189,
+          "display": "189",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 88,
+          "display": "88",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 77000,
+          "display": "7.7w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "employment_window",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7693545828631202417.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "写稿",
+          "拍摄",
+          "剪辑"
+        ],
+        "summary": "本人负责选题、写稿、拍摄和剪辑全流程"
+      }
+    },
+    {
+      "id": "7699436259345709690",
+      "url": "https://www.douyin.com/video/7699436259345709690",
+      "title": "她到底对自己做了什么？",
+      "date": "2026-10-22",
+      "published_display": "2026-10-22 06:25",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 2844,
+          "display": "2844",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 24,
+          "display": "24",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 165,
+          "display": "165",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 196,
+          "display": "196",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 146000,
+          "display": "14.6w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "after_exit",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7699436259345709690.jpg",
+      "contribution": {
+        "duties": [
+          "选题",
+          "文案",
+          "花老板口播拍摄",
+          "剪辑"
+        ],
+        "summary": "已确认选题、文案、花老板口播拍摄与剪辑"
+      }
+    },
+    {
+      "id": "7701314562998416122",
+      "url": "https://www.douyin.com/video/7701314562998416122",
+      "title": "miumiu女孩们都转头去买拉夫劳伦了 这不止是一个商业层面的问题，还有品牌创始人的内核。说到底，一个品牌在没被资本全面入侵前，它的天花板，是无法突破创始人人格的。被资本收购后其实也一样，变成统一的资本家人格了。",
+      "date": "2026-10-27",
+      "published_display": "2026-10-27 07:53",
+      "date_source": "douyin-detail",
+      "metrics": {
+        "likes": {
+          "value": 408,
+          "display": "408",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "comments": {
+          "value": 11,
+          "display": "11",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "shares": {
+          "value": 29,
+          "display": "29",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "favorites": {
+          "value": 41,
+          "display": "41",
+          "source_id": "douyin-detail",
+          "as_of": "2026-10-31",
+          "exactness": "integer-display"
+        },
+        "views": {
+          "value": 24000,
+          "display": "2.4w",
+          "source_id": "xingtu-work",
+          "as_of": "2026-10-31",
+          "exactness": "rounded-display"
+        }
+      },
+      "selection": [
+        "C"
+      ],
+      "ranks": {},
+      "publication_group": "after_exit",
+      "entry_month_boundary": false,
+      "cover": "media/work-covers/7701314562998416122.jpg"
+    }
+  ],
+  "scope_note": "2026.10.31累计快照：目录595条，已核日期203条；2025.04—2026.10.20已核作品68条。3月具体入职日未明，另有2条边界作品不计入榜。播放分同日15条样本与原表补查4条，各展示前二。",
+  "playback_groups": {
+    "same_snapshot": [
+      "7561699295905369404",
+      "7654134834776443313"
+    ],
+    "table_readback": [
+      "7521307066273041724",
+      "7547670462312336700"
+    ],
+    "table_sample_count": 4
+  }
+}

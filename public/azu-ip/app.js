@@ -1,4 +1,4 @@
-import { createSiteSound } from './sound.js?v=20261019-sound-recovery';
+import { createSiteSound } from './sound.js?v=20261031-album-rest';
 const siteSound = createSiteSound();
 const $ = (s) => document.querySelector(s);
 // Resolves when the visitor clicks into the site (enter page), or straight away when there is none.
@@ -10,7 +10,8 @@ const entered = new Promise(resolve => {
   const go = async () => {
     if(entering) return;
     entering = true;
-    await siteSound.unlock();
+    // Unlock audio in the gesture, while letting the page enter immediately.
+    void siteSound.unlock().catch(()=>{});
     root.classList.add('entered'); gate.setAttribute('aria-hidden', 'true');
     wordmark.disabled = true; resolve(true);
   };
@@ -22,7 +23,10 @@ const entered = new Promise(resolve => {
   try { wordmark.focus({ preventScroll: true, focusVisible: false }); }
   catch { wordmark.focus({ preventScroll: true }); }
 });
-const content = await fetch('./content.json?v=20261025-drop').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
+// The first screen starts independently of the content catalog and videos.
+entered.then(()=>document.body.classList.add('intro-visible','scroll-visible'));
+setupHeadlineDrop();
+const content = await fetch('./content.json?v=20261105-hua-tenure1').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
 import { setupWorld } from './world.js?v=20261018-move';
 
 const openPersonalCard = fillPhotoFan($('#world .photo-fan'));
@@ -57,47 +61,42 @@ setupToolbox();
 setupIpBoards();
 setupNowPlaying();
 setupContact();
-setupHeadlineDrop();
 setupCharacter();
 
 function setupWorkGallery(){
   const track = $('#work-track');
   const cards = [...track.querySelectorAll('.work-slot')];
-  const buttons = [...track.querySelectorAll('.work-select')];
-  let active = -1;
+  const controls = [...track.querySelectorAll('.work-select')];
+  let active = null;
   const select = index => {
-    const target = (index + cards.length) % cards.length;
-    if(target === active) return;
-    active = target;
+    if(index === active) return;
+    active = index;
     cards.forEach((card, i) => {
       card.classList.toggle('is-active', i === active);
-      // Keep the catalogue order fixed: Xiaoyi (01) always sits above 02 and 03.
-      // Hover and focus may pull a record out, but never reorder the sleeves.
-      card.style.zIndex = String(cards.length - i);
-      if(buttons[i].tagName === 'BUTTON') buttons[i].setAttribute('aria-pressed', String(i === active));
+      card.style.zIndex = String(i === active ? cards.length + 1 : cards.length - i);
+      if(controls[i].tagName === 'BUTTON') controls[i].setAttribute('aria-pressed', String(i === active));
     });
   };
   cards.forEach((card, i) => {
-    // Each sleeve itself is the control; its uncovered half stays reachable.
-    // No hover reset or movement can make neighbouring cards fight for focus.
-    const hover = event => { if(event.pointerType !== 'touch') select(i); };
-    card.addEventListener('pointerenter', hover);
-
-    buttons[i].addEventListener('click', () => select(i));
-    buttons[i].addEventListener('focus', () => select(i));
+    card.addEventListener('pointerenter', event => { if(event.pointerType !== 'touch') select(i); });
+    controls[i].addEventListener('focus', () => select(i));
+    controls[i].addEventListener('click', () => {
+      select(i);
+      if(controls[i].tagName === 'A') return;
+      const project = content.projects?.[i];
+      if(project) openPersonalCard({...project, theme:'project', number:String(i+1).padStart(2,'0')}, controls[i]);
+    });
   });
+  track.addEventListener('pointerleave', () => select(-1));
+  track.addEventListener('focusout', event => { if(!track.contains(event.relatedTarget)) select(-1); });
   track.addEventListener('keydown', event => {
-    let target;
-    if(event.key === 'ArrowLeft') target = (active - 1 + cards.length) % cards.length;
-    else if(event.key === 'ArrowRight') target = (active + 1) % cards.length;
-    else if(event.key === 'Home') target = 0;
-    else if(event.key === 'End') target = cards.length - 1;
-    else return;
-    event.preventDefault();
-    buttons[target].focus({preventScroll:true});
+    const next = event.key === 'ArrowLeft' ? (active < 0 ? cards.length - 1 : (active - 1 + cards.length) % cards.length) :
+      event.key === 'ArrowRight' ? (active + 1) % cards.length :
+      event.key === 'Home' ? 0 : event.key === 'End' ? cards.length - 1 : null;
+    if(next === null) return;
+    event.preventDefault(); controls[next].focus({preventScroll:true});
   });
-  // Start with Xiaoyi; keep the most recently chosen sleeve in front.
-  select(0);
+  select(-1);
 }
 
 async function setupToolbox(){
@@ -107,7 +106,7 @@ async function setupToolbox(){
   const scroller = root.querySelector('.toolbox-scroll');
   let catalog = [];
   try {
-    const response = await fetch('../secret-weapons/catalog.json?v=20261025-drop');
+    const response = await fetch('./assets/zurenze/tools.json?v=20261031-content');
     if(!response.ok) throw Error('Tool catalog unavailable');
     catalog = (await response.json()).filter(tool => tool.id !== 'markdown');
   } catch(error) { console.warn('Tool catalog unavailable', error); }
@@ -135,11 +134,8 @@ async function setupToolbox(){
     // when a raised cover travels across its neighbours. CSS retargets in flight.
     const tools = toolsFor(i);
     if(tools.length){
-      card.dataset.coverTheme = tools[0].coverTheme;
-      const art = card.querySelector('.toolbox-art'); art.classList.add('has-tool-covers');
-      art.replaceChildren(...tools.slice(0, 2).map(tool => createToolCover(tool)));
       card.querySelector('.toolbox-cover-footer b').textContent = `${tools.length} ↗`;
-      card.setAttribute('aria-label', card.tagName === 'A' ? `打开${card.dataset.topic} · ${tools[0].shortName || tools[0].name}` : `${card.dataset.title}：${card.dataset.topic}，${tools.map(tool => tool.name).join('、')}`);
+      card.setAttribute('aria-label', `打开${card.dataset.title}`);
     }
     if(card.tagName !== 'A'){
       card.setAttribute('aria-haspopup', 'dialog');
@@ -169,7 +165,7 @@ function createToolCover(tool){
   const cover = document.createElement('span');cover.className='tool-cover';
   cover.dataset.tone=tool.coverTheme || 'paper';
   const image=document.createElement('img');
-  image.src=new URL(tool.cover,new URL('../secret-weapons/',location.href)).href;
+  image.src=new URL(tool.cover,location.href).href;
   image.alt='';image.width=200;image.height=132;
   const name=document.createElement('span');name.textContent=tool.shortName || tool.name;
   cover.append(image,name);return cover;
@@ -189,7 +185,7 @@ function createToolEntry(tool, compact = false){
     entry.append(tagline);
   }
   const actions = document.createElement('div'); actions.className = 'tool-entry-actions';
-  for(const [url,label,download] of [[tool.web,'在线打开',false],[tool.download,'下载 Mac',true]]){
+  for(const [url,label,download] of [[tool.web,tool.webLabel || (tool.localOnly?'本机打开':'查看项目'),false],[tool.download,'下载 Mac',true]]){
     if(!url)continue;
     const link = document.createElement('a');
     link.href = new URL(url, new URL('../secret-weapons/',location.href)).href;
@@ -216,21 +212,121 @@ function createToolEntry(tool, compact = false){
 }
 
 function setupContact(){
-  const email = content.contact?.email?.trim();
-  if(!email){ $('.contact-email').hidden = true; return; }
-  $('#contact-email').textContent = email;
-  $('#copy-email').disabled = false;
-  $('#send-email').hidden = false;
-  $('#send-email').href = `mailto:${email}`;
-  $('#contact-status').textContent = '';
-  $('#copy-email').addEventListener('click', async () => {
-    try{
-      await navigator.clipboard.writeText(email);
-      $('#contact-status').textContent = '邮箱已复制';
-    }catch{
-      $('#contact-status').textContent = '暂时无法自动复制，请选中上方邮箱手动复制。';
-    }
+  const status = $('#contact-status');
+  for(const key of ['phone', 'email']){
+    const value = content.contact?.[key]?.trim();
+    const block = $('.contact-' + key);
+    block.hidden = !value;
+    if(!value) continue;
+    $('#contact-' + key).textContent = value;
+    const action = $(key === 'phone' ? '#call-phone' : '#send-email');
+    action.hidden = false;
+    action.href = (key === 'phone' ? 'tel:' : 'mailto:') + value;
+    const copy = $('#copy-' + key);
+    copy.disabled = false;
+    copy.addEventListener('click', async () => {
+      const label = key === 'phone' ? '电话 / 微信号' : '邮箱';
+      try{
+        await navigator.clipboard.writeText(value);
+        status.textContent = label + '已复制';
+      }catch{
+        status.textContent = '暂时无法自动复制，请选中上方' + label + '手动复制。';
+      }
+    });
+  }
+}
+
+function createMaterialsPreview(items){
+  const section=document.createElement('section');section.className='world-materials-gallery';section.setAttribute('aria-label','工具与素材界面');
+  for(const item of items){const figure=document.createElement('figure'),button=document.createElement('button'),image=document.createElement('img'),caption=document.createElement('figcaption'),title=document.createElement('b'),copy=document.createElement('span');
+    button.type='button';button.setAttribute('aria-label','放大查看'+item.title);image.src=item.src;image.alt=item.alt;image.width=item.width;image.height=item.height;image.loading='lazy';button.append(image);button.addEventListener('click',()=>openMaterialsImage(item,button));title.textContent=item.title+' ↗';copy.textContent=item.caption;caption.append(title,copy);figure.append(button,caption);section.append(figure);
+  }return section;
+}
+let materialsImageDialog,materialsImageTrigger;
+function openMaterialsImage(item,trigger){
+  if(!materialsImageDialog){materialsImageDialog=document.createElement('dialog');materialsImageDialog.className='materials-image-dialog';materialsImageDialog.setAttribute('aria-label','素材截图大图');materialsImageDialog.innerHTML='<header><p></p><button type="button" aria-label="关闭素材大图">关闭 ×</button></header><img alt="">';document.body.append(materialsImageDialog);materialsImageDialog.querySelector('button').addEventListener('click',()=>materialsImageDialog.close());materialsImageDialog.addEventListener('click',e=>{if(e.target===materialsImageDialog)materialsImageDialog.close();});materialsImageDialog.addEventListener('close',()=>{materialsImageDialog.querySelector('img').removeAttribute('src');materialsImageTrigger?.focus({preventScroll:true});});}
+  materialsImageTrigger=trigger;const image=materialsImageDialog.querySelector('img');image.src=item.src;image.alt=item.alt;materialsImageDialog.querySelector('p').textContent=item.title;materialsImageDialog.showModal();materialsImageDialog.querySelector('button').focus();
+}
+function createAudiovisualShowcase(data){
+  const node = (tag, className, text) => {
+    const element = document.createElement(tag);
+    element.className = className;
+    if(text) element.textContent = text;
+    return element;
+  };
+  const link = (text, href) => {
+    const a = node('a', 'av-file', text); a.href = href; a.download = ''; return a;
+  };
+  const player = (src, label) => {
+    const audio = document.createElement('audio');
+    audio.controls = true; audio.preload = 'metadata'; audio.src = src; audio.tabIndex = 0;
+    audio.setAttribute('aria-label', label); return audio;
+  };
+  const root = node('div', 'av-showcase');
+  const voice = node('section', 'av-voice');
+  const voiceName = data.voice.name || '祖仁泽';
+  voice.setAttribute('aria-label', `${voiceName}原声与${data.voice.models.length}模型试听对照`);
+  voice.append(node('p', 'av-eyebrow', '01 / 声音克隆'), node('h3', '', data.voice.title || '用我的声音，读新的文案。'));
+  const inputs = node('div', 'av-inputs');
+  const reference = node('article', 'av-input av-reference');
+  reference.append(node('h4', '', data.voice.referenceLabel || '本人参考原声'), node('span', 'av-meta', `${data.voice.referenceMeta || '电脑录音'} · ${data.voice.referenceDuration.toFixed(2)}秒`),
+    player(data.voice.reference, `试听${voiceName}参考原声`), node('blockquote', '', data.voice.referenceText));
+  if(data.voice.fullReference) reference.append(link('完整原声录音 ↓', data.voice.fullReference));
+  if(data.voice.referenceSourceUrl){const source=node('a','av-file','打开原视频 ↗');source.href=data.voice.referenceSourceUrl;source.target='_blank';source.rel='noopener noreferrer';reference.append(source);}
+  if(data.voice.cloningReference) reference.append(link('去伴奏克隆参考 ↓',data.voice.cloningReference));
+  const script = node('article', 'av-input av-script');
+  script.append(node('h4', '', `给${data.voice.models.length}个模型的同一份文案`), node('span', 'av-meta', data.voice.scriptLabel || '统一试音稿'), node('blockquote', '', data.voice.text));
+  inputs.append(reference, script); voice.append(inputs);
+  const flow = node('ol', 'av-flow');
+  (data.voice.flow || ['采集参考原声', '输入新文案', '模型生成', '对照试听']).forEach((text, i) => {
+    const step = node('li', ''); step.append(node('b', '', String(i + 1).padStart(2, '0')), document.createTextNode(text)); flow.append(step);
   });
+  voice.append(flow, node('p', 'av-listening-note', data.voice.note || '以下为同响度试听；每段保留原始合成。'));
+  const models = node('div', 'av-models');
+  data.voice.models.forEach((model, i) => {
+    const card = node('article', 'av-model');
+    card.append(node('span', 'av-eyebrow', `${model.backend || 'LOCAL'} / ${String(i + 1).padStart(2, '0')}`), node('h4', '', model.name));
+    const wave = node('img', 'av-wave'); wave.src = model.wave; wave.alt = `${model.name}试听音频的实际波形`; wave.width = 900; wave.height = 120; wave.loading = 'lazy';
+    card.append(wave, player(model.src, `试听${voiceName}的${model.name}克隆音`));
+    const facts = node('dl', 'av-facts');
+    const rows=[['音频时长', `${model.duration.toFixed(2)}秒`], ['采样率', `${model.sampleRate / 1000}kHz`]];
+    if(model.elapsed != null) rows.push(['当次用时', `${model.elapsed.toFixed(2)}秒`]);
+    if(model.seed != null) rows.push(['随机种子', String(model.seed)]);
+    rows.forEach(([label, text]) => {const fact = node('div', ''); fact.append(node('dt', '', label), node('dd', '', text)); facts.append(fact);});
+    card.append(facts, link(`下载原始${model.rawFormat || 'WAV'} ↓`, model.raw)); models.append(card);
+  });
+  voice.append(models); root.append(voice);
+  const avatar = node('section', 'av-avatar');
+  avatar.append(node('p', 'av-eyebrow', '02 / 数字人'), node('h3', '', '从脚本、配音，到数字人口播。'), node('p', '', '涉及真人肖像的项目演示暂不公开，可采用原创虚拟形象。'));
+  root.append(avatar);
+  const film = node('section', 'av-film');
+  film.append(node('p', 'av-eyebrow', '03 / AIGC影像'));
+  if(data.shots?.length){
+    film.append(node('h3', '', 'AIGC镜头作品'));
+    const shots = node('div', 'av-shot-grid');
+    data.shots.forEach((clip, i) => {
+      const figure = node('figure', 'av-shot');
+      const player = document.createElement('video');
+      player.controls = true; player.playsInline = true; player.preload = 'metadata';
+      player.poster = clip.poster; player.src = clip.src; player.tabIndex = 0;
+      player.width = 1280; player.height = 720;
+      player.setAttribute('aria-label', `播放AIGC镜头：${clip.title}`);
+      const caption = node('figcaption', '');
+      caption.append(node('span', 'av-clip-meta', `${String(i + 1).padStart(2, '0')} / AIGC · ${clip.duration.toFixed(2)}秒`), node('h4', '', clip.title));
+      figure.append(player, caption); shots.append(figure);
+    });
+    film.append(shots);
+  }
+  film.append(node('h3', 'av-mv-title', '原创小说《灵珠》· 剧情MV'));
+  const video = document.createElement('video');
+  video.controls = true; video.playsInline = true; video.preload = 'none'; video.poster = data.film.poster; video.src = data.film.src; video.tabIndex = 0;
+  video.setAttribute('aria-label', '播放灵珠78秒剧情MV');
+  film.append(video, node('p', 'av-film-credit', '78秒完整成片 · 原作小说：祖仁泽独立创作 · 歌曲与影像：祖仁泽 × AI共创'));
+  root.append(film);
+  root.addEventListener('play', event => {
+    root.querySelectorAll('audio,video').forEach(media => { if(media !== event.target) media.pause(); });
+  }, true);
+  return root;
 }
 
 function fillPhotoFan(gallery){
@@ -243,7 +339,7 @@ function fillPhotoFan(gallery){
   dialog.innerHTML = `<button class="world-dialog-close" type="button" aria-label="关闭介绍">×</button>
     <div class="world-story-layout"><div class="world-story-photo"><img alt=""><span class="world-media-word" aria-hidden="true"></span><div class="world-story-archive" hidden><b></b><strong></strong></div><div class="world-story-tool-covers" hidden></div></div>
     <div class="world-story-content"><h2 id="world-story-title"></h2>
-    <p class="world-story-lead"></p><div class="world-song-grid" hidden></div><div class="world-story-paragraphs"></div><section class="world-story-honors" hidden aria-label="军旅荣誉"><h3>军旅荣誉</h3><div class="honor-grid"></div><p></p></section><dl class="world-story-details"></dl><div class="world-tool-list" hidden></div></div></div>`;
+    <p class="world-story-lead"></p><div class="world-song-grid" hidden></div><div class="world-story-paragraphs"></div><div class="world-materials-slot"></div><div class="world-av-slot"></div><section class="world-story-honors" hidden aria-label="军旅荣誉"><h3>军旅荣誉</h3><div class="honor-grid"></div><p></p></section><dl class="world-story-details"></dl><div class="world-tool-list" hidden></div><div class="world-project-links" hidden></div></div></div>`;
   document.body.append(dialog);
   const close = dialog.querySelector('.world-dialog-close');
   let opener = null, previousOverflow = '';
@@ -252,6 +348,7 @@ function fillPhotoFan(gallery){
   dialog.addEventListener('pointerdown', event => { backdropDown = event.target === dialog; });
   dialog.addEventListener('click', event => { if(backdropDown && event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => {
+    dialog.querySelectorAll('audio,video').forEach(media => media.pause());
     document.documentElement.style.overflow = previousOverflow;
     opener?.setAttribute('aria-expanded', 'false');
     opener?.focus({preventScroll:true});
@@ -259,6 +356,9 @@ function fillPhotoFan(gallery){
   function openStory(photo, trigger){
     if(dialog.open) return;
     opener = trigger;
+    const hasGallery=!!photo.gallery?.length;dialog.classList.toggle('world-dialog--gallery',hasGallery);dialog.querySelector('.world-story-photo').hidden=hasGallery||!!photo.showcase;const slot=dialog.querySelector('.world-materials-slot');slot.replaceChildren(...(hasGallery?[createMaterialsPreview(photo.gallery)]:[]));
+    dialog.classList.toggle('world-dialog--av', !!photo.showcase);
+    dialog.querySelector('.world-av-slot').replaceChildren(...(photo.showcase ? [createAudiovisualShowcase(photo.showcase)] : []));
     const image = dialog.querySelector('img');
     image.hidden = !photo.src;
     const archive = dialog.querySelector('.world-story-archive');
@@ -295,6 +395,9 @@ function fillPhotoFan(gallery){
       title.textContent = song.title; reason.textContent = song.reason;
       copy.append(title, reason); card.append(link, copy); return card;
     }));
+    const links=dialog.querySelector('.world-project-links');
+    links.hidden=!photo.links?.length;
+    links.replaceChildren(...(photo.links||[]).map(item=>{const link=document.createElement('a');link.href=item.url;link.textContent=item.label+' ↗';link.target='_blank';link.rel='noopener noreferrer';return link;}));
     dialog.querySelector('.world-story-lead').textContent = photo.description || '';
     dialog.querySelector('.world-story-paragraphs').replaceChildren(...(photo.paragraphs || []).map(text => {
       const p = document.createElement('p'); p.textContent = text; return p;
@@ -358,7 +461,7 @@ async function setupCharacter(){
   const fallback=()=>{
     if(broken)return;broken=true;
     video.pause();if(callback!==null)video.cancelVideoFrameCallback?.(callback);
-    const image=document.createElement('img');image.id='character';image.alt='阿祖的男性潮玩形象';image.width=720;image.height=1280;image.src=video.poster;
+    const image=document.createElement('img');image.id='character';image.alt='阿泽的男性潮玩形象';image.width=720;image.height=1280;image.src=video.poster;
     // Replace the whole media element; never stack a poster below transparent video.
     video.replaceWith(image);figure.dataset.state='fallback';replay&&(replay.hidden=true);revealAll();
   };
@@ -611,7 +714,7 @@ function setupNowPlaying(){
   const show=playing=>{button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',`${playing?'暂停':'播放'} ${bgm.artist||''}《${bgm.title||''}》`);};
   audio.addEventListener('play',()=>show(true));audio.addEventListener('pause',()=>show(false));
   const source=document.getElementById('now-playing-source');
-  if(bgm.appleMusicUrl&&!bgm.src){source.href=bgm.appleMusicUrl;source.hidden=false;}
+  if(bgm.sourceUrl){source.href=bgm.sourceUrl;source.textContent=bgm.sourceLabel||'音源与许可 ↗';source.hidden=false;}else if(bgm.appleMusicUrl&&!bgm.src){source.href=bgm.appleMusicUrl;source.hidden=false;}
   // Resolve near the music card, so playback can begin in the actual click gesture.
   async function resolve(){
     if(bgm.src)return bgm.src;
@@ -663,10 +766,10 @@ function frameHasAlpha(v){
   }catch{return false;}
 }
 
-// 01 headline. Entrance, cartoon style: each letter of SOCIAL MEDIA drops in from above the page,
+// 01 headline. Entrance, cartoon style: each letter of CONTENT & AI drops in from above the page,
 // lands a little below its place with a squash and a bounce, and cracks in two along one slanted
 // line that only just opens (a couple of tiny chips, a small puff). Once all are down the chunks snap
-// back together and the letters hop up into place; then the profile text on the left appears.
+// back together and the letters hop up into place. Profile text stays visible throughout.
 // After that the letters play with the mouse: the one nearest the pointer is pushed taller and a
 // little wider, its neighbours a little less, and they spring back when the pointer leaves.
 // Sound (a crisp tap on landing, a crack and glassy chips on breaking) is made live with Web Audio. Browsers keep sound off until
@@ -749,16 +852,12 @@ function setupHeadlineDrop(){
     dust.animate([{transform:'scale(.4,.5)',opacity:.35},{transform:'scale(1.25,1.2)',opacity:0}],{duration:450,easing:'ease-out',fill:'forwards'}).finished.then(()=>dust.remove());
   }
 
-  async function run(withSound){
+  function run(withSound){
     if(running)return;running=true;
-    const ctx=withSound?await soundReady():null;
-    if(withSound && siteSound.isEnabled() && !ctx && document.documentElement.dataset.sound!=='unavailable'){
-      running=false;box.dataset.animation='waiting-for-sound';goLive();reveal();return;
-    }
-    hasRun=true;box.dataset.animation='playing';box.dataset.animationSound=ctx?'on':'off';
+    const sound=withSound?soundReady():Promise.resolve(null),startedAt=performance.now(),hits=[];
+    hasRun=true;box.dataset.animation='playing';box.dataset.animationSound='off';
     document.body.classList.remove('headline-done');box.classList.remove('is-dropped');box.classList.add('is-dropping');
-    const letters=build(),t0=ctx?ctx.currentTime+0.02:0;
-    if(ctx)siteSound.monitor(2600);
+    const letters=build();
     letters.forEach(({g,pieces,e},i)=>{
       const rot=rnd(4,9)*(Math.random()<.5?-1:1),delay=100+i*STEP,hit=delay+FALL*0.7;
       g.animate([
@@ -773,8 +872,19 @@ function setupHeadlineDrop(){
       pieces[0].animate([{transform:'translate(0,0) rotate(0deg)'},{transform:`translate(${slip}px,-2px) rotate(${slip*0.5}deg)`}],
         {duration:220,delay:hit+FALL*0.14,easing:'cubic-bezier(.3,1.6,.6,1)',fill:'forwards'});
       setTimeout(()=>puff(e),hit);
-      if(ctx){land(ctx,t0+hit/1000,0.75);breakSound(ctx,t0+(hit+FALL*0.14)/1000,0.6);}
+      hits.push({land:hit,crack:hit+FALL*0.14});
     });
+    // Schedule only future impacts once audio becomes available. A blocked or
+    // slow audio device never delays the visual animation or hides the text.
+    sound.then(ctx=>{
+      if(!ctx||!running||document.hidden)return;
+      box.dataset.animationSound='on';siteSound.monitor(2600);
+      const elapsed=performance.now()-startedAt,now=ctx.currentTime;
+      for(const hit of hits){
+        if(hit.land>elapsed)land(ctx,now+(hit.land-elapsed)/1000,0.75);
+        if(hit.crack>elapsed)breakSound(ctx,now+(hit.crack-elapsed)/1000,0.6);
+      }
+    }).catch(()=>{box.dataset.animationSound='off';});
     const allDown=100+(letters.length-1)*STEP+FALL+350;
     setTimeout(()=>{
       const back=[];
@@ -815,8 +925,8 @@ function setupHeadlineDrop(){
   hero.addEventListener('pointerleave',()=>{last=null;if(!frame)frame=requestAnimationFrame(squeeze);});
   addEventListener('resize',()=>{if(live.length&&!running)goLive();});
 
-  // Wait only for our local headline font, not every remote font on the page.
-  const fontReady = Promise.race([document.fonts.load('160px Anton'),new Promise(resolve=>setTimeout(resolve,1500))]);
+  // Prewarm the local face behind the entry gate; never hold the entrance for it.
+  const fontReady=document.fonts.load('160px Anton').catch(()=>[]);
   let visible = false, mayStart = false;
   let initialAway = !!location.hash && location.hash !== '#home';
   const visibleHero = new IntersectionObserver(entries => {
@@ -828,11 +938,12 @@ function setupHeadlineDrop(){
   document.addEventListener('azu:sound-change',()=>{
     if(visible&&!initialAway&&mayStart&&!hasRun)run(true);
   });
-  entered.then(()=>fontReady).then(()=>{mayStart=true;if(visible&&!initialAway)run(true);});
+  entered.then(()=>{mayStart=true;if(visible&&!initialAway)run(true);});
+  fontReady.then(()=>{if(live.length&&!running)goLive();});
   // Returning through Home is an explicit replay gesture, including from deep links.
   document.querySelectorAll('a[href="#home"]').forEach(link=>link.addEventListener('click',()=>{
     initialAway=false;siteSound.unlock();
-    fontReady.then(()=>{if(mayStart)run(true);});
+    if(mayStart)run(true);
     document.dispatchEvent(new Event('azu:replay-hero'));
   }));
   box.style.cursor='pointer';box.title='点一下，再摔一次（有声音）';

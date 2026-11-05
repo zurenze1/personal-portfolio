@@ -12,8 +12,14 @@
 
 .replay[hidden]{display:none}
 
-/* Page 02: interests (left) and work (right) around one character that turns toward them. */
-.world-page{min-height:100svh;padding:clamp(56px,8svh,96px) 5% clamp(40px,7svh,72px);background:linear-gradient(180deg,#ed3d4000 0%,#ed3d4000 22%,#f06a5fb3 52%,#f5b5a3e6 80%,#f2efe8 100%),#ed3d40 url('./assets/red-paper.png') center top/100% auto repeat-y;overflow:hidden;color:#fffaf4;display:flex;flex-direction:column;justify-content:center}
+/* Page 04: interest photos and their interactive character, over the existing dark backdrop. */
+.world-page{--section-fade:clamp(120px,12vw,180px);min-height:100svh;padding:clamp(56px,8svh,96px) 5% clamp(40px,7svh,72px);background:
+    linear-gradient(180deg,
+      #ecebe700 calc(100% - var(--section-fade)),#ecebe70a calc(100% - var(--section-fade)*.88),
+      #ecebe72e calc(100% - var(--section-fade)*.72),#ecebe778 calc(100% - var(--section-fade)*.52),
+      #ecebe7b8 calc(100% - var(--section-fade)*.30),#ecebe7ef calc(100% - var(--section-fade)*.12),
+      #ecebe7 calc(100% - 2px),#ecebe7 100%),
+    radial-gradient(ellipse 60% 70% at 82% 100%,#3a3a3f 0%,#232327 45%,#1b1b1e 100%),#ecebe7;overflow:hidden;color:#fffaf4;display:flex;flex-direction:column;justify-content:center}
 /* The remaining five modules are content structures awaiting visual references. */
 .content-module{padding:100px 8%;scroll-margin-top:0}
 .module-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:50px}
@@ -112,8 +118,8 @@
 @media(prefers-reduced-motion:reduce){.fan-card:has(.is-answered){translate:none;scale:none}}
 @media(prefers-reduced-motion:reduce){.world-character{transition:none}}
 
-/* ===== IP boards: 03 创作案例 / 04 秘密武器库 / 05 联系我 =====
-   Each board is built around one looping transparent IP clip; colours come from his outfit. */
+/* ===== IP boards: 02 创作案例 / 03 秘密武器库 / 05 联系我 =====
+   Content moves as a group; backgrounds keep their original order on the page. */
 .ip-board{display:grid;align-items:center;gap:clamp(24px,5vw,80px);position:relative;overflow:hidden}
 .board-body{min-width:0;position:relative;z-index:1}
 .board-ip{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;align-self:stretch}
@@ -121,19 +127,15 @@
 .ip-video{display:block;width:100%;height:auto;background:transparent;object-fit:contain}
 .ip-stage::after{content:"";position:absolute;left:50%;bottom:-1.2%;width:62%;height:4%;translate:-50% 0;border-radius:50%;background:radial-gradient(closest-side,var(--shadow,#0006),transparent);filter:blur(4px);z-index:-1}
 
-/* 03 创作案例 — continues the cream from the photo screen; navy from his denim jacket */
+/* 02 创作案例 — directly after the hero, over the existing red-to-cream background. */
 .module-work.ip-board{
   --section-fade:clamp(120px,12vw,180px);
   grid-template-columns:minmax(220px,30%) 1fr;
-  /* Keep the fade below the content, ending in the next section's exact charcoal. */
-  background:linear-gradient(180deg,
-    #f2efe8 0%,#ebe7df calc(100% - var(--section-fade)),
-    #e5e1d9 calc(100% - var(--section-fade)*.88),#cbc8c2 calc(100% - var(--section-fade)*.72),
-    #969491 calc(100% - var(--section-fade)*.52),#565658 calc(100% - var(--section-fade)*.30),
-    #29292c calc(100% - var(--section-fade)*.12),#1b1b1e calc(100% - 2px),#1b1b1e 100%),#1b1b1e;
-  color:#1c2a48;padding-top:70px;padding-bottom:calc(var(--section-fade) + 32px);--shadow:#1c2a4859;
+  /* Preserve the original second background, ending in the next section's cream. */
+  background:linear-gradient(180deg,#ed3d4000 0%,#ed3d4000 22%,#f06a5fb3 52%,#f5b5a3e6 80%,#f2efe8 100%),#ed3d40 url('./assets/red-paper.png') center top/100% auto repeat-y;
+  color:#fffaf4;padding-top:70px;padding-bottom:calc(var(--section-fade) + 32px);--shadow:#1c2a4859;
 }
-.module-work .eyebrow,.module-work .module-placeholder,.module-work .work-controls p{color:#5b6680;opacity:1}
+.module-work .eyebrow,.module-work .module-placeholder,.module-work .work-controls p{color:#fff0e8;opacity:1}
 .board-ip--music .ip-stage{max-width:300px}
 /* Now-playing card: a spinning record, the song, live bars and a play/pause button for the song */
 .now-playing{display:inline-flex;align-items:center;gap:12px;margin:26px 0 0;padding:7px 9px 7px 7px;border:1px solid #ffffff1f;border-radius:999px;
@@ -174,18 +176,16 @@
 .module-work .work-cover span:first-child{color:#f2efe870}.module-work .work-cover span:last-child{color:#f2efe8b3}
 .module-work .work-copy p{color:#5b6680}.module-work .work-copy>span{color:#1c2a48;border-color:#1c2a4840;border-radius:999px}
 
-/* 04 秘密武器库 — charcoal from his sweater, site red as the accent; he rises from the bottom edge */
+/* 03 秘密武器库 — over the existing cream-to-charcoal background. */
 .module-skills.ip-board{
   --section-fade:clamp(120px,12vw,180px);
   grid-template-columns:1fr minmax(260px,36%);
-  background:
-    linear-gradient(180deg,
-      #ecebe700 calc(100% - var(--section-fade)),#ecebe70a calc(100% - var(--section-fade)*.88),
-      #ecebe72e calc(100% - var(--section-fade)*.72),#ecebe778 calc(100% - var(--section-fade)*.52),
-      #ecebe7b8 calc(100% - var(--section-fade)*.30),#ecebe7ef calc(100% - var(--section-fade)*.12),
-      #ecebe7 calc(100% - 2px),#ecebe7 100%),
-    radial-gradient(ellipse 60% 70% at 82% 100%,#3a3a3f 0%,#232327 45%,#1b1b1e 100%),#ecebe7;
-  color:#f1eee8;padding-bottom:0;--shadow:transparent;
+  background:linear-gradient(180deg,
+    #f2efe8 0%,#ebe7df calc(100% - var(--section-fade)),
+    #e5e1d9 calc(100% - var(--section-fade)*.88),#cbc8c2 calc(100% - var(--section-fade)*.72),
+    #969491 calc(100% - var(--section-fade)*.52),#565658 calc(100% - var(--section-fade)*.30),
+    #29292c calc(100% - var(--section-fade)*.12),#1b1b1e calc(100% - 2px),#1b1b1e 100%),#1b1b1e;
+  color:#1c2a48;padding-bottom:0;--shadow:transparent;
 }
 .module-skills .board-body{padding-bottom:calc(var(--section-fade) + 32px)}
 .module-skills .eyebrow,.module-skills .module-placeholder{color:#9d9a94;opacity:1}
@@ -205,7 +205,7 @@
 /* 05 联系我 — light grey from his sweatshirt; he sits on a block and talks to you */
 .module-contact.ip-board{grid-template-columns:minmax(240px,34%) 1fr;background:linear-gradient(180deg,#ecebe7 0%,#e2e0db 100%);color:#202024;--shadow:#20202440}
 /* Overlap the matching end colours to prevent subpixel seams at fractional zoom. */
-#work + #skills,#skills + #contact{margin-top:-2px}
+#work + #skills,#skills + #world,#world + #contact{margin-top:-2px}
 .module-contact .eyebrow{color:#77767a}
 .board-ip--seat .ip-stage{max-width:330px;--seat-x:36%;--seat-w:58%}
 /* the source block was keyed out with the white backdrop; this one sits behind his legs, top at his seat (68%) */
@@ -248,9 +248,9 @@
 @media(prefers-reduced-motion:reduce){.world-light{display:none}.fan-card,.photo-fan,.world-playground,.world-character::before{transition:none}}
 
 /* ===== 01 headline: letters drop in, crash in a row, then spring back into place ===== */
-/* hidden until the drop starts; if the script never runs, it simply appears after 6s */
-.js-drop .hero-headline svg>text{visibility:hidden;animation:drop-fallback 0s 6s forwards}
-.js-drop .hero-headline.is-dropping svg>text{animation:none}
+/* Keep a readable title while the local font or animation script is preparing. */
+.js-drop .hero-headline svg>text{visibility:visible}
+.js-drop .hero-headline.is-dropping svg>text{visibility:hidden;animation:none}
 .js-drop .hero-headline.is-dropped svg>text{visibility:visible;animation:none}
 .js-drop .hero-headline.is-live svg>text{visibility:hidden;animation:none}
 .live-ch{transform-box:fill-box;transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1)}
@@ -258,13 +258,10 @@
 .drop-ch{transform-box:fill-box;transform-origin:50% 100%}
 .drop-shard{fill:#fffaf7;transform-box:fill-box;transform-origin:50% 50%;pointer-events:none}
 .drop-dust{fill:#fffaf7;transform-box:fill-box;transform-origin:50% 50%;pointer-events:none}
-/* the profile on the left waits until the headline has landed back in place */
-.js-drop body:not(.headline-done) .reference-marketing,.js-drop body:not(.headline-done) .hero-profile>*{opacity:0;translate:0 16px;animation:profile-fallback 0s 7s forwards}
-@keyframes profile-fallback{to{opacity:1;translate:0 0}}
-.js-drop .reference-marketing,.js-drop .hero-profile>*{transition:opacity .7s var(--ease),translate .7s var(--ease)}
-.js-drop .hero-profile>:nth-child(2){transition-delay:.12s}.js-drop .hero-profile>:nth-child(3){transition-delay:.24s}.js-drop .reference-marketing{transition-delay:.05s}
+/* Profile and surrounding words are present as soon as the visitor enters. */
+.hero-profile .introduction{transition:opacity .25s var(--ease),transform .25s var(--ease)}
 
-/* hero profile uses the body sans; MARKETING and AZU. use the same display face as the gate */
+/* hero profile uses the body sans; MARKETING and AZE. use the same display face as the gate */
 .reference-marketing{font-family:var(--display);font-weight:400;letter-spacing:.22em}
 .profile-name span{font-family:var(--display);font-weight:400;letter-spacing:.04em}
 @media(min-width:651px){
@@ -276,7 +273,7 @@
 /* ===== enter page (only shown at the top, with motion allowed) ===== */
 .enter-gate{display:none}
 .has-gate .enter-gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;
-  background:#ed3d40 url('./assets/red-paper.png') center/cover no-repeat;color:#fffaf4;transition:opacity .6s ease,visibility .6s}
+  background:#ed3d40 url('./assets/red-paper.png') center/cover no-repeat;color:#fffaf4;transition:opacity .24s ease,visibility .24s}
 .has-gate.entered .enter-gate{opacity:0;visibility:hidden;pointer-events:none}
 .gate-brand{margin:.08em 0 0;padding:.02em .06em .04em;border:0;border-radius:0;background:transparent;color:inherit;cursor:pointer;user-select:none;
   appearance:none;-webkit-appearance:none;font-family:var(--display);font-weight:400;font-style:normal;
@@ -288,7 +285,7 @@
 .gate-brand:focus-visible{outline:3px solid #fffaf4;outline-offset:.06em}
 .has-gate:not(.entered) body{overflow:hidden}
 
-/* 01 hero: the border collie with his red ball, sitting on the same ground as AZU, right of him */
+/* 01 hero: the border collie with his red ball, sitting on the same ground as AZE, right of him */
 .ip-stage.hero-dog{position:absolute;left:auto;right:21%;bottom:2.2%;height:33%;width:auto;aspect-ratio:342/600;max-width:none;margin:0;z-index:2;pointer-events:none;--shadow:#5a0d1099}
 .hero-dog .ip-video{width:100%;height:100%}
 .hero-dog::after{bottom:.4%;width:74%;height:5%}
@@ -379,7 +376,7 @@
 .toolbox-card[data-group="4"]{--ink:#843a2e;--paper:#d9a28c;--spine:#ad715b;--top:#efd0bc}
 .toolbox-box{pointer-events:none;position:absolute;left:0;top:calc(160px - var(--index)*9px);width:var(--cover-width);height:238px;transform-style:preserve-3d;transform:perspective(1000px) rotateX(-13deg) rotateY(38deg);transform-origin:50% 90%;transition:transform .5s cubic-bezier(.2,.85,.25,1.1)}
 .toolbox-cover{position:absolute;inset:0;display:flex;flex-direction:column;text-align:left;padding:20px 15px 15px;background:linear-gradient(120deg,#ffffff20,transparent 45%,#0000000d),var(--paper);color:var(--ink);border:1px solid #ffffff38;border-radius:3px;transform:translateZ(18px);box-shadow:inset 0 0 0 5px #00000008,3px 18px 22px #0004;backface-visibility:hidden}
-.toolbox-cover::before{content:"AZU FILE";position:absolute;top:-19px;left:10px;width:78px;padding:5px 8px 4px;border-radius:6px 6px 0 0;background:var(--paper);border:1px solid #ffffff38;border-bottom:0;font:9px var(--sans);letter-spacing:1px}
+.toolbox-cover::before{content:"AZE FILE";position:absolute;top:-19px;left:10px;width:78px;padding:5px 8px 4px;border-radius:6px 6px 0 0;background:var(--paper);border:1px solid #ffffff38;border-bottom:0;font:9px var(--sans);letter-spacing:1px}
 .toolbox-spine{position:absolute;left:-18px;top:0;width:36px;height:100%;background:linear-gradient(90deg,#0002,transparent 35%,#fff1),var(--spine);color:var(--ink);transform:rotateY(-90deg);display:flex;align-items:center;flex-direction:column;padding:18px 0;border:1px solid #ffffff30;border-radius:2px}
 .toolbox-spine b{font:15px var(--sans)}.toolbox-spine>span{writing-mode:vertical-rl;letter-spacing:4px;font-size:12px;margin-top:20px}.toolbox-spine i{margin-top:auto;width:15px;height:15px;border:3px solid #d1c8b9;border-radius:50%;background:#242428;box-shadow:0 1px 2px #0008}
 .toolbox-top{position:absolute;left:0;top:-18px;width:100%;height:36px;transform:rotateX(90deg);background:repeating-linear-gradient(0deg,transparent 0 3px,#00000013 3px 4px),var(--top);border:1px solid #fff4}
@@ -436,6 +433,7 @@
 .toolbox-card[data-cover-theme="paper"]{--paper:#f4efe6;--ink:#14080a;--spine:#c9bca9;--top:#fff9ef}
 .toolbox-card[data-cover-theme="black"]{--paper:#181818;--ink:#f4efe6;--spine:#080808;--top:#373737}
 .toolbox-card[data-cover-theme="red"]{--paper:#c81018;--ink:#fff;--spine:#850c12;--top:#e5484f}
+.toolbox-card[data-cover-theme="orange"]{--paper:#f28b36;--ink:#402516;--spine:#b95b25;--top:#ffbf80}
 .tool-entry>.tool-cover{float:right;width:66px;height:64px;padding:5px;margin:0 0 12px 14px;box-shadow:0 3px 6px #0002}
 .tool-entry>.tool-cover>span{display:none}
 .tool-entry details{clear:both}
@@ -553,7 +551,7 @@
 html[data-sound="waiting"] .sound-toggle{border-style:dashed}
 
 /* Light Americana: letterman piping, a varsity patch, and an on-page enter cue.
-   The AZU letters stay the only enter control — the line under them is a hint, not a button. */
+   The AZE letters stay the only enter control — the line under them is a hint, not a button. */
 .azu-star{display:block;width:12px;height:12px;background:currentColor;flex:none;
   clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
 .brand::before{content:"";width:11px;height:11px;background:currentColor;flex:none;
@@ -594,3 +592,153 @@ html[data-sound="waiting"] .sound-toggle{border-style:dashed}
   .brand::before{width:9px;height:9px}
 }
 @media(prefers-reduced-motion:reduce){.gate-hint,.gate-chevron{animation:none}.gate-hint{opacity:1}}
+
+/* Personal project artwork and explicit local/demo links. */
+.project-cover-art{display:block;width:100%;height:100%;object-fit:contain;object-position:left center}
+.world-project-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.world-project-links[hidden]{display:none}.world-project-links a{display:inline-flex;padding:10px 14px;border:1px solid #29302a44;border-radius:6px;font-size:12px;line-height:1.5}.world-project-links a:hover{background:#29302a;color:#fffaf4}.world-story-tool-covers:empty{display:none}
+
+/* Case sleeves keep the original construction and shared card sound. */
+.work-card-face{transition:translate .4s cubic-bezier(.2,.85,.25,1),box-shadow .4s}
+.module-work .work-slot.is-active:is(:hover,:focus-within) .work-card-face{translate:0 -16px;box-shadow:0 26px 34px -14px #101b32a6,-6px 0 15px -9px #0009}
+.module-work .work-slot.is-active:is(:hover,:focus-within) .work-record{translate:0 -16px}
+.work-record{transition:transform .65s cubic-bezier(.2,.85,.25,1),translate .4s cubic-bezier(.2,.85,.25,1),box-shadow .65s}
+.module-work .work-slot--library .sleeve-art b{color:#e4ded0;opacity:.86}
+.module-work .work-slot--tonggao .sleeve-art i{background:#d59a7622}
+@media(prefers-reduced-motion:reduce){.work-card-face,.work-record{transition:none}}
+
+/* Client commissions stay distinct from creator cases and everyday tools. */
+.client-projects{margin-top:36px;padding:20px 22px 6px;border:1px solid #fff8;border-radius:10px;background:#f4efe8f5;color:#1c2a48;box-shadow:0 12px 24px #1c2a4814}
+.client-projects-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}
+.client-projects-heading h3{font-size:23px;font-weight:600;line-height:1.4;margin:0}.client-projects-heading p{font-size:10px;line-height:1.6;margin:0;color:#5c6370}
+.commission-card{display:grid;grid-template-columns:78px minmax(0,1fr) 20px;align-items:center;gap:16px;width:100%;padding:18px 0;border:0;border-top:1px solid #1c2a4826;background:none;color:inherit;text-align:left;cursor:pointer;transition:translate .25s}
+.commission-card:hover{translate:0 -3px}.commission-card:focus-visible{outline:2px solid #ed3d40;outline-offset:3px}.commission-client{font-size:12px;font-weight:600;color:#254c70}.commission-card:last-child .commission-client{color:#3e6751}
+.commission-copy{display:grid;gap:5px;min-width:0}.commission-copy strong{font-size:19px;font-weight:600;line-height:1.5}.commission-copy small{font-size:10px;line-height:1.6;color:#5c6370}
+.contact-methods{display:grid;gap:26px;min-width:0}.contact-phone{border-top:1px solid #20202426;padding-top:22px;min-width:0}.contact-phone>p{font-size:29px;line-height:1.5;margin:18px 0;overflow-wrap:anywhere}.contact-methods .contact-email>p:first-of-type{font-size:clamp(19px,2vw,26px)}.contact-methods .contact-actions{flex-wrap:wrap;gap:12px}.contact-methods .contact-note{margin:0}
+@media(max-width:650px){.client-projects{padding:18px 16px 4px;margin-top:28px}.client-projects-heading{display:block}.client-projects-heading h3{font-size:22px}.client-projects-heading p{margin-top:6px}.commission-card{grid-template-columns:64px minmax(0,1fr) 16px;gap:10px}.commission-copy strong{font-size:17px}.commission-client{font-size:11px}.commission-copy small{font-size:9px}.module-contact .contact-layout{grid-template-columns:1fr;gap:28px}.contact-phone>p{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.commission-card{transition:none}}
+
+/* Album order stays 1, 2, 3 at rest; hover and keyboard focus temporarily lead. */
+@font-face{font-family:'Yigongzi Album';src:url('./yigongzi/fonts/ma-shan-zheng-portfolio.ttf') format('truetype');font-display:swap}
+#work-card-1{--sleeve:#243c42;--sleeve-ink:#f1eee3;--record-accent:#b5a372}
+#work-card-2{--sleeve:#153b31;--sleeve-ink:#f2f0e7;--record-accent:#b6a777}
+#work-card-3{--sleeve:#e8dfca;--sleeve-ink:#253c42;--record-accent:#6d8875}
+.album-yigongzi .work-cover{position:relative;isolation:isolate}
+.album-garden{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;opacity:.38}
+.album-portrait{position:absolute;inset:5% 0 0 auto;width:88%;height:95%;object-fit:cover;object-position:52% 24%;z-index:-2;mask-image:linear-gradient(90deg,transparent,#000 20%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 20%)}
+.album-yigongzi .work-cover::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#102c2522,transparent 35%,#102c25cc)}
+.album-yigongzi .sleeve-title{position:relative;border:0}
+.album-yigongzi .sleeve-title h3{font-family:'Yigongzi Album','Songti SC',serif;font-size:clamp(25px,3.2vw,46px);font-weight:400;letter-spacing:.05em}
+.album-yigongzi .work-card-face::before{background:linear-gradient(#ece7d8 0 2px,#b6a777 2px 5px,#153b31 5px 8px)}
+.album-yigongzi .sleeve-number{color:#153b31;background:#ece7d8;box-shadow:2px 2px 0 #0f2d25}
+.album-yigongzi .record-label b{font-family:'Yigongzi Album','Songti SC',serif}
+.module-work .album-clients .work-cover .sleeve-title>span{color:#344b43}
+.album-hualaoban .sleeve-title{width:50%;margin-left:0}
+.album-clients .sleeve-title{width:50%;margin-left:50%}
+.album-hualaoban .sleeve-title h3,.album-clients .sleeve-title h3{font-size:clamp(13px,1.6vw,23px)}
+.module-work :is(.album-hualaoban,.album-clients).is-active .sleeve-title{width:100%;margin-left:0}
+.module-work .work-slot.is-active:not(:hover):not(:focus-within) .work-record{transform:translateX(-3%) rotate(12deg)}
+@media(max-width:650px){.album-yigongzi .sleeve-title h3{font-size:clamp(16px,4.4vw,27px)}.album-hualaoban .sleeve-title h3,.album-clients .sleeve-title h3{font-size:clamp(10px,2.8vw,16px)}.module-work .work-cover .sleeve-meta span{font-size:5px}.module-work .work-cover .sleeve-title>span{font-size:6px;letter-spacing:0}}
+
+.album-yigongzi .sleeve-title{width:50%;margin-left:50%}
+.album-yigongzi .sleeve-title h3{font-size:clamp(18px,2.2vw,30px)}
+.album-yigongzi.is-active .sleeve-title{width:100%;margin-left:0}
+.album-yigongzi.is-active .sleeve-title h3{font-size:clamp(25px,3.2vw,46px)}
+@media(max-width:650px){.album-yigongzi .sleeve-title h3{font-size:clamp(14px,3.8vw,22px)}.album-yigongzi.is-active .sleeve-title h3{font-size:clamp(16px,4.4vw,27px)}}
+
+/* Hualaoban keeps the record interaction and adopts its fashion editorial cover. */
+#work-card-1.album-hualaoban{--sleeve:#ede9df;--sleeve-ink:#28241f;--record-accent:#c4ad91}
+.album-hualaoban .work-cover{position:relative;isolation:isolate}
+.album-hualaoban .album-fashion-portrait{position:absolute;inset:0 auto 0 0;width:80%;height:100%;object-fit:cover;object-position:42% 20%;z-index:-2;mask-image:linear-gradient(90deg,#000 0 60%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 0 60%,transparent 100%)}
+.album-hualaoban .work-cover::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#ede9dfd9,transparent 24%,transparent 42%,#ede9dfe6 76%,#ede9df)}
+.album-hualaoban .work-card-face::before{background:linear-gradient(#28241f 0 2px,#c4ad91 2px 4px,#ede9df 4px 8px)}
+.album-hualaoban .sleeve-title{position:relative;border-top:1px solid #28241f55}
+.album-hualaoban .sleeve-title h3{font-family:"Songti SC",Georgia,serif;font-weight:600}
+.module-work .album-hualaoban .sleeve-title>span{font-size:clamp(6px,.65vw,9px);letter-spacing:.03em;color:#40392f}
+.album-hualaoban .sleeve-number{background:#28241f;color:#ede9df}
+.album-hualaoban .work-record{pointer-events:auto;cursor:pointer}
+.album-hualaoban .record-label b{font-family:"Songti SC",Georgia,serif}
+.module-work .album-hualaoban .sleeve-title .sleeve-open{font:inherit;letter-spacing:0;color:var(--sleeve-ink)}
+
+.toolbox-card[data-cover-theme="navy"]{--paper:#23395f;--ink:#edf2ff;--spine:#132442;--top:#586f96}
+.world-dialog--gallery .world-story-layout{grid-template-columns:1fr}.world-story-photo[hidden]{display:none}.world-dialog--gallery .world-story-content{padding:48px 40px 38px}.world-dialog--gallery .world-story-details{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:18px 0 30px}.world-dialog--gallery .world-story-details>div{display:block;padding:13px 0}.world-dialog--gallery .world-story-details dt{margin-bottom:5px}.world-materials-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}.world-materials-gallery figure{margin:0;min-width:0}.world-materials-gallery button{display:block;width:100%;padding:0;border:1px solid #24395b25;background:#eff0ed;border-radius:7px;overflow:hidden;cursor:zoom-in}.world-materials-gallery img{display:block;width:100%;height:245px;object-fit:contain}.world-materials-gallery figcaption{padding:12px 0 0;font:12px/1.7 var(--sans);color:#626d74}.world-materials-gallery figcaption b{display:block;color:#22364e;font-size:15px;margin-bottom:3px}.world-materials-gallery figcaption span{display:block}.world-materials-gallery button:focus-visible{outline:3px solid #536e9b;outline-offset:4px}.materials-image-dialog{width:min(1500px,96vw);max-width:96vw;max-height:94vh;padding:0;border:0;border-radius:8px;background:#edf0f2;color:#22364e}.materials-image-dialog::backdrop{background:#091626d9}.materials-image-dialog header{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px 18px;position:sticky;top:0;background:#edf0f2;z-index:1}.materials-image-dialog header p{font-size:13px;margin:0}.materials-image-dialog header button{border:1px solid #22364e40;border-radius:4px;padding:7px 12px;background:#fff;color:#22364e;font:13px var(--sans);cursor:pointer}.materials-image-dialog>img{display:block;width:100%;height:auto}
+@media(max-width:650px){.world-dialog--gallery .world-story-content{padding:48px 20px 25px}.world-dialog--gallery .world-story-details{grid-template-columns:1fr;gap:0}.world-materials-gallery{grid-template-columns:1fr;gap:24px}.world-materials-gallery img{height:auto;max-height:360px}.materials-image-dialog header{padding:10px}.materials-image-dialog header p{font-size:11px}}
+
+/* Confirmed career dates, kept alongside the personal introduction. */
+.hero{min-height:1020px}.reference-marketing{top:31%}.hero-profile{top:37%}
+.profile-career{margin:20px 0 0;border-top:1px solid #fffaf74d;padding-top:4px}
+.profile-career>div{display:grid;grid-template-columns:124px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid #fffaf729}
+.profile-career dt{font-size:12px;line-height:1.8;font-variant-numeric:tabular-nums;white-space:nowrap}
+.profile-career dd{margin:0;line-height:1.55}.profile-career strong{display:block;font-size:14px;font-weight:600}.profile-career dd span{display:block;font-size:12px;color:#fffaf4}
+@media(max-width:650px){.hero{height:1080px;min-height:1080px}.hero-profile{top:25%}.reference-marketing{top:calc(85px + 20vw + 25px)}.profile-career{margin-top:18px}.profile-career>div{grid-template-columns:1fr;gap:2px;padding:9px 0}.profile-career dt{font-size:11px}.profile-career strong{font-size:13px}.profile-career dd span{font-size:12px;line-height:1.6}}
+
+@media(max-width:650px){.ip-stage.hero-dog{bottom:3%}}
+
+#work-card-3{--sleeve:#c4dac1;--sleeve-ink:#193d36;--record-accent:#83aebd}
+.album-clients .work-cover{position:relative;isolation:isolate;background:linear-gradient(145deg,#bed5e2,#c5d9ae);overflow:hidden}
+.album-clients .work-cover::before{content:"";position:absolute;inset:-34% -12%;background:url('./client-media/lake-reference.jpg') center/cover;transform:rotate(-90deg);opacity:.65;z-index:-2}
+.album-clients .work-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#d9e9e85c,#dfead24d 40%,#dce8cfed 82%);z-index:-1}
+.album-clients .sleeve-art{opacity:.28}.album-clients .sleeve-title,.album-clients .sleeve-meta{position:relative}.album-clients .sleeve-title{background:#e6efd5b8;border-color:#42674755}.album-clients .sleeve-art i{border-color:#315d55;background:#7b9d6550}
+
+.world-dialog--gallery .world-tool-list .tool-cover{display:none}.world-materials-gallery>figure:last-child:nth-child(odd){grid-column:1/-1}
+
+/* Real voice samples and the complete Lingzhu MV, loaded only inside this archive. */
+.world-dialog--av{width:min(1140px,calc(100% - 48px));background:linear-gradient(145deg,#fff8ed,#f1eee7 60%,#e9efeb)}
+.world-dialog--av .world-story-layout{grid-template-columns:1fr}
+.world-dialog--av .world-story-content{min-width:0;padding:40px}
+.world-dialog--av .world-story-content h2{margin-bottom:10px}
+.world-dialog--av .world-story-lead{margin-bottom:30px}
+.av-showcase h3{font-size:26px;line-height:1.5;font-weight:500;margin:7px 0 22px;color:#44362f}
+.av-showcase h4{font-size:16px;line-height:1.5;margin:0 0 7px;color:#44362f}
+.av-eyebrow{font:11px/1.5 var(--sans);letter-spacing:.12em;color:#ad5935;margin:0}
+.av-inputs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.av-input{min-width:0;padding:23px;border-radius:12px;border:1px solid #bca99440;background:#ffffff80}
+.av-script{background:linear-gradient(135deg,#f3e0cd9c,#f7ebda70)}
+.av-meta{font-size:11px;line-height:1.7;color:#7e766b;margin:8px 0}
+.av-showcase blockquote{font-size:14px;line-height:1.95;margin:17px 0 13px;color:#67564a}
+.av-showcase audio{display:block;width:100%;min-width:0;height:38px;margin:14px 0}
+.av-file{display:inline-block;color:#995335;font:11px/1.7 var(--sans);text-underline-offset:4px}
+.av-file:focus-visible,.av-showcase audio:focus-visible,.av-film video:focus-visible{outline:2px solid #b36b44;outline-offset:4px}
+.av-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;list-style:none;margin:20px 0 14px;padding:0}
+.av-flow li{display:flex;align-items:center;gap:10px;border-top:1px solid #b9936d55;padding:13px 0 0;font-size:12px;color:#6d645a}
+.av-flow b{color:#ae6544;font-size:12px;font-weight:500}
+.av-listening-note{font-size:11px;line-height:1.8;color:#877b6e;margin:0 0 18px}
+.av-models{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.av-model{min-width:0;padding:23px 18px 20px;border:1px solid #b69b7e45;border-radius:12px;background:linear-gradient(155deg,#fffdf7d9,#e8ded075)}
+.av-model:nth-child(2){background:linear-gradient(155deg,#f8fbf4d9,#dfe9e175)}
+.av-model:nth-child(3){background:linear-gradient(155deg,#fdf7f0d9,#f0d9c475)}
+.av-model h4{margin-top:10px;font-size:17px;overflow-wrap:anywhere}
+.av-wave{width:100%;height:48px;object-fit:fill;display:block;margin-top:20px}
+.av-facts{display:grid;grid-template-columns:1fr 1fr;gap:15px 8px;margin:21px 0}
+.av-facts>div{min-width:0}.av-facts dt{font-size:10px;color:#8c8174;margin-bottom:5px}.av-facts dd{margin:0;font-size:14px;color:#584f47;font-variant-numeric:tabular-nums}
+.av-avatar{padding:28px;margin:35px 0;border:1px solid #a0afa040;border-radius:12px;background:linear-gradient(125deg,#d7e2db70,#ede8d952)}
+.av-avatar h3{font-size:21px;margin:8px 0}.av-avatar>p:last-child{font-size:12px;line-height:1.8;color:#777669;margin:0}
+.av-film video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#202b27;border-radius:10px}
+.av-film-credit{font-size:11px;line-height:1.9;color:#797469;margin:13px 0 0}
+.av-shot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:0 0 38px}
+.av-shot{min-width:0;margin:0;padding:12px;border:1px solid #b69b7e45;border-radius:12px;background:linear-gradient(150deg,#fffaf3d9,#e9dfd480)}
+.av-shot:nth-child(2){background:linear-gradient(150deg,#f5f8f1d9,#dce5df80)}
+.av-shot:nth-child(3){background:linear-gradient(150deg,#f1f7fad9,#dbe7ed80)}
+.av-shot video{height:auto}
+.av-shot figcaption{padding:12px 2px 2px}.av-clip-meta{display:block;font:10px/1.7 var(--sans);letter-spacing:.04em;color:#837669}
+.av-shot h4{font-size:14px;line-height:1.65;margin:5px 0 0;overflow-wrap:anywhere}
+.av-film .av-mv-title{padding-top:24px;border-top:1px solid #b69b7e45}
+@media(max-width:760px){.av-shot-grid{grid-template-columns:1fr;gap:22px}.av-shot{padding:12px}.av-shot h4{font-size:16px}}
+@media(max-width:650px){.world-dialog--av{width:calc(100% - 24px)}.world-dialog--av .world-story-content{padding:45px 20px 25px}.av-showcase h3{font-size:22px}.av-inputs,.av-models{grid-template-columns:1fr}.av-input{padding:20px}.av-flow{grid-template-columns:1fr 1fr}.av-model{padding:22px}.av-avatar{padding:22px}.av-model h4{font-size:19px}}
+
+/* Smaller first-screen imagery while retaining all confirmed career lines. */
+.hero{min-height:860px}.hero-headline{top:80px;left:16%;width:68%}.reference-marketing{top:33%}.hero-profile{top:40%;width:440px}.hero .figure{height:52%}.profile-name{margin-bottom:14px}.hero-profile>.eyebrow{margin-bottom:12px}.profile-short{margin-bottom:16px}.profile-career{margin-top:16px}.profile-career strong{display:inline;font-size:14px}.profile-career dd span{display:inline;margin-left:8px;font-size:12px}.profile-career>div{padding:8px 0}
+#work-card-3{--sleeve:#438bd0;--sleeve-ink:#fffdf2;--record-accent:#f4ce48}.album-clients .work-cover{background:#428ad0}.album-clients .work-cover::before{inset:0;background:url('./client-media/sky-flowers-reference.png') center/cover;transform:none;opacity:1}.album-clients .work-cover::after{background:linear-gradient(180deg,#174d7b0a 38%,#173e6855 64%,#173e68f2 100%)}.album-clients .sleeve-art{display:none}.album-clients .sleeve-title{background:transparent;border-color:#fff8}.album-clients .sleeve-meta>span{padding:3px 6px;background:#f8fcffe0;color:#173657}.album-clients .sleeve-meta .sleeve-number{background:#fff7df;color:#173657}
+
+/* Keep each sleeve's role and date range together, including at rest on phones. */
+.module-work .work-cover .sleeve-title{min-width:90px;max-width:100%}
+.album-yigongzi .sleeve-title,.album-clients .sleeve-title{margin-left:auto}
+.module-work .work-cover .sleeve-title>span{display:block;white-space:nowrap;font-size:clamp(6px,.65vw,9px);letter-spacing:.025em;line-height:1.5;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.module-work .work-cover .sleeve-title>span{font-size:6px;letter-spacing:0}}
+@media(min-width:1600px){.hero{min-height:960px}.hero-profile{width:470px}}
+@media(min-width:651px) and (max-width:1100px){.hero-profile{width:350px;left:6%;top:37%}.profile-career{font-size:12px}.reference-marketing{top:31%}}
+@media(max-width:650px){.hero{height:900px;min-height:900px}.hero-headline{top:76px;left:12%;width:76%}.reference-marketing{top:calc(85px + 20vw + 25px)}.hero-profile{width:44%;max-width:235px;top:26%}.hero .figure{height:50%;left:76%;bottom:9%}.profile-name{margin-bottom:16px}.profile-career strong{display:block;font-size:13px}.profile-career dd span{display:block;margin-left:0;line-height:1.6}.profile-career>div{padding:8px 0}.ip-stage.hero-dog{height:16%;left:52%;bottom:3%}}
+
+@media(max-width:650px){.ip-stage.hero-dog{height:11.5%}}
+
+/* Four-model voice comparison, real waveforms and a shared listening script. */
+.av-models{grid-template-columns:repeat(2,minmax(0,1fr))}.av-voice .av-model,.av-voice .av-model:nth-child(n){background:linear-gradient(155deg,#f5f7ffed,#e1e8f4cc);border-color:#344f7c45}.av-voice .av-facts dd{font-variant-numeric:lining-nums tabular-nums}@media(max-width:650px){.av-models{grid-template-columns:1fr}}

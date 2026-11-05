@@ -1,0 +1,38 @@
+/* One continuous surface; chapters do not paint independent color rectangles. */
+#top.continuous-wash-ready{background-color:rgb(var(--palette-green));background-image:var(--continuous-wash);background-repeat:no-repeat;background-size:100% 100%;position:relative}
+body[data-season] #top.continuous-wash-ready :is(.creator-hero,.tenure-stage,#proposal,.ygd-original-video,#featuredVideo,#yg-data,#audience,#ygd-later,#business,#business-model,#researchLibrary,.rl-opening,#rl-commercial,#rl-recent,#methods,#profile,#seasons){background:none;border-top:0;border-bottom:0;box-shadow:none;transition:none}
+#top.continuous-wash-ready .chapter-blend{height:clamp(200px,19vw,290px);position:relative;pointer-events:none;background:none;border:0;box-shadow:none}
+#top.continuous-wash-ready .chapter-blend::before{content:none}
+#top.continuous-wash-ready .chapter-blend.wash-same-tone{display:none}
+#top.continuous-wash-ready .wash-inner-gap{height:210px;pointer-events:none}
+/* Scenery is translucent ink on the shared surface. Its colored masks used to
+   reintroduce hard edges even where the section itself was transparent. */
+body[data-season] #top.continuous-wash-ready :is(.chapter-landscape,.rl-garden-scene){opacity:.13;animation:none!important;transform:none!important;mask-image:linear-gradient(to bottom,transparent,#000 160px,#000 calc(100% - 160px),transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,#000 160px,#000 calc(100% - 160px),transparent)}
+body[data-season] #top.continuous-wash-ready :is(.chapter-landscape,.rl-opening,.rl-landscape-section)::after{background:none}
+body[data-season] #top.continuous-wash-ready #researchLibrary :is(.rl-opening,#rl-commercial,#rl-recent)::after{background:none}
+#top.continuous-wash-ready .creator-hero .hero-atmosphere{opacity:.34;animation:none;mask-image:linear-gradient(to bottom,#000 65%,transparent)}
+#top.continuous-wash-ready .creator-hero::after{mask-image:linear-gradient(to bottom,#000 60%,transparent)}
+#top.continuous-wash-ready .creator-hero::before{mask-image:linear-gradient(to bottom,#000 45%,transparent 88%);-webkit-mask-image:linear-gradient(to bottom,#000 45%,transparent 88%)}
+#top.continuous-wash-ready .literati-ornament{mask-image:radial-gradient(ellipse at center,#000 38%,transparent 72%);-webkit-mask-image:radial-gradient(ellipse at center,#000 38%,transparent 72%)}
+#top.continuous-wash-ready :is(.scene-interlude,.rl-section,.ygd-original-video){border-top:0;border-bottom:0}
+#top.continuous-wash-ready :is(#ygd-my-role,#ygd-tenure-data){border-top:0}
+#top.continuous-wash-ready .creator-hero{padding-bottom:65px}
+/* Quiet adjacent colors for the work chapter; stronger colors are grouped
+   around audience and commercial analysis rather than alternating every page. */
+#top.continuous-wash-ready #proposal,#top.continuous-wash-ready #featuredVideo{--section-rgb:var(--palette-jade);--section-ink:#244b3e;--section-muted:#526e61;color:var(--section-ink)}
+#top.continuous-wash-ready #yg-data{--section-rgb:var(--palette-blue);--section-ink:#263f50;--section-muted:#526d7d}
+#top.continuous-wash-ready #methods{--section-rgb:var(--palette-lilac);--section-ink:#453b59;--section-muted:#6c6380;color:var(--section-ink)}
+#top.continuous-wash-ready #seasons{--section-rgb:var(--palette-jade);--section-ink:#244b3e;--section-muted:#526e61;color:var(--section-ink)}
+body[data-season] #top.continuous-wash-ready #proposal :is(.section-head,.ygd,.ygd h3,.ygd h4){color:var(--section-ink)}
+body[data-season] #top.continuous-wash-ready #proposal :is(.section-head p,.section-num,.ygd .note,.ygd small){color:var(--section-muted)}
+#top.continuous-wash-ready #featuredVideo .creator-video-copy,#top.continuous-wash-ready #featuredVideo .creator-video-copy p{color:var(--section-ink)}
+#top.continuous-wash-ready #featuredVideo .creator-video-copy :is(.small,.section-num){color:var(--section-muted)}
+#top.continuous-wash-ready #methods :is(.section-head p,.section-head .section-num,.scene-copy p,.scene-copy .eyebrow,.research-photo figcaption){color:var(--section-muted)}
+#top.continuous-wash-ready #methods .scene-copy{color:var(--section-ink)}
+#top.continuous-wash-ready #methods .portfolio-method-tabs button{background:#fbf9ff70;color:var(--section-ink);border-color:#71677f55}
+#top.continuous-wash-ready #methods .portfolio-method-tabs button[aria-selected=true]{background:#50465f;color:#faf5ff}
+#top.continuous-wash-ready #methods .portfolio-method-panel{box-shadow:0 14px 45px #403c5910}
+#top.continuous-wash-ready #methods .literati-ornament{opacity:.24}
+body:has(#top.continuous-wash-ready)>footer{background:rgb(var(--palette-jade));border-top:0;color:#244b3e}
+#top.continuous-wash-ready #ygd-my-role .yg-flow button[aria-pressed=true] small{color:inherit;opacity:.8}
+@media(max-width:760px){#top.continuous-wash-ready .chapter-blend{height:175px}#top.continuous-wash-ready .wash-inner-gap{height:160px}#top.continuous-wash-ready .creator-hero{padding-bottom:40px}body[data-season] #top.continuous-wash-ready :is(.chapter-landscape,.rl-garden-scene){mask-image:linear-gradient(to bottom,transparent,#000 110px,#000 calc(100% - 110px),transparent)}}

@@ -1,28 +1,28 @@
 {
-  "introLead": "祖朋 · 贵州贵阳",
-  "introDetail": "广州软件学院毕业",
-  "introStatus": "基础信息来自正式网站 src/App.tsx 与 src/content-checklist.json",
+  "introLead": "祖仁泽 · 贵州贵阳",
+  "introDetail": "上海外国语大学贤达经济人文学院毕业",
+  "introStatus": "姓名、教育及个人经历来自本人既有个人网站和本次确认；项目按实际功能展示。",
   "chapters": [
     {
-      "id": "world",
-      "number": "02",
-      "title": "生活照片",
-      "english": "MY LITTLE UNIVERSE",
-      "description": "那些让我保持好奇的小事，以及生活里不同的我。"
-    },
-    {
       "id": "work",
-      "number": "03",
+      "number": "02",
       "title": "创作案例",
       "english": "IDEAS INTO REALITY",
       "description": "把想法变成作品，把好奇心变成行动。"
     },
     {
       "id": "skills",
-      "number": "04",
+      "number": "03",
       "title": "秘密武器库",
       "english": "MY CREATIVE TOOLBOX",
       "description": "正在学习的技能、顺手的工具，以及新的可能。"
+    },
+    {
+      "id": "world",
+      "number": "04",
+      "title": "生活照片",
+      "english": "MY LITTLE UNIVERSE",
+      "description": "那些让我保持好奇的小事，以及生活里不同的我。"
     },
     {
       "id": "contact",
@@ -34,331 +34,530 @@
   ],
   "worldPhotos": [
     {
-      "src": "./assets/world/guiyang-white-palace.jpg",
-      "alt": "贵阳花果园白宫的灯光与湖面倒影",
-      "width": 1680,
-      "height": 945,
-      "eyebrow": "01 / HOME",
-      "title": "来自贵阳",
-      "description": "山水之间，烟火之中。",
+      "src": "./assets/zurenze/travel.jpg",
+      "alt": "祖仁泽在旅行中穿着红色民族服装留影",
+      "title": "旅行在路上",
+      "description": "从贵阳出发，去看看不同的风景。",
       "paragraphs": [
-        "我是贵州贵阳人。喜欢这座城市的山水，也喜欢它直爽、热闹的生活气息。"
+        "在上海读书，在重庆服役，也在不同城市工作和旅行。喜欢看看山海、建筑和当地的生活，把路上的片刻留在照片里。"
       ],
       "tags": [
-        "贵州 · 贵阳",
-        "直爽不绕弯",
-        "家乡味道"
+        "贵阳",
+        "旅行",
+        "生活记录"
       ],
       "theme": "home",
       "details": [
         [
-          "城市印象",
-          "花果园白宫的夜色与倒影，是我想给你看的贵阳。"
+          "旅行里的我",
+          "喜欢走出去，也愿意慢下来看看沿途的人和风景。"
         ],
         [
-          "家乡味道",
-          "酸汤鱼、肠旺面、折耳根。熟悉的味道，最有归属感。"
+          "认识世界",
+          "读书和旅行，是我保持好奇的两种方式。"
         ]
       ],
-      "position": "55% 62%",
-      "displayTitle": "来自贵阳",
-      "mediaWord": "贵阳"
+      "position": "50% 35%",
+      "mediaWord": "在路上",
+      "width": 1920,
+      "height": 1280
     },
     {
-      "src": "./assets/world/marine.jpg",
-      "alt": "海上执勤的军旅时光",
-      "width": 964,
-      "height": 1280,
-      "position": "50% 32%",
-      "eyebrow": "02 / SERVICE",
+      "src": "./assets/zurenze/military-daily.jpg",
+      "alt": "祖仁泽军旅时期戴迷彩帽、穿黑色上衣的日常留影",
       "title": "军旅时光",
-      "description": "2021.03 — 2025.03 · 海军陆战队",
+      "description": "武警退伍 · 文书与内部宣传",
       "paragraphs": [
-        "四年军旅，留下执行力、自律与团队意识。任务面前认真负责，认准的事就做到位。"
+        "军旅经历让我更重视纪律、执行和团队协作。曾参与文书材料、内部宣传文案与视频内容相关工作。"
       ],
       "tags": [
-        "海军陆战队",
-        "执行力",
+        "武警退伍",
+        "文书与内部宣传",
         "团队协作"
       ],
       "theme": "service",
       "details": [
         [
-          "任务经历",
-          "第47批亚丁湾护航 · 联合利剑-2024A"
-        ],
-        [
-          "能力沉淀",
-          "任务导向的执行力、高强度下的抗压能力，以及把团队目标放在前面的习惯。"
+          "经历与积累",
+          "把事情交代清楚、把任务落实到位，也把经历转化为表达与创作的素材。"
         ]
       ],
-      "honors": [
-        {
-          "count": "02",
-          "label": "“四有”优秀士兵"
-        },
-        {
-          "count": "02",
-          "label": "嘉奖"
-        },
-        {
-          "count": "01",
-          "label": "班三等功"
-        },
-        {
-          "count": "01",
-          "label": "优秀新兵"
-        }
-      ],
-      "honorNote": "另有集体嘉奖"
+      "position": "40% 30%",
+      "width": 1536,
+      "height": 1024
     },
     {
-      "src": "./assets/world/portrait.jpg",
-      "alt": "阿祖在城市街头的生活照",
-      "width": 1024,
-      "height": 1534,
-      "position": "50% 28%",
-      "eyebrow": "03 / ABOUT ME",
-      "title": "我叫阿祖",
-      "description": "直爽，认真，也始终好奇。",
+      "src": "./assets/zurenze/about.jpg",
+      "cover": {
+        "src": "./assets/zurenze/graduation.jpg",
+        "alt": "祖仁泽穿学士服、手持花束的毕业留影",
+        "position": "44% 38%",
+        "width": 1920,
+        "height": 1280
+      },
+      "alt": "祖仁泽的彩色正式肖像",
+      "title": "我叫祖仁泽",
+      "description": "自媒体创作 · IP 内容策划 · AI 工具开发",
       "paragraphs": [
-        "我是祖朋，叫我阿祖就好。广州软件学院毕业。把军旅积累的执行力，带进学习与生活。"
+        "我是祖仁泽，叫我阿泽就好。上海外国语大学贤达经济人文学院法学本科，武警退伍，有自媒体和 AI 部门的工作经历。",
+        "围绕人物内容与 IP 创作，参与选题、资料研究、脚本文案、拍摄和剪辑，把内容从想法推进到成片。",
+        "用 AI 开发服务创作的小工具，覆盖热点追踪、选题整理、视频拆解、素材采集、声音合成、数字人与视频制作，把重复工作整理成可复用的工具和流程。"
       ],
       "tags": [
-        "广州软件学院",
-        "推理小说",
-        "AI 学习者"
+        "自媒体创作",
+        "IP 内容策划",
+        "AI 工具开发"
       ],
       "theme": "about",
       "details": [
         [
-          "书架一角",
-          "东野圭吾：《白夜行》《解忧杂货店》《嫌疑人X的献身》。喜欢在细节里找真相。"
+          "内容创作",
+          "选题研究、资料核查、脚本文案、拍摄与剪辑。"
         ],
         [
-          "正在学习",
-          "认真学习 AI，把工具用明白，把知识变成能用上的本领。"
-        ],
-        [
-          "生活里的我",
-          "球场、健身房、音乐和书，都是认识我的入口。"
+          "AI 工具开发",
+          "从创作任务出发梳理需求，开发选题、拆解、采集和声音等工具，并通过实际操作持续改进。"
         ]
-      ]
-    },
-    {
-      "src": "./assets/world/beyond-yellow.png",
-      "alt": "阿祖提供的黄色 Beyond 四子海报",
-      "width": 836,
-      "height": 1606,
-      "eyebrow": "04 / MUSIC",
-      "title": "一直听 Beyond",
-      "description": "有些旋律，始终有回响。",
-      "position": "50% 40%",
-      "paragraphs": [],
-      "tags": [
-        "Beyond",
-        "海阔天空",
-        "光辉岁月"
       ],
-      "theme": "music",
-      "details": [],
-      "displayTitle": "一直听 Beyond",
-      "mediaWord": "",
-      "songs": [
-        {
-          "title": "海阔天空",
-          "cover": "../assets/boundless.jpg",
-          "album": "海闊天空",
-          "reason": "喜欢它关于自由和理想的倔强。认准的方向，再难也想走下去。",
-          "url": "https://music.apple.com/us/album/1722093835"
-        },
-        {
-          "title": "光辉岁月",
-          "cover": "../assets/glorious.jpg",
-          "album": "光輝歲月",
-          "reason": "喜欢那种不向困境低头的力量。时间会过去，心里的信念要留下。",
-          "url": "https://music.apple.com/us/album/1443905184"
-        },
-        {
-          "title": "真的爱你",
-          "cover": "./assets/world/beyond-iv.jpg",
-          "album": "Beyond IV",
-          "reason": "喜欢它把感谢唱得真诚。往前走，也记得珍惜身边的人。",
-          "url": "https://music.apple.com/us/song/1443425287"
-        }
-      ]
+      "position": "50% 25%",
+      "width": 1800,
+      "height": 1200
     },
     {
-      "src": "../assets/fitness.jpg",
-      "alt": "阿祖进行单杠引体向上训练的照片",
-      "width": 871,
-      "height": 1280,
-      "cover": {
-        "src": "./assets/world/court.jpg",
-        "alt": "夕阳下打篮球的身影",
-        "width": 1280,
-        "height": 865,
-        "position": "50% 50%"
-      },
-      "eyebrow": "05 / SPORTS",
-      "title": "球场上见",
-      "description": "把力量，练进日常。",
+      "src": "./assets/zurenze/reading.jpg",
+      "alt": "祖仁泽坐在桌前阅读的生活照",
+      "title": "读书与听琴",
+      "description": "阅读、古诗词，也给日常留一点安静。",
       "paragraphs": [
-        "足球带来协作与热血，训练让人专注，游泳让节奏慢下来。运动，是我保持状态的方式。"
+        "喜欢阅读、写作、传统文化与哲学，最近尤其喜欢苏轼。也喜欢听钢琴音乐，给自己留一点独处和整理思绪的时间。"
       ],
       "tags": [
-        "足球",
-        "健身",
-        "游泳"
+        "阅读与写作",
+        "古诗词",
+        "钢琴音乐"
+      ],
+      "theme": "reading",
+      "details": [
+        [
+          "书架一角",
+          "《遥远的救世主》《平凡的世界》《觉察之道》《命运》《六祖坛经》。"
+        ],
+        [
+          "传统文化",
+          "对儒释道、哲学与古诗词保持兴趣，也喜欢到古寺小住。"
+        ],
+        [
+          "最近在听",
+          "卡农、Flower Dance，以及钢琴演奏的《青空》。"
+        ]
+      ],
+      "position": "51% 44%",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "./assets/zurenze/running.jpg",
+      "cover": {
+        "src": "./assets/zurenze/baseball.jpg",
+        "alt": "祖仁泽大学棒球队时期的照片",
+        "position": "50% 34%",
+        "width": 1440,
+        "height": 1920
+      },
+      "alt": "祖仁泽穿绿色上衣在户外跑步",
+      "title": "跑步与棒球",
+      "description": "身体在路上，人也继续向前。",
+      "paragraphs": [
+        "大学时是棒球队校队的一员。现在依然喜欢跑步，也在练习游泳，把运动留在日常里。"
+      ],
+      "tags": [
+        "棒球",
+        "跑步",
+        "游泳练习"
       ],
       "theme": "sports",
       "details": [
         [
-          "足球",
-          "享受奔跑、配合和全力投入的一刻。"
+          "球场经历",
+          "校队训练和比赛，让我体会到配合、投入与长期练习。"
         ],
         [
-          "力量训练",
-          "把自律变成习惯，让每一次练习都有积累。"
-        ],
-        [
-          "游泳",
-          "专注呼吸，在自己的节奏里向前。"
+          "日常运动",
+          "会蛙泳，继续练自由泳；也希望以后尝试骑马和滑雪。"
         ]
       ],
-      "position": "50% 85%",
-      "displayTitle": "热爱运动",
-      "mediaWord": "MOVE."
+      "position": "50% 48%",
+      "mediaWord": "MOVE.",
+      "width": 1080,
+      "height": 1924
     }
   ],
   "contact": {
-    "email": ""
+    "phone": "17678917744",
+    "email": "2966766140@qq.com"
   },
   "bgm": {
-    "title": "Love Story",
-    "artist": "Taylor Swift",
-    "src": "",
-    "appleTrackId": 1552791427,
-    "appleMusicUrl": "https://music.apple.com/us/album/love-story-taylors-version/1552791073?i=1552791427",
-    "note": "Official 30-second Apple Music preview of “Love Story (Taylor’s Version)”, streamed from Apple at click time (iTunes lookup API); not stored in the site. Put your own licensed file in src to use it instead."
+    "title": "卡农",
+    "artist": "Lee Galloway · 钢琴",
+    "src": "./assets/zurenze/canon-lee-galloway.mp3",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pachelbel%27s_Canon.ogg",
+    "sourceLabel": "音源与许可 ↗",
+    "note": "Johann Pachelbel 作曲，Lee Galloway 钢琴演奏；沿用本人旧站音源，CC BY-SA 3.0。"
   },
   "toolboxStories": [
     {
-      "title": "工作流",
-      "description": "让重复的步骤连起来，让精力留给判断。",
-      "paragraphs": [
-        "正在探索 AI 自动化，从整理一项重复任务开始，理解输入、处理和输出之间的关系。"
+      "title": "热点雷达",
+      "description": "从人物、文化和行业线索里，找到值得继续研究的选题。",
+      "paragraphs": [],
+      "details": [],
+      "toolIds": [
+        "radar"
       ],
+      "gallery": [
+        {
+          "title": "热点雷达",
+          "src": "./assets/zurenze/tool-showcase/radar.png",
+          "alt": "祖仁泽自媒体工作台中的人物与时尚选题图文卡片",
+          "caption": "",
+          "width": 3002,
+          "height": 1888
+        }
+      ]
+    },
+    {
+      "title": "选题与拆解",
+      "description": "把线索变成选题，把参考作品拆成能复用的方法。",
+      "paragraphs": [],
+      "details": [],
+      "toolIds": [
+        "topics",
+        "breakdown"
+      ],
+      "gallery": [
+        {
+          "title": "选题库 · 刘翔项目",
+          "src": "./assets/zurenze/tool-showcase/topics.png",
+          "alt": "刘翔第九道封王的真实项目工作区，显示选题、项目资料与制作流程",
+          "caption": "",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "title": "从选题到成片",
+          "src": "./assets/zurenze/tool-showcase/finished-works.png",
+          "alt": "自媒体工作台中的邓稼先与钱学森已有完整视频作品及版本",
+          "caption": "",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "title": "视频拆解 · 辛芷蕾",
+          "src": "./assets/zurenze/tool-showcase/breakdown.jpg",
+          "alt": "辛芷蕾成片拆解工程，含花老板口播、素材、时间线与音频波形",
+          "caption": "",
+          "width": 2984,
+          "height": 1718
+        }
+      ]
+    },
+    {
+      "title": "视频素材采集",
+      "description": "链接解析、画质选择、片段截取与字幕处理。",
+      "paragraphs": [],
+      "details": [],
+      "toolIds": [
+        "capture"
+      ]
+    },
+    {
+      "title": "AI影音创作",
+      "description": "声音克隆 · 数字人口播 · AIGC影像",
+      "paragraphs": [],
+      "details": [],
+      "links": [
+        {
+          "url": "https://github.com/OpenBMB/VoxCPM",
+          "label": "VoxCPM 项目"
+        },
+        {
+          "url": "https://github.com/QwenLM/Qwen3-TTS",
+          "label": "Qwen3-TTS 项目"
+        },
+        {
+          "url": "https://github.com/SWivid/F5-TTS",
+          "label": "F5-TTS 项目"
+        },
+        {
+          "url": "https://fish.audio/",
+          "label": "Fish Audio"
+        }
+      ],
+      "toolIds": [],
+      "showcase": {
+        "voice": {
+          "name": "花老板",
+          "title": "同一位IP，四种克隆音对比。",
+          "reference": "./assets/zurenze/audiovisual/hualaoban/原视频声音_216至229.5秒.wav",
+          "referenceDuration": 13.5,
+          "referenceLabel": "花老板原视频声音节选",
+          "referenceMeta": "Rosé视频 · 03:36.00—03:49.50",
+          "referenceSourceUrl": "https://www.douyin.com/video/7654134834776443313",
+          "referenceText": "求稳和激进都是个人选择但我想告诉你的是在这个高处不胜寒的圈子里该挨的骂 该受的苦 哪条路都少不了你选择突破 要挨骂选择坚持 一样要挨骂你选择开拓 要受苦",
+          "cloningReference": "./assets/zurenze/audiovisual/hualaoban/克隆参考_分离人声_216至229.5秒.wav",
+          "text": "我们说一件衣服好看，不能只看它的价格和标签。更值得看的，是剪裁、比例，还有它和穿着者之间的关系。把这些细节讲清楚，观众才知道自己为什么喜欢。",
+          "scriptLabel": "同文试音 · 本次测试文案",
+          "flow": [
+            "选取清晰人声",
+            "输入统一文案",
+            "Fish＋三个本地模型",
+            "对照试听"
+          ],
+          "note": "以下均为AI克隆音，不是真人新录制。原始合成保留，试听只调整恒定音量。",
+          "models": [
+            {
+              "name": "Fish Audio · Drama 3",
+              "duration": 12.146875,
+              "sampleRate": 44100,
+              "elapsed": null,
+              "seed": null,
+              "backend": "Fish云端",
+              "rawFormat": "MP3",
+              "raw": "./assets/zurenze/audiovisual/hualaoban/花老板_Fish_Drama3_原始合成.mp3",
+              "src": "./assets/zurenze/audiovisual/hualaoban/fish-listening.mp3",
+              "wave": "./assets/zurenze/audiovisual/hualaoban/fish-wave.png"
+            },
+            {
+              "name": "VoxCPM2",
+              "duration": 11.200167,
+              "sampleRate": 48000,
+              "elapsed": 262.4,
+              "seed": 42,
+              "backend": "本机",
+              "rawFormat": "WAV",
+              "raw": "./assets/zurenze/audiovisual/hualaoban/vox-original.wav",
+              "src": "./assets/zurenze/audiovisual/hualaoban/vox-listening.mp3",
+              "wave": "./assets/zurenze/audiovisual/hualaoban/vox-wave.png"
+            },
+            {
+              "name": "Qwen3 TTS Base",
+              "duration": 12.08,
+              "sampleRate": 24000,
+              "elapsed": 36.3,
+              "seed": 42,
+              "backend": "本机",
+              "rawFormat": "WAV",
+              "raw": "./assets/zurenze/audiovisual/hualaoban/qwen-original.wav",
+              "src": "./assets/zurenze/audiovisual/hualaoban/qwen-listening.mp3",
+              "wave": "./assets/zurenze/audiovisual/hualaoban/qwen-wave.png"
+            },
+            {
+              "name": "F5 TTS",
+              "duration": 13.017333,
+              "sampleRate": 24000,
+              "elapsed": 135.0,
+              "seed": 42,
+              "backend": "本机",
+              "rawFormat": "WAV",
+              "raw": "./assets/zurenze/audiovisual/hualaoban/f5-original.wav",
+              "src": "./assets/zurenze/audiovisual/hualaoban/f5-listening.mp3",
+              "wave": "./assets/zurenze/audiovisual/hualaoban/f5-wave.png"
+            }
+          ]
+        },
+        "film": {
+          "src": "./assets/zurenze/audiovisual/lingzhu-mv-720p.mp4",
+          "poster": "./assets/zurenze/audiovisual/lingzhu-poster.jpg"
+        },
+        "shots": [
+          {
+            "title": "外套质感特写",
+            "duration": 4.11,
+            "src": "./assets/zurenze/audiovisual/aigc-shots/shell-texture.mp4",
+            "poster": "./assets/zurenze/audiovisual/aigc-shots/shell-texture.jpg"
+          },
+          {
+            "title": "渔网到外套 · 形态转场",
+            "duration": 5.108005,
+            "src": "./assets/zurenze/audiovisual/aigc-shots/net-to-coat.mp4",
+            "poster": "./assets/zurenze/audiovisual/aigc-shots/net-to-coat.jpg"
+          },
+          {
+            "title": "水下渔网 · 纤维转化",
+            "duration": 4.096009,
+            "src": "./assets/zurenze/audiovisual/aigc-shots/underwater-fibers.mp4",
+            "poster": "./assets/zurenze/audiovisual/aigc-shots/underwater-fibers.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "我的素材库",
+      "description": "音效与画面参考，按创作场景整理。",
+      "paragraphs": [],
       "details": [
         [
-          "关注方向",
-          "资料收集、信息整理、内容处理。"
+          "音效整理",
+          "172条音效，按9类归档，可导入剪映使用。"
         ],
         [
-          "做事思路",
-          "先拆步骤，再连接工具；把人工确认留在关键环节。"
+          "画面参考",
+          "在Eagle中整理花字、标题、转场、素材罗列、分屏与画中画。"
         ]
+      ],
+      "gallery": [
+        {
+          "src": "./assets/zurenze/material-library/sfx-categories.png",
+          "title": "音效分类",
+          "caption": "嗖声、冲击、上升、闪光、纸张、故障、氛围与拟音，按9类查找。",
+          "alt": "音效分类的真实界面截图",
+          "width": 4718592,
+          "height": 4292935744
+        },
+        {
+          "src": "./assets/zurenze/material-library/sfx-files.png",
+          "title": "可直接导入剪映的音效",
+          "caption": "保留WAV / M4A原文件，按镜头需要挑选。",
+          "alt": "可直接导入剪映的音效的真实界面截图",
+          "width": 4718592,
+          "height": 4292935744
+        },
+        {
+          "src": "./assets/zurenze/material-library/eagle-type.png",
+          "title": "Eagle · 花字与文字动效",
+          "caption": "从文字样式到画面节奏，归集可检索的剪辑参考。",
+          "alt": "Eagle · 花字与文字动效的真实界面截图",
+          "width": 2046,
+          "height": 1578
+        },
+        {
+          "src": "./assets/zurenze/material-library/eagle-montage.png",
+          "title": "Eagle · 素材罗列与信息编排",
+          "caption": "积累分屏、画中画和图文编排参考。",
+          "alt": "Eagle · 素材罗列与信息编排的真实界面截图",
+          "width": 2092,
+          "height": 1602
+        }
       ],
       "toolIds": []
-    },
+    }
+  ],
+  "projects": [
     {
-      "title": "效率工具",
-      "description": "工具的价值，是把手头的事情做得更顺。",
+      "title": "意公子",
+      "displayTitle": "意公子 · 人物与文化内容",
+      "description": "参与人物与文化内容的选题、文案、拍摄和剪辑。",
+      "src": "./assets/zurenze/case-yigongzi.webp",
+      "alt": "意公子公开肖像，沿用既有研究页素材",
+      "width": 1513,
+      "height": 1044,
       "paragraphs": [
-        "把 AI 学习放进具体场景，关注工具是否真正减少操作、方便下一次使用。"
+        "曾参与意公子相关内容制作，工作包括选题、资料整理、文案、拍摄与剪辑。",
+        "这里将按具体作品整理我的参与环节、过程材料与成片，清楚呈现一条内容是如何完成的。"
       ],
       "details": [
         [
-          "关注方向",
-          "截图、素材整理与日常信息处理。"
+          "参与方向",
+          "人物故事、文化表达与视频内容制作。"
         ],
         [
-          "做事思路",
-          "从一个小问题开始，做简单、清楚、用得上的功能。"
+          "作品档案",
+          "具体参与作品与过程材料继续整理，以单条作品的实际分工为准。"
         ]
       ],
-      "toolIds": [
-        "capso-trim",
-        "screen-chinese"
+      "links": [],
+      "page": "./yigongzi/",
+      "employmentPeriod": "2022.10—2023.12",
+      "employmentType": "实习",
+      "role": "参与选题、文案、拍摄与剪辑"
+    },
+    {
+      "title": "花老板",
+      "displayTitle": "花老板 · 时尚、人物与品牌内容",
+      "description": "2025年3月—2026年10月20日，参与人物与品牌内容制作。",
+      "src": "./hualaoban/media/portrait.jpg",
+      "alt": "花老板公开作品中的出镜肖像",
+      "width": 630,
+      "height": 1120,
+      "page": "./hualaoban/",
+      "employmentPeriod": "2025.03—2026.10.20",
+      "role": "本人负责选题、写稿、拍摄和剪辑全流程",
+      "paragraphs": [
+        "曾在花老板团队工作，任职时间为2025年3月—2026年10月20日。",
+        "梅根福克斯作品中负责选题、文案、花老板口播拍摄与剪辑，原作于离职后发布。其他个人分工见作品页。"
+      ],
+      "details": [
+        [
+          "任职时间",
+          "2025.03—2026.10.20"
+        ],
+        [
+          "主案例分工",
+          "选题、文案、口播拍摄与剪辑"
+        ]
+      ],
+      "links": [
+        {
+          "label": "进入花老板主页",
+          "url": "./hualaoban/"
+        }
       ]
     },
     {
-      "title": "视觉表达",
-      "description": "把一个想法，变成看得见的画面。",
+      "title": "客户定制",
+      "page": "./client-projects.html",
+      "description": "戏里戏外与反舞弊数字稽查官两项客户定制开发"
+    }
+  ],
+  "clientProjects": [
+    {
+      "id": "actor",
+      "title": "戏里戏外",
+      "displayTitle": "戏里戏外 · 明星客户定制项目",
+      "description": "为明星客户设计和开发的工作台。",
+      "src": "./client-media/actor-script.png",
+      "alt": "戏里戏外剧本研读演示界面，使用虚构项目资料",
+      "width": 1440,
+      "height": 1000,
       "paragraphs": [
-        "探索 AI 图像与视频的视觉表达，从参考、构图和人物一致性入手，慢慢形成自己的判断。"
+        "为一位明星客户设计和开发的项目，围绕项目、剧本、通告、团队协作与内容运营组织工作流程。",
+        "从具体需求出发梳理使用场景，结合 AI 协作完成产品实现与操作验证。"
       ],
       "details": [
         [
-          "关注方向",
-          "人物形象、画面构图、色彩与氛围。"
+          "服务对象",
+          "明星客户（匿名展示）"
         ],
         [
-          "做事思路",
-          "先明确画面要表达什么，再选择合适的工具。"
+          "项目功能",
+          "剧本资料、通告日历、任务与团队协作、工作室经营及内容运营。"
         ]
       ],
-      "toolIds": [
-        "shots"
-      ]
+      "links": []
     },
     {
-      "title": "动态内容",
-      "description": "让画面动起来，也让故事讲清楚。",
+      "id": "inspection",
+      "title": "反舞弊数字稽查官",
+      "displayTitle": "反舞弊数字稽查官",
+      "description": "为茶饮行业头部企业的业务场景设计和开发的系统。",
+      "src": "./client-media/inspection-archives.jpg",
+      "alt": "反舞弊数字稽查官的案件与资料界面预览",
+      "width": 1280,
+      "height": 720,
       "paragraphs": [
-        "关注动作是否自然、镜头是否连贯，以及画面和声音能否一起传达内容。"
+        "这是为茶饮行业头部企业开发的定制项目，围绕流水、规则、线索和资料管理梳理业务流程。",
+        "从需求理解、操作流程设计，到 AI 协作开发与功能验证，把具体业务问题做成系统。"
       ],
       "details": [
         [
-          "关注方向",
-          "AI 视频、短片与人物动态。"
+          "服务对象",
+          "茶饮行业头部"
         ],
         [
-          "做事思路",
-          "从短片段开始，检查节奏、衔接和画面细节。"
+          "项目功能",
+          "流水整理与分析、规则检查、线索追踪及知识资料管理。"
         ]
       ],
-      "toolIds": [
-        "shoot"
-      ]
-    },
-    {
-      "title": "日历与备忘录",
-      "description": "把日程、待办和灵感，放在一起。",
-      "paragraphs": [
-        "在个人网站里探索卡片、排版和交互，关注视觉层次，也关注鼠标和手机操作的体验。"
-      ],
-      "details": [
-        [
-          "关注方向",
-          "信息层级、卡片布局、交互反馈。"
-        ],
-        [
-          "做事思路",
-          "把最重要的内容放清楚，让装饰服务于使用。"
-        ]
-      ],
-      "toolIds": [
-        "memo"
-      ]
-    },
-    {
-      "title": "页面布局",
-      "description": "从页面想法，到可以打开、可以操作的网站。",
-      "paragraphs": [
-        "围绕自己的个人空间，持续尝试照片展示、内容组织和响应式布局。"
-      ],
-      "details": [
-        [
-          "关注方向",
-          "个人网站、照片展示与不同屏幕适配。"
-        ],
-        [
-          "做事思路",
-          "先搭结构，再补内容，最后检查实际使用效果。"
-        ]
-      ],
-      "toolIds": []
+      "links": []
     }
   ]
 }
