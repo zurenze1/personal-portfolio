@@ -17,7 +17,7 @@ async function init(){
  const response=await fetch('data/account-dashboard-20261030.json?v=20261106-tenure');if(!response.ok)throw Error('数据快照读取失败');const d=await response.json();
  Q('#ygd-tenure-chart').innerHTML=monthly(d.tenure.months,'count','2023年3月至2023年9月已核日期样本的发布数量');
  Q('#ygd-formats').innerHTML=bars(d.tenure.publish_time_bins);
- Q('#ygd-topics').innerHTML=d.tenure.topics.length?bars(d.tenure.topics):'<p>新实习期的主题分类整理中，暂不展示旧窗口统计。</p>';
+ Q('#ygd-topics').innerHTML=d.tenure.topics.length?bars(d.tenure.topics):'<p>围绕中华文化、历史人物、艺术与审美，结合人物经历和生活议题组织叙事。</p>';
  Q('#ygd-plays').innerHTML=bars([{label:'近15条最低播放',value:d.xingtu.recent15.min_plays},{label:'近15条平均播放',value:d.xingtu.recent15.mean_plays},{label:'近15条最高播放',value:d.xingtu.recent15.max_plays}]);
  Q('#ygd-milestones').innerHTML=d.milestones.map((x,i)=>`<article><b>${E(x.date.slice(0,7).replace('-', '年')+'月')}</b><strong>${E(x.display)}</strong><small>历史账号节点</small></article>`).join('');
  await initDateFilters();
