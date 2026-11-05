@@ -29,9 +29,9 @@ export async function initDateFilters(){
   let chart=`<svg class="ygd-chart ygd-date-chart" style="min-width:${w}px" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(a+'至'+b+' '+labels[key]+'按'+({year:'年',month:'月',day:'日'}[unit])+'汇总图')}，可横向滑动"><title>${esc(labels[key])}；空缺指标不按0补齐</title><path class="axis" d="M${left} 20V${base}H${w-8}"/>`;
   rows.forEach((x,i)=>{const bh=x.value/max*165,xx=left+slot*(i+.2),cx=left+slot*(i+.5),missing=key!=='count'&&x.count>0&&x.known===0,label=unit==='year'?x.date:unit==='month'?x.date.slice(2):x.date.slice(5);chart+=`<g><title>${esc(x.date)}：${missing?'该指标缺失':fmt(x.value)}；已核作品${x.count}条${key==='count'?'':`，有指标${x.known}条`}</title>${missing?`<path class="missing-mark" d="M${cx-4} ${base-8}l8 8m-8 0 8-8"/>`:`<rect class="bar${i%2?' bar-alt':''}" x="${xx}" y="${base-bh}" width="${Math.max(3,slot*.6)}" height="${bh}" rx="2"/>`}${(rows.length<=40||x.value===max)&&!missing?`<text x="${cx}" y="${base-bh-9}" text-anchor="middle">${fmt(x.value)}</text>`:''}${i%tickEvery===0?`<text x="${cx}" y="${base+26}" text-anchor="middle">${esc(label)}</text>`:''}</g>`});
   $('#ygd-month-chart').innerHTML=chart+'</svg>';
-  document.querySelectorAll('[data-ygd-range]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.ygdRange==='all'?a===data.min_date&&b===data.max_date:a==='2022-10-01'&&b==='2023-12-31')));
+  document.querySelectorAll('[data-ygd-range]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.ygdRange==='all'?a===data.min_date&&b===data.max_date:a==='2023-03-01'&&b==='2023-09-30')));
  }
  for(const input of [start,end,group,metric])input.addEventListener('change',render);
- document.querySelectorAll('[data-ygd-range]').forEach(button=>button.addEventListener('click',()=>{start.value=button.dataset.ygdRange==='all'?data.min_date:'2022-10-01';end.value=button.dataset.ygdRange==='all'?data.max_date:'2023-12-31';render()}));
+ document.querySelectorAll('[data-ygd-range]').forEach(button=>button.addEventListener('click',()=>{start.value=button.dataset.ygdRange==='all'?data.min_date:'2023-03-01';end.value=button.dataset.ygdRange==='all'?data.max_date:'2023-09-30';render()}));
  render();
 }

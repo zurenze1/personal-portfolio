@@ -1,4 +1,4 @@
-import {initDateFilters} from './date-filter.js?v=20261031-r1';
+import {initDateFilters} from './date-filter.js?v=20261106-tenure';
 const E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const Q=s=>document.querySelector(s);
 const fmt=n=>n>=10000?(n/10000).toLocaleString('zh-CN',{maximumFractionDigits:1})+'万':Number(n).toLocaleString('zh-CN',{maximumFractionDigits:1});
@@ -14,12 +14,12 @@ function hourly(rows){
  }).join('')+'</svg>';
 }
 async function init(){
- const response=await fetch('data/account-dashboard-20261030.json?v=20261031-data2');if(!response.ok)throw Error('数据快照读取失败');const d=await response.json();
- Q('#ygd-tenure-chart').innerHTML=monthly(d.tenure.months,'count','2022年10月至2023年12月已核日期样本的发布数量');
+ const response=await fetch('data/account-dashboard-20261030.json?v=20261106-tenure');if(!response.ok)throw Error('数据快照读取失败');const d=await response.json();
+ Q('#ygd-tenure-chart').innerHTML=monthly(d.tenure.months,'count','2023年3月至2023年9月已核日期样本的发布数量');
  Q('#ygd-formats').innerHTML=bars(d.tenure.publish_time_bins);
- Q('#ygd-topics').innerHTML=bars(d.tenure.topics);
+ Q('#ygd-topics').innerHTML=d.tenure.topics.length?bars(d.tenure.topics):'<p>新实习期的主题分类整理中，暂不展示旧窗口统计。</p>';
  Q('#ygd-plays').innerHTML=bars([{label:'近15条最低播放',value:d.xingtu.recent15.min_plays},{label:'近15条平均播放',value:d.xingtu.recent15.mean_plays},{label:'近15条最高播放',value:d.xingtu.recent15.max_plays}]);
- Q('#ygd-milestones').innerHTML=d.milestones.map((x,i)=>`<article><b>${E(x.date.slice(0,7).replace('-', '年')+'月')}</b><strong>${E(x.display)}</strong><small>${['入职前','任职期间','离职前'][i]}</small></article>`).join('');
+ Q('#ygd-milestones').innerHTML=d.milestones.map((x,i)=>`<article><b>${E(x.date.slice(0,7).replace('-', '年')+'月')}</b><strong>${E(x.display)}</strong><small>历史账号节点</small></article>`).join('');
  await initDateFilters();
  const labels={age:'年龄分布',segments:'人群分布',province:'省份分布',city:'城市分布',city_tier:'城市层级',devices:'设备品牌',price:'消费价格偏好',content:'内容偏好',brands:'品牌偏好',activity:'活跃程度'};
  function audience(kind){const a=d.audience[kind];document.querySelectorAll('[data-ygd-audience]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.ygdAudience===kind)));Q('#ygd-gender').innerHTML='<div class="ygd-gender">'+a.gender.map(x=>`<i style="width:${x.value}%" title="${E(x.label)} ${x.value}%"></i>`).join('')+'</div><div class="ygd-legend">'+a.gender.map(x=>`<span>${E(x.label)} ${x.value}%</span>`).join('')+'</div>';for(const key of ['age','segments','province'])Q('#ygd-'+key).innerHTML=bars(a[key],{percent:true});Q('#ygd-audience-more').innerHTML=Object.entries(labels).filter(([k])=>!['age','segments','province'].includes(k)&&a[k]?.length).map(([k,title])=>`<article class="ygd-panel"><h4>${title}</h4>${bars(a[k],{percent:true})}</article>`).join('');Q('#ygd-hours-wrap').hidden=!a.hours?.length;if(a.hours?.length)Q('#ygd-hours').innerHTML=hourly(a.hours)}
