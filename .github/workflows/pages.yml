@@ -25,12 +25,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Prepare current portfolio only
+        run: |
+          mkdir -p pages-site
+          cp -a dist/aze-ip dist/azu-ip pages-site/
+          cp dist/index.html pages-site/index.html
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: pages-site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          timeout: 1800000
