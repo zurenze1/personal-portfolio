@@ -1,0 +1,37 @@
+/* V1 skins share the original four-sleeve stack and pointer / focus logic. */
+.module-work #work-card-shengongbao{z-index:2;--sleeve:#141414;--sleeve-ink:#fffaf4;--record-accent:#FFD60A}
+.module-work #work-card-fangli{z-index:3;--sleeve:#F5F3EF;--sleeve-ink:#1E1E1E;--record-accent:#E9A8B8}
+.module-work #work-card-yigongzi{z-index:4;--sleeve:#153b31;--sleeve-ink:#f2f0e7;--record-accent:#b6a777}
+.module-work #work-card-aigc{z-index:1;--sleeve:#0E1116;--sleeve-ink:#f0ece1;--record-accent:#d8c89f}
+.album-shengongbao .work-cover,.album-fangli .work-cover,.album-aigc .work-cover{position:relative;isolation:isolate}
+.case-sleeve-image{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.album-shengongbao .case-sleeve-image{object-position:50% 25%;transform:none}
+.module-work .album-shengongbao:not(.is-active) .case-sleeve-image{left:auto;right:0;width:34%;object-position:50% 22%}
+.album-shengongbao .work-cover:before,.album-fangli .work-cover:before,.album-aigc .work-cover:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#14141480,transparent 26% 38%,#141414f2 86%)}
+.album-shengongbao .work-card-face:before{background:linear-gradient(#FFD60A 0 3px,#141414 3px 8px)}
+.module-work .album-shengongbao .sleeve-meta>span{background:#FFD60A;color:#141414;padding:3px 6px;font-weight:800}
+.album-shengongbao .sleeve-number{background:#FFD60A;color:#141414;box-shadow:2px 2px 0 #141414}
+.album-shengongbao .record-label b{font-family:"PingFang SC","Heiti SC",sans-serif;font-weight:900}
+.album-fangli .case-sleeve-image{object-position:50% 35%;width:84%;mask-image:linear-gradient(90deg,#000 55%,transparent);-webkit-mask-image:linear-gradient(90deg,#000 55%,transparent)}
+.album-fangli .work-cover:before{background:linear-gradient(180deg,#f5f3ef66,transparent 35%,#f5f3efed 85%)}
+.album-fangli .sleeve-title h3,.album-fangli .record-label b{font-family:"Songti SC","STSong",serif;font-weight:500}
+.album-fangli .work-card-face:before{background:linear-gradient(#E9A8B8 0 2px,#F5F3EF 2px 8px)}
+.album-fangli .sleeve-number{background:#1E1E1E;color:#F5F3EF;box-shadow:none}
+.module-work .album-fangli .sleeve-title>span{color:#1E1E1E}
+.album-fangli .sleeve-title{border-color:#E9A8B8}
+.sleeve-signature{position:absolute;right:7%;top:15%;font:clamp(25px,4vw,58px)/1 "Snell Roundhand","Zapfino",cursive!important;letter-spacing:0!important;color:#E9A8B8!important;transform:rotate(-9deg)}
+.album-aigc .case-sleeve-image{object-position:50% 50%}
+.album-aigc .work-cover:before{background:linear-gradient(180deg,#0e111680,transparent 30% 48%,#0e1116f2 88%)}
+.album-aigc .work-card-face:before{background:linear-gradient(#d8c89f 0 2px,#0E1116 2px 8px)}
+.album-aigc .sleeve-title h3,.album-aigc .record-label b{font-family:"Songti SC","STSong",serif;font-weight:400}
+.album-aigc .sleeve-number{background:#d8c89f;color:#0E1116;box-shadow:none}
+.module-work .work-slot .sleeve-title{position:relative}
+.module-work .work-slot .sleeve-title .sleeve-open{font:inherit;color:inherit;letter-spacing:0}
+.module-work .record-label b{font-size:clamp(10px,1.35vw,20px);line-height:1.3;text-align:center}
+@media(max-width:650px){.module-work .record-label b{font-size:10px}.sleeve-signature{font-size:25px!important}}
+
+/* A quiet chronological cue for the three employment albums. */
+.module-work .work-order-note{display:flex;align-items:center;gap:10px;margin:15px 0 0;color:#fff4ded9;font:400 12px/1.6 var(--sans);letter-spacing:.08em}
+.module-work .work-order-note>span:first-child{font-size:10px;letter-spacing:.12em;font-variant-numeric:lining-nums tabular-nums}
+.module-work .work-order-arrow{margin-left:3px;font-size:15px}
+@media(max-width:650px){.module-work .work-order-note{margin-top:11px;font-size:11px;gap:8px;color:#414d67}}

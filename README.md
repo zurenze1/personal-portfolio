@@ -1,20 +1,20 @@
 # 个人作品集
 
-祖仁泽 · 阿泽 AZE 的个人作品集。展示自媒体内容策划与制作经历、创作者研究、AI 影音创作和工具项目。
+祖仁泽 · AZE 的个人作品集，展示IP内容策划与制作、AI影音创作和工具项目。
 
 ## 页面入口
 
-- 个人作品集：`/azu-ip/`
-- 意公子案例：`/azu-ip/yigongzi/`
-- 花老板案例：`/azu-ip/hualaoban/`
-- 客户定制项目：`/azu-ip/client-projects.html`
+- [个人作品集](https://zurenze1.github.io/personal-portfolio/aze-ip/)
+- [01 意公子](https://zurenze1.github.io/personal-portfolio/aze-ip/yigongzi/)
+- [02 方里菊子](https://zurenze1.github.io/personal-portfolio/aze-ip/fangli/)
+- [03 申公豹](https://zurenze1.github.io/personal-portfolio/aze-ip/shengongbao/)
+- [04 AIGC与自研](https://zurenze1.github.io/personal-portfolio/aze-ip/aigc/)
+- [客户定制项目](https://zurenze1.github.io/personal-portfolio/aze-ip/client-projects.html)
 
-## 维护与预览
+## 维护与发布
 
-当前作品集源码和媒体位于 `public/azu-ip/`，对应静态发布副本位于 `dist/azu-ip/`。更新后同步这两处；直接使用支持字节范围请求的静态服务器预览 `dist/`，可完整播放站内视频。
+当前作品集源码和媒体位于 `public/aze-ip/`，对应静态发布副本位于 `dist/aze-ip/`；更新时同步这两处。GitHub Pages沿用现有工作流发布 `dist/`。
 
-仓库还保留原版网站与既有工具页面。原 React 网站位于 `src/`，可通过 `npm ci`、`npm run build` 构建。GitHub Pages 工作流使用 `dist/` 作为发布目录；仓库上传和网页对外发布是两个独立步骤。
+唱片中的三段任职经历按时间排列。旧 `/azu-ip/` 入口及已有案例链接保留跳转，指向新的 `/aze-ip/` 页面。工具的本机启动地址只在本机工作台使用，公开页面保留工具介绍、界面截图与制作案例。
 
-## 版本与素材
-
-本版包含已确认的个人资料、意公子与花老板任职案例、竞品研究、视频拆解、声音克隆对比及 AIGC 作品。创作者指标均为对应采集时点的快照，具体分工与时间范围以页面标注为准。
+仓库保留既有网站、工具、素材来源及许可说明。原React网站位于 `src/`，可用 `npm ci`、`npm run build` 构建；发布当前静态作品集时无需重建原网站。

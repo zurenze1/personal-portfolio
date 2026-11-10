@@ -1,0 +1,11 @@
+/* The original palette and chapter structure remain in place. */
+:root{--brush:"Songti SC","STSong",serif;--portfolio-brush:"Songti SC","STSong",serif}
+.top nav a,.top .brand{font-family:"Songti SC","STSong",serif!important}
+.iv1-role-description{font:14px/2 var(--sans);max-width:36em;margin:24px 0 30px}
+.iv1-team-note{font:10px/1.9 var(--sans);opacity:.72;max-width:none;margin:24px 0}
+.iv1-case-pagination{border-top:1px solid #82967a60;margin-top:38px;padding-top:32px}
+.footer .iv1-next{display:flex;align-items:baseline;justify-content:space-between;gap:24px;font:500 clamp(32px,4.2vw,60px)/1.5 var(--serif);margin:0 0 28px;text-decoration:none}
+.iv1-next small{font:12px/1.8 var(--sans);letter-spacing:.1em}
+.iv1-case-pagination>a:last-child{font:12px/1.8 var(--sans)}
+@media(max-width:620px){.footer .iv1-next{display:block;font-size:34px}.iv1-next small{display:block;margin-top:12px}.iv1-role-description{font-size:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}}

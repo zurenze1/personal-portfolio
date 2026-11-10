@@ -1,0 +1,448 @@
+{
+  "introLead": "祖仁泽 · IP编导 / AI内容编导",
+  "introDetail": "上海外国语大学贤达经济人文学院毕业",
+  "introStatus": "姓名、教育及个人经历来自本人既有个人网站和本次确认；项目按实际功能展示。",
+  "chapters": [
+    {
+      "id": "work",
+      "number": "02",
+      "title": "创作案例",
+      "english": "IDEAS INTO REALITY",
+      "description": "把想法变成作品，把好奇心变成行动。"
+    },
+    {
+      "id": "skills",
+      "number": "03",
+      "title": "秘密武器库",
+      "english": "MY CREATIVE TOOLBOX",
+      "description": "正在学习的技能、顺手的工具，以及新的可能。"
+    },
+    {
+      "id": "world",
+      "number": "04",
+      "title": "生活照片",
+      "english": "MY LITTLE UNIVERSE",
+      "description": "那些让我保持好奇的小事，以及生活里不同的我。"
+    },
+    {
+      "id": "contact",
+      "number": "05",
+      "title": "联系我",
+      "english": "LET’S MAKE A CONNECTION",
+      "description": "聊聊想法，分享热爱，或者只是打个招呼。"
+    }
+  ],
+  "worldPhotos": [
+    {
+      "src": "./assets/zurenze/travel.jpg",
+      "alt": "祖仁泽在旅行中穿着红色民族服装留影",
+      "title": "旅行在路上",
+      "description": "从贵阳出发，去看看不同的风景。",
+      "paragraphs": [
+        "在上海读书，在重庆服役，也在不同城市工作和旅行。喜欢看看山海、建筑和当地的生活，把路上的片刻留在照片里。"
+      ],
+      "tags": [
+        "贵阳",
+        "旅行",
+        "生活记录"
+      ],
+      "theme": "home",
+      "details": [
+        [
+          "旅行里的我",
+          "喜欢走出去，也愿意慢下来看看沿途的人和风景。"
+        ],
+        [
+          "认识世界",
+          "读书和旅行，是我保持好奇的两种方式。"
+        ]
+      ],
+      "position": "50% 35%",
+      "mediaWord": "在路上",
+      "width": 1920,
+      "height": 1280
+    },
+    {
+      "src": "./assets/zurenze/military-daily.jpg",
+      "alt": "祖仁泽军旅时期戴迷彩帽、穿黑色上衣的日常留影",
+      "title": "军旅时光",
+      "description": "武警退伍 · 文书与内部宣传",
+      "paragraphs": [
+        "军旅经历让我更重视纪律、执行和团队协作。曾参与文书材料、内部宣传文案与视频内容相关工作。"
+      ],
+      "tags": [
+        "武警退伍",
+        "文书与内部宣传",
+        "团队协作"
+      ],
+      "theme": "service",
+      "details": [
+        [
+          "经历与积累",
+          "把事情交代清楚、把任务落实到位，也把经历转化为表达与创作的素材。"
+        ]
+      ],
+      "position": "40% 30%",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "src": "./assets/zurenze/about.jpg",
+      "cover": {
+        "src": "./assets/zurenze/graduation.jpg",
+        "alt": "祖仁泽穿学士服、手持花束的毕业留影",
+        "position": "44% 38%",
+        "width": 1920,
+        "height": 1280
+      },
+      "alt": "祖仁泽的彩色正式肖像",
+      "title": "我叫祖仁泽",
+      "description": "自媒体创作 · IP 内容策划 · AI 工具开发",
+      "paragraphs": [
+        "我是祖仁泽，叫我阿泽就好。上海外国语大学贤达经济人文学院法学本科，武警退伍，有自媒体和 AI 部门的工作经历。",
+        "围绕人物内容与 IP 创作，参与选题、资料研究、脚本文案、拍摄和剪辑，把内容从想法推进到成片。",
+        "用 AI 开发服务创作的小工具，覆盖热点追踪、选题整理、视频拆解、素材采集、声音合成、数字人与视频制作，把重复工作整理成可复用的工具和流程。"
+      ],
+      "tags": [
+        "自媒体创作",
+        "IP 内容策划",
+        "AI 工具开发"
+      ],
+      "theme": "about",
+      "details": [
+        [
+          "内容创作",
+          "选题研究、资料核查、脚本文案、拍摄与剪辑。"
+        ],
+        [
+          "AI 工具开发",
+          "从创作任务出发梳理需求，开发选题、拆解、采集和声音等工具，并通过实际操作持续改进。"
+        ]
+      ],
+      "position": "50% 25%",
+      "width": 1800,
+      "height": 1200
+    },
+    {
+      "src": "./assets/zurenze/reading.jpg",
+      "alt": "祖仁泽坐在桌前阅读的生活照",
+      "title": "读书与听琴",
+      "description": "阅读、古诗词，也给日常留一点安静。",
+      "paragraphs": [
+        "喜欢阅读、写作、传统文化与哲学，最近尤其喜欢苏轼。也喜欢听钢琴音乐，给自己留一点独处和整理思绪的时间。"
+      ],
+      "tags": [
+        "阅读与写作",
+        "古诗词",
+        "钢琴音乐"
+      ],
+      "theme": "reading",
+      "details": [
+        [
+          "书架一角",
+          "《遥远的救世主》《平凡的世界》《觉察之道》《命运》《六祖坛经》。"
+        ],
+        [
+          "传统文化",
+          "对儒释道、哲学与古诗词保持兴趣，也喜欢到古寺小住。"
+        ],
+        [
+          "最近在听",
+          "卡农、Flower Dance，以及钢琴演奏的《青空》。"
+        ]
+      ],
+      "position": "51% 44%",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "./assets/zurenze/running.jpg",
+      "cover": {
+        "src": "./assets/zurenze/baseball.jpg",
+        "alt": "祖仁泽大学棒球队时期的照片",
+        "position": "50% 34%",
+        "width": 1440,
+        "height": 1920
+      },
+      "alt": "祖仁泽穿绿色上衣在户外跑步",
+      "title": "跑步与棒球",
+      "description": "身体在路上，人也继续向前。",
+      "paragraphs": [
+        "大学时是棒球队校队的一员。现在依然喜欢跑步，也在练习游泳，把运动留在日常里。"
+      ],
+      "tags": [
+        "棒球",
+        "跑步",
+        "游泳练习"
+      ],
+      "theme": "sports",
+      "details": [
+        [
+          "球场经历",
+          "校队训练和比赛，让我体会到配合、投入与长期练习。"
+        ],
+        [
+          "日常运动",
+          "会蛙泳，继续练自由泳；也希望以后尝试骑马和滑雪。"
+        ]
+      ],
+      "position": "50% 48%",
+      "mediaWord": "MOVE.",
+      "width": 1080,
+      "height": 1924
+    }
+  ],
+  "contact": {
+    "phone": "17678917744",
+    "email": "2966766140@qq.com"
+  },
+  "bgm": {
+    "title": "卡农",
+    "artist": "Lee Galloway · 钢琴",
+    "src": "./assets/zurenze/canon-lee-galloway.mp3",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pachelbel%27s_Canon.ogg",
+    "sourceLabel": "音源与许可 ↗",
+    "note": "Johann Pachelbel 作曲，Lee Galloway 钢琴演奏；沿用本人旧站音源，CC BY-SA 3.0。"
+  },
+  "toolboxStories": [
+    {
+      "title": "热点雷达",
+      "description": "从人物、文化和行业线索里，找到值得继续研究的选题。",
+      "paragraphs": [],
+      "details": [],
+      "toolIds": [
+        "radar"
+      ],
+      "gallery": [
+        {
+          "title": "热点雷达",
+          "src": "./assets/zurenze/tool-showcase/radar.png",
+          "alt": "祖仁泽自媒体工作台中的人物与时尚选题图文卡片",
+          "caption": "",
+          "width": 3002,
+          "height": 1888
+        }
+      ]
+    },
+    {
+      "title": "选题与拆解",
+      "description": "把线索变成选题，把参考作品拆成能复用的方法。",
+      "paragraphs": [],
+      "details": [],
+      "toolIds": [
+        "topics",
+        "breakdown"
+      ],
+      "gallery": [
+        {
+          "title": "选题库 · 刘翔项目",
+          "src": "./assets/zurenze/tool-showcase/topics.png",
+          "alt": "刘翔第九道封王的真实项目工作区，显示选题、项目资料与制作流程",
+          "caption": "",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "title": "从选题到成片",
+          "src": "./assets/zurenze/tool-showcase/finished-works.png",
+          "alt": "自媒体工作台中的邓稼先与钱学森已有完整视频作品及版本",
+          "caption": "",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "title": "视频拆解 · 辛芷蕾",
+          "src": "./assets/zurenze/tool-showcase/breakdown.jpg",
+          "alt": "辛芷蕾成片拆解工程，含口播、素材、时间线与音频波形",
+          "caption": "",
+          "width": 2984,
+          "height": 1718
+        }
+      ]
+    },
+    {
+      "title": "视频素材采集",
+      "description": "链接解析、画质选择、片段截取与字幕处理。",
+      "paragraphs": [],
+      "details": [],
+      "toolIds": [
+        "capture"
+      ]
+    },
+    {
+      "title": "AI影音创作",
+      "description": "声音克隆 · 数字人口播 · AIGC影像",
+      "paragraphs": [],
+      "details": [],
+      "links": [
+        {
+          "url": "https://github.com/OpenBMB/VoxCPM",
+          "label": "VoxCPM 项目"
+        },
+        {
+          "url": "https://github.com/QwenLM/Qwen3-TTS",
+          "label": "Qwen3-TTS 项目"
+        },
+        {
+          "url": "https://github.com/SWivid/F5-TTS",
+          "label": "F5-TTS 项目"
+        },
+        {
+          "url": "https://fish.audio/",
+          "label": "Fish Audio"
+        }
+      ],
+      "toolIds": [],
+      "showcase": {
+        "film": {
+          "src": "./assets/zurenze/audiovisual/lingzhu-mv-720p.mp4",
+          "poster": "./assets/zurenze/audiovisual/lingzhu-poster.jpg"
+        },
+        "shots": [
+          {
+            "title": "外套质感特写",
+            "duration": 4.11,
+            "src": "./assets/zurenze/audiovisual/aigc-shots/shell-texture.mp4",
+            "poster": "./assets/zurenze/audiovisual/aigc-shots/shell-texture.jpg"
+          },
+          {
+            "title": "渔网到外套 · 形态转场",
+            "duration": 5.108005,
+            "src": "./assets/zurenze/audiovisual/aigc-shots/net-to-coat.mp4",
+            "poster": "./assets/zurenze/audiovisual/aigc-shots/net-to-coat.jpg"
+          },
+          {
+            "title": "水下渔网 · 纤维转化",
+            "duration": 4.096009,
+            "src": "./assets/zurenze/audiovisual/aigc-shots/underwater-fibers.mp4",
+            "poster": "./assets/zurenze/audiovisual/aigc-shots/underwater-fibers.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "我的素材库",
+      "description": "音效与画面参考，按创作场景整理。",
+      "paragraphs": [],
+      "details": [
+        [
+          "音效整理",
+          "172条音效，按9类归档，可导入剪映使用。"
+        ],
+        [
+          "画面参考",
+          "在Eagle中整理花字、标题、转场、素材罗列、分屏与画中画。"
+        ]
+      ],
+      "gallery": [
+        {
+          "src": "./assets/zurenze/material-library/sfx-categories.png",
+          "title": "音效分类",
+          "caption": "嗖声、冲击、上升、闪光、纸张、故障、氛围与拟音，按9类查找。",
+          "alt": "音效分类的真实界面截图",
+          "width": 4718592,
+          "height": 4292935744
+        },
+        {
+          "src": "./assets/zurenze/material-library/sfx-files.png",
+          "title": "可直接导入剪映的音效",
+          "caption": "保留WAV / M4A原文件，按镜头需要挑选。",
+          "alt": "可直接导入剪映的音效的真实界面截图",
+          "width": 4718592,
+          "height": 4292935744
+        },
+        {
+          "src": "./assets/zurenze/material-library/eagle-type.png",
+          "title": "Eagle · 花字与文字动效",
+          "caption": "从文字样式到画面节奏，归集可检索的剪辑参考。",
+          "alt": "Eagle · 花字与文字动效的真实界面截图",
+          "width": 2046,
+          "height": 1578
+        },
+        {
+          "src": "./assets/zurenze/material-library/eagle-montage.png",
+          "title": "Eagle · 素材罗列与信息编排",
+          "caption": "积累分屏、画中画和图文编排参考。",
+          "alt": "Eagle · 素材罗列与信息编排的真实界面截图",
+          "width": 2092,
+          "height": 1602
+        }
+      ],
+      "toolIds": []
+    }
+  ],
+  "projects": [
+    {
+      "title": "申公豹",
+      "page": "./shengongbao/",
+      "role": "IP编导 / 2025.03—2026.09"
+    },
+    {
+      "title": "方里菊子",
+      "page": "./fangli/",
+      "role": "创始人IP编导 / 2023.07—2024.08"
+    },
+    {
+      "title": "意公子",
+      "page": "./yigongzi/",
+      "role": "内容策划 / 2022.10—2023.06"
+    },
+    {
+      "title": "AIGC与自研",
+      "page": "./aigc/",
+      "role": "AI内容生产 / 自研工具"
+    }
+  ],
+  "clientProjects": [
+    {
+      "id": "actor",
+      "title": "戏里戏外",
+      "displayTitle": "戏里戏外 · 明星客户定制项目",
+      "description": "为明星客户设计和开发的工作台。",
+      "src": "./client-media/actor-script.png",
+      "alt": "戏里戏外 · 剧本研读工作界面",
+      "width": 1440,
+      "height": 1000,
+      "paragraphs": [
+        "为一位明星客户设计和开发的项目，围绕项目、剧本、通告、团队协作与内容运营组织工作流程。",
+        "从具体需求出发梳理使用场景，结合 AI 协作完成产品实现与操作验证。"
+      ],
+      "details": [
+        [
+          "服务对象",
+          "明星客户（匿名展示）"
+        ],
+        [
+          "项目功能",
+          "剧本资料、通告日历、任务与团队协作、工作室经营及内容运营。"
+        ]
+      ],
+      "links": []
+    },
+    {
+      "id": "inspection",
+      "title": "反舞弊数字稽查官",
+      "displayTitle": "反舞弊数字稽查官",
+      "description": "为茶饮行业头部企业的业务场景设计和开发的系统。",
+      "src": "./client-media/inspection-archives.jpg",
+      "alt": "反舞弊数字稽查官的案件与资料界面预览",
+      "width": 1280,
+      "height": 720,
+      "paragraphs": [
+        "这是为茶饮行业头部企业开发的定制项目，围绕流水、规则、线索和资料管理梳理业务流程。",
+        "从需求理解、操作流程设计，到 AI 协作开发与功能验证，把具体业务问题做成系统。"
+      ],
+      "details": [
+        [
+          "服务对象",
+          "茶饮行业头部"
+        ],
+        [
+          "项目功能",
+          "流水整理与分析、规则检查、线索追踪及知识资料管理。"
+        ]
+      ],
+      "links": []
+    }
+  ]
+}
