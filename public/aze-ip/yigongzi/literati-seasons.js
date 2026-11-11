@@ -14,7 +14,7 @@ function arrangeMotifs(){for(const layer of ornamentLayers){const count=innerWid
 const motifResize=new ResizeObserver(arrangeMotifs);ornamentLayers.forEach(x=>motifResize.observe(x));addEventListener('resize',arrangeMotifs);arrangeMotifs();
 const paused=()=>body.classList.contains('paused')||reduced.matches||document.hidden;
 let weatherDark=false,lastSurfaceCheck=0;
-function resize(){width=innerWidth;height=innerHeight;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);particles=Array.from({length:width<600?28:52},()=>({x:Math.random()*width,y:Math.random()*height,r:3+Math.random()*4,v:14+Math.random()*20,phase:Math.random()*6.28}));draw(0)}
+function resize(){width=innerWidth;height=innerHeight;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);particles=Array.from({length:width<600?5:10},()=>({x:Math.random()*width,y:Math.random()*height,r:3+Math.random()*4,v:14+Math.random()*20,phase:Math.random()*6.28}));draw(0)}
 function draw(dt){
  ctx.clearRect(0,0,width,height);if(paused())return;const season=body.dataset.season||'summer';
  for(const p of particles){
