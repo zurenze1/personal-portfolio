@@ -245,7 +245,7 @@ function setupContact(){
 function createMaterialsPreview(items){
   const section=document.createElement('section');section.className='world-materials-gallery';section.setAttribute('aria-label','工具与素材界面');
   for(const item of items){const figure=document.createElement('figure'),button=document.createElement('button'),image=document.createElement('img'),caption=document.createElement('figcaption'),title=document.createElement('b'),copy=document.createElement('span');
-    button.type='button';button.setAttribute('aria-label','放大查看'+item.title);image.src=item.src;image.alt=item.alt;image.width=item.width;image.height=item.height;image.loading='lazy';button.append(image);button.addEventListener('click',()=>openMaterialsImage(item,button));title.textContent=item.title+' ↗';copy.textContent=item.caption;caption.append(title,copy);figure.append(button,caption);section.append(figure);
+    button.type='button';button.setAttribute('aria-label','放大查看'+item.title);image.src=item.src;image.alt=item.alt;image.width=item.width;image.height=item.height;image.loading='lazy';button.append(image);button.addEventListener('click',()=>openMaterialsImage(item,button));title.textContent=item.title+' ↗';copy.textContent=item.caption;if(item.url){const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label','查看'+item.title+'项目');link.append(title);caption.append(link,copy);}else{caption.append(title,copy);}figure.append(button,caption);section.append(figure);
   }return section;
 }
 let materialsImageDialog,materialsImageTrigger;

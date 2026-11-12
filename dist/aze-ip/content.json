@@ -823,45 +823,29 @@
       "title": "业务系统定制",
       "description": "把实际需求梳理为流程，再用AI协作开发成可用系统。",
       "paragraphs": [],
-      "details": [
-        [
-          "反舞弊数字稽查官",
-          "茶饮头部品牌监察部门定制，入选内部AI创新大赛前十。"
-        ],
-        [
-          "戏里戏外",
-          "明星客户工作台，整合剧本资料、通告、团队任务与内容运营。"
-        ]
-      ],
+      "details": [],
       "toolIds": [],
       "gallery": [
         {
           "title": "戏里戏外",
           "src": "./client-media/actor-script.png",
           "alt": "戏里戏外 · 剧本研读工作界面",
-          "caption": "",
+          "caption": "明星客户工作台，整合剧本资料、通告、团队任务与内容运营。",
           "width": 1440,
-          "height": 1000
+          "height": 1000,
+          "url": "./client-projects.html#actor"
         },
         {
           "title": "反舞弊数字稽查官",
           "src": "./client-media/inspection-archives.jpg",
           "alt": "反舞弊数字稽查官的案件与资料界面预览",
-          "caption": "",
+          "caption": "茶饮头部品牌监察部门定制，入选内部AI创新大赛前十。",
           "width": 1280,
-          "height": 720
+          "height": 720,
+          "url": "./client-projects.html#inspection"
         }
       ],
-      "links": [
-        {
-          "label": "反舞弊数字稽查官 · 看项目",
-          "url": "./client-projects.html#inspection"
-        },
-        {
-          "label": "戏里戏外 · 看项目",
-          "url": "./client-projects.html#actor"
-        }
-      ]
+      "links": []
     }
   ],
   "projects": [
