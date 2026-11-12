@@ -27,7 +27,7 @@ const entered = new Promise(resolve => {
 // The first screen starts independently of the content catalog and videos.
 entered.then(()=>document.body.classList.add('intro-visible','scroll-visible'));
 setupHeadlineDrop();
-const content = await fetch('./content.json?v=20261112-portfolio').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
+const content = await fetch('./content.json?v=20261112-cases').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
 const {setupWorld}=window.__m_world_js;
 
 const openPersonalCard = fillPhotoFan($('#world .photo-fan'));
@@ -111,7 +111,7 @@ async function setupToolbox(){
   const scroller = root.querySelector('.toolbox-scroll');
   let catalog = [];
   try {
-    const response = await fetch('./assets/zurenze/tools.json?v=20261112-portfolio');
+    const response = await fetch('./assets/zurenze/tools.json?v=20261112-cases');
     if(!response.ok) throw Error('Tool catalog unavailable');
     catalog = (await response.json()).filter(tool => tool.id !== 'markdown');
   } catch(error) { console.warn('Tool catalog unavailable', error); }
@@ -335,6 +335,45 @@ function createAudiovisualShowcase(data){
   return root;
 }
 
+function caseNode(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n;}
+function createCaseOverview(data){
+  const root=caseNode('section','case-overview');root.setAttribute('aria-label','作品数据与个人分工');
+  root.append(caseNode('p','case-dateline',`${data.account} / 发布于 ${data.publishedOn}`));
+  const metrics=caseNode('dl','case-metrics');
+  for(const item of data.metrics){const n=caseNode('div','case-metric');
+    const value=item.value==null?'—':(item.approximate?'约':'')+(item.value>=10000?(item.value/10000).toFixed(1).replace(/\.0$/,'')+'万':item.value.toLocaleString('zh-CN'));
+    n.append(caseNode('dt','',item.label),caseNode('dd','',value));
+    if(item.value!=null)n.title=`${item.approximate?'约':''}${item.value.toLocaleString('zh-CN')} · 采集${item.observedOn}`;
+    metrics.append(n);
+  }
+  root.append(metrics,caseNode('p','case-metric-note',data.metricsNote));
+  const role=caseNode('section','case-role');role.append(caseNode('h3','','我的分工'));
+  const tags=caseNode('div','case-role-tags');for(const text of data.role)tags.append(caseNode('span','',text));
+  role.append(tags,caseNode('p','',data.roleNote));root.append(role);return root;
+}
+function createCaseStudy(data){
+  const root=caseNode('section','case-study');root.setAttribute('aria-label','作品阅读拆解');
+  root.append(caseNode('p','case-study-kicker','CASE STUDY / 阅读拆解'));
+  const nav=caseNode('div','case-study-tabs');nav.setAttribute('role','tablist');nav.setAttribute('aria-label','案例内容');
+  const panels=caseNode('div','case-study-panels');
+  const labels=['结构与节奏','写作思路','逐字稿'];const buttons=[],bodies=[];
+  labels.forEach((label,i)=>{
+    const b=caseNode('button','',label);b.type='button';b.id='case-study-tab-'+i;b.setAttribute('role','tab');b.setAttribute('aria-controls','case-study-panel-'+i);
+    const panel=caseNode('section','case-study-panel');panel.id='case-study-panel-'+i;panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',b.id);
+    buttons.push(b);bodies.push(panel);nav.append(b);panels.append(panel);
+  });
+  const select=i=>{buttons.forEach((b,j)=>{b.setAttribute('aria-selected',String(i===j));b.tabIndex=i===j?0:-1;bodies[j].hidden=i!==j;});};
+  buttons.forEach((b,i)=>{b.addEventListener('click',()=>select(i));b.addEventListener('keydown',e=>{const n=e.key==='ArrowRight'?(i+1)%3:e.key==='ArrowLeft'?(i+2)%3:e.key==='Home'?0:e.key==='End'?2:null;if(n==null)return;e.preventDefault();select(n);buttons[n].focus();});});
+  bodies[0].append(caseNode('h3','case-hook',data.hook));
+  const stages=caseNode('ol','case-structure');
+  data.structure.forEach((stage,i)=>{const li=caseNode('li','');li.append(caseNode('span','case-stage-no',String(i+1).padStart(2,'0')),caseNode('h4','',stage.title),caseNode('p','',stage.action));const why=caseNode('p','case-stage-purpose');why.append(caseNode('b','','这一步的作用'),document.createTextNode(stage.purpose));li.append(why);stages.append(li);});
+  bodies[0].append(stages);
+  const thoughts=caseNode('div','case-thinking');data.thinking.forEach(item=>{const article=caseNode('article','');article.append(caseNode('h3','',item.title),caseNode('p','',item.text));thoughts.append(article);});bodies[1].append(thoughts);
+  bodies[2].append(caseNode('p','case-transcript-note',data.transcriptNote));
+  const script=caseNode('div','case-transcript');data.transcript.forEach((text,i)=>{const p=caseNode('p','',text);p.id='case-paragraph-'+i;script.append(p);});bodies[2].append(script);
+  root.append(nav,panels);select(0);return root;
+}
+
 function fillPhotoFan(gallery){
   const photos = content.worldPhotos || [];
   const middle = (photos.length - 1) / 2;
@@ -345,7 +384,7 @@ function fillPhotoFan(gallery){
   dialog.innerHTML = `<button class="world-dialog-close" type="button" aria-label="关闭介绍">×</button>
     <div class="world-story-layout"><div class="world-story-photo"><img alt=""><div class="world-work-player" hidden></div><span class="world-media-word" aria-hidden="true"></span><div class="world-story-archive" hidden><b></b><strong></strong></div><div class="world-story-tool-covers" hidden></div></div>
     <div class="world-story-content"><h2 id="world-story-title"></h2>
-    <p class="world-story-lead"></p><div class="world-song-grid" hidden></div><div class="world-story-paragraphs"></div><div class="world-materials-slot"></div><div class="world-av-slot"></div><section class="world-story-honors" hidden aria-label="军旅荣誉"><h3>军旅荣誉</h3><div class="honor-grid"></div><p></p></section><dl class="world-story-details"></dl><div class="world-tool-list" hidden></div><div class="world-project-links" hidden></div></div></div>`;
+    <p class="world-story-lead"></p><div class="world-case-overview" hidden></div><div class="world-song-grid" hidden></div><div class="world-story-paragraphs"></div><div class="world-materials-slot"></div><div class="world-av-slot"></div><section class="world-story-honors" hidden aria-label="军旅荣誉"><h3>军旅荣誉</h3><div class="honor-grid"></div><p></p></section><dl class="world-story-details"></dl><div class="world-tool-list" hidden></div><div class="world-project-links" hidden></div></div></div><div class="world-case-study" hidden></div>`;
   document.body.append(dialog);
   const close = dialog.querySelector('.world-dialog-close');
   let opener = null, previousOverflow = '';
@@ -363,6 +402,12 @@ function fillPhotoFan(gallery){
   function openStory(photo, trigger){
     if(dialog.open) return;
     opener = trigger;
+    const caseData=photo.caseStudy;
+    dialog.classList.toggle('world-dialog--case',!!caseData);
+    const overview=dialog.querySelector('.world-case-overview'),study=dialog.querySelector('.world-case-study');
+    overview.hidden=!caseData;study.hidden=!caseData;
+    overview.replaceChildren(...(caseData?[createCaseOverview(caseData)]:[]));
+    study.replaceChildren(...(caseData?[createCaseStudy(caseData)]:[]));
     const hasGallery=!!photo.gallery?.length;dialog.classList.toggle('world-dialog--gallery',hasGallery);dialog.querySelector('.world-story-photo').hidden=hasGallery||!!photo.showcase;const slot=dialog.querySelector('.world-materials-slot');slot.replaceChildren(...(hasGallery?[createMaterialsPreview(photo.gallery)]:[]));
     dialog.classList.toggle('world-dialog--av', !!photo.showcase);
     dialog.querySelector('.world-av-slot').replaceChildren(...(photo.showcase ? [createAudiovisualShowcase(photo.showcase)] : []));
@@ -441,7 +486,7 @@ function fillPhotoFan(gallery){
     const trigger = document.createElement('button');
     trigger.type = 'button'; trigger.className = 'photo-trigger';
     trigger.dataset.look = index < middle ? 'left' : index > middle ? 'right' : 'front';
-    trigger.setAttribute('aria-label', photo.video ? `播放代表作${photo.title}` : `打开${photo.title || photo.alt}介绍`);
+    trigger.setAttribute('aria-label', photo.video ? `查看${photo.title}视频拆解` : `打开${photo.title || photo.alt}介绍`);
     trigger.setAttribute('aria-haspopup', 'dialog');
     trigger.setAttribute('aria-controls', dialog.id);
     trigger.setAttribute('aria-expanded', 'false');
