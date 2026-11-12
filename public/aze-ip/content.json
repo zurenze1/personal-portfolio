@@ -607,57 +607,59 @@
       ]
     },
     {
-      "title": "选题与拆解",
-      "description": "把线索变成选题，把参考作品拆成能复用的方法。",
+      "title": "选题与素材策划",
+      "description": "从观众问题确定选题，从长视频中找到可用原话。",
       "paragraphs": [],
       "details": [],
       "toolIds": [
         "topics",
-        "breakdown"
+        "quotes"
       ],
       "gallery": [
         {
-          "src": "./assets/zurenze/tool-showcase/topics-20261112.jpg",
-          "title": "选题研究 · 申公豹方向",
-          "alt": "IP工作台当前选题库，按受众与议题整理",
-          "caption": "",
-          "width": 1220,
-          "height": 670
+          "src": "./assets/zurenze/tool-showcase/topics-content-20261112.jpg",
+          "title": "选题库 · 选题问题与目标受众",
+          "alt": "选题库中实际保存的议题、目标受众和状态",
+          "caption": "把选题、目标受众与参考资料归到同一条记录。",
+          "width": 925,
+          "height": 365
         },
         {
-          "src": "./assets/zurenze/tool-showcase/foreign-edit-20261112.jpg",
-          "title": "外企作品 · 拆解工程",
-          "alt": "外企作品拆解工程的画面素材、多轨时间线与声音波形",
-          "caption": "",
-          "width": 3024,
-          "height": 1768
+          "src": "./assets/zurenze/tool-showcase/quote-library-20261112.jpg",
+          "title": "金句切片 · 原话检索与视频片段",
+          "alt": "金句切片真实素材库中的主题筛选、原话和原片缩略图",
+          "caption": "搜索原话、筛选主题，预览并导出带时间对应关系的视频片段。",
+          "width": 1280,
+          "height": 720
         }
-      ]
+      ],
+      "galleryLayout": "content"
     },
     {
       "title": "AI分镜执行",
-      "description": "让文案落到每一句画面、花字、转场与声音。",
+      "description": "看得见的逐字稿，以及每一句对应的画面、花字、转场和声音要求。",
       "toolIds": [
         "execution"
       ],
       "gallery": [
         {
-          "src": "./assets/zurenze/tool-showcase/execution-20261112.jpg",
-          "title": "文案到分镜 · 执行与导出",
-          "alt": "分镜执行台的文案导入、素材关联与Excel导出入口",
-          "caption": "",
-          "width": 1220,
-          "height": 670
+          "src": "./assets/zurenze/tool-showcase/script-body-20261112.jpg",
+          "title": "脚本正文 · 钱学森给中国留下了什么",
+          "alt": "分镜执行台中已有钱学森文稿的连续三段正文",
+          "caption": "从开场、归国选择到方案与机构，逐段查看和编辑。",
+          "width": 1240,
+          "height": 570
         },
         {
-          "src": "./assets/zurenze/tool-showcase/materials-20261112.jpg",
-          "title": "逐句画面 · 素材关联",
-          "alt": "工作台逐句分镜与参考素材关联界面",
-          "caption": "",
-          "width": 1220,
-          "height": 670
+          "src": "./assets/zurenze/tool-showcase/execution-content-20261112.jpg",
+          "title": "分镜工作稿 · 口播、画面与声音",
+          "alt": "现有分镜工作稿中已填写的口播、画面、花字、转场、音乐与音效字段",
+          "caption": "同一张表逐镜编排，内容可继续修改，并可导出 Excel 执行表。",
+          "width": 1240,
+          "height": 650
         }
-      ]
+      ],
+      "galleryLayout": "content"
     },
     {
       "title": "AI影音创作",

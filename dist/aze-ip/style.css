@@ -782,3 +782,11 @@ html[data-sound="waiting"] .sound-toggle{border-style:dashed}
 .case-thinking{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.case-thinking h3{font-size:18px;font-weight:500;margin:0 0 15px}.case-thinking p{font-size:14px;line-height:2;color:#4c5a50;margin:0}
 .case-transcript-note{font-size:11px;color:#788178;margin:0 0 24px;line-height:1.8}.case-transcript{max-width:780px;margin:auto}.case-transcript p{font-size:15px;line-height:2.1;letter-spacing:.015em;margin:0 0 22px;overflow-wrap:anywhere;text-wrap:pretty}
 @media(max-width:650px){.world-dialog--case{width:calc(100% - 20px);max-height:calc(100svh - 20px)}.world-dialog--case .world-story-layout{grid-template-columns:1fr}.world-dialog--case .world-work-player video{max-height:48svh}.world-dialog--case .world-story-content{padding:24px}.world-dialog--case .world-story-content h2{font-size:24px}.case-study{padding:25px 22px}.case-study-tabs{gap:0}.case-study-tabs button{padding:9px 10px;font-size:13px}.case-structure,.case-thinking{grid-template-columns:1fr;gap:18px}.case-metric dd{font-size:28px}.case-thinking h3{margin-bottom:8px}.case-transcript p{font-size:14px}}
+
+/* Content evidence is readable at full column width. */
+.world-materials-gallery[data-layout="content"]{grid-template-columns:minmax(0,1fr);gap:28px}
+.world-materials-gallery[data-layout="content"] img{height:auto;max-height:none;object-fit:contain}
+.world-materials-gallery[data-layout="content"] figcaption{padding-top:10px}
+
+.world-dialog--gallery .world-story-details:empty{display:none;margin:0;padding:0;border:0}
+.materials-image-original{white-space:nowrap;font-size:12px;text-decoration:underline}

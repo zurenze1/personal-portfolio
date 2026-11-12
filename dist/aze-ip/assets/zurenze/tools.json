@@ -32,25 +32,25 @@
     ],
     "steps": [],
     "platform": "",
-    "cover": "./assets/zurenze/tool-showcase/topics-20261112.jpg",
+    "cover": "./assets/zurenze/tool-showcase/topics-content-20261112.jpg",
     "coverTheme": "paper"
   },
   {
-    "id": "breakdown",
-    "name": "视频拆解",
-    "type": "自研工作台模块",
-    "tagline": "记录参考作品的选题、结构、镜头与表达方法。",
-    "web": null,
-    "localOnly": true,
-    "description": "从已发布成片回看钩子、节奏与素材衔接，再把观察用于下一次写稿。",
+    "id": "quotes",
+    "name": "金句切片",
+    "type": "IP工作台 · 本机工具",
+    "tagline": "从长视频中找原话，把能用的片段留下来。",
+    "description": "导入视频后转写并生成候选切片，按主题或来源检索；对照原片校正后，导出可继续剪辑的 MP4。",
     "features": [
-      "参考作品与出处",
-      "结构和表达观察",
-      "可迁移方法与选题关联"
+      "原话、主题、素材来源与时码关联",
+      "预览原片片段，逐条校正文字",
+      "下载 MP4，继续放入剪辑流程"
     ],
     "steps": [],
+    "localOnly": true,
+    "web": null,
     "platform": "",
-    "cover": "./assets/zurenze/tool-showcase/foreign-edit-20261112.jpg",
+    "cover": "./assets/zurenze/tool-showcase/quote-library-20261112.jpg",
     "coverTheme": "paper"
   },
   {
@@ -68,7 +68,7 @@
     "localOnly": true,
     "web": null,
     "platform": "",
-    "cover": "./assets/zurenze/tool-showcase/execution-20261112.jpg",
+    "cover": "./assets/zurenze/tool-showcase/execution-content-20261112.jpg",
     "coverTheme": "paper"
   },
   {

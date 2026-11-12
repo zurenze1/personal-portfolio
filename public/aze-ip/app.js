@@ -111,7 +111,7 @@ async function setupToolbox(){
   const scroller = root.querySelector('.toolbox-scroll');
   let catalog = [];
   try {
-    const response = await fetch('./assets/zurenze/tools.json?v=20261112-interview');
+    const response = await fetch('./assets/zurenze/tools.json?v=20261112-books-content');
     if(!response.ok) throw Error('Tool catalog unavailable');
     catalog = (await response.json()).filter(tool => tool.id !== 'markdown');
   } catch(error) { console.warn('Tool catalog unavailable', error); }
@@ -242,16 +242,16 @@ function setupContact(){
   }
 }
 
-function createMaterialsPreview(items){
-  const section=document.createElement('section');section.className='world-materials-gallery';section.setAttribute('aria-label','工具与素材界面');
+function createMaterialsPreview(items,layout){
+  const section=document.createElement('section');section.className='world-materials-gallery';if(layout)section.dataset.layout=layout;section.setAttribute('aria-label','工具与素材界面');
   for(const item of items){const figure=document.createElement('figure'),button=document.createElement('button'),image=document.createElement('img'),caption=document.createElement('figcaption'),title=document.createElement('b'),copy=document.createElement('span');
     button.type='button';button.setAttribute('aria-label','放大查看'+item.title);image.src=item.src;image.alt=item.alt;image.width=item.width;image.height=item.height;image.loading='lazy';button.append(image);button.addEventListener('click',()=>openMaterialsImage(item,button));title.textContent=item.title+' ↗';copy.textContent=item.caption;if(item.url){const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label','查看'+item.title+'项目');link.append(title);caption.append(link,copy);}else{caption.append(title,copy);}figure.append(button,caption);section.append(figure);
   }return section;
 }
 let materialsImageDialog,materialsImageTrigger;
 function openMaterialsImage(item,trigger){
-  if(!materialsImageDialog){materialsImageDialog=document.createElement('dialog');materialsImageDialog.className='materials-image-dialog';materialsImageDialog.setAttribute('aria-label','素材截图大图');materialsImageDialog.innerHTML='<header><p></p><button type="button" aria-label="关闭素材大图">关闭 ×</button></header><img alt="">';document.body.append(materialsImageDialog);materialsImageDialog.querySelector('button').addEventListener('click',()=>materialsImageDialog.close());materialsImageDialog.addEventListener('click',e=>{if(e.target===materialsImageDialog)materialsImageDialog.close();});materialsImageDialog.addEventListener('close',()=>{materialsImageDialog.querySelector('img').removeAttribute('src');materialsImageTrigger?.focus({preventScroll:true});});}
-  materialsImageTrigger=trigger;const image=materialsImageDialog.querySelector('img');image.src=item.src;image.alt=item.alt;materialsImageDialog.querySelector('p').textContent=item.title;materialsImageDialog.showModal();materialsImageDialog.querySelector('button').focus();
+  if(!materialsImageDialog){materialsImageDialog=document.createElement('dialog');materialsImageDialog.className='materials-image-dialog';materialsImageDialog.setAttribute('aria-label','素材截图大图');materialsImageDialog.innerHTML='<header><p></p><a class="materials-image-original" target="_blank" rel="noopener noreferrer">查看原图 ↗</a><button type="button" aria-label="关闭素材大图">关闭 ×</button></header><img alt="">';document.body.append(materialsImageDialog);materialsImageDialog.querySelector('button').addEventListener('click',()=>materialsImageDialog.close());materialsImageDialog.addEventListener('click',e=>{if(e.target===materialsImageDialog)materialsImageDialog.close();});materialsImageDialog.addEventListener('close',()=>{materialsImageDialog.querySelector('img').removeAttribute('src');materialsImageTrigger?.focus({preventScroll:true});});}
+  materialsImageTrigger=trigger;const image=materialsImageDialog.querySelector('img');image.src=item.src;image.alt=item.alt;materialsImageDialog.querySelector('p').textContent=item.title;materialsImageDialog.querySelector('a').href=item.src;materialsImageDialog.showModal();materialsImageDialog.querySelector('button').focus();
 }
 function createAudiovisualShowcase(data){
   const node = (tag, className, text) => {
@@ -408,7 +408,7 @@ function fillPhotoFan(gallery){
     overview.hidden=!caseData;study.hidden=!caseData;
     overview.replaceChildren(...(caseData?[createCaseOverview(caseData)]:[]));
     study.replaceChildren(...(caseData?[createCaseStudy(caseData)]:[]));
-    const hasGallery=!!photo.gallery?.length;dialog.classList.toggle('world-dialog--gallery',hasGallery);dialog.querySelector('.world-story-photo').hidden=hasGallery||!!photo.showcase;const slot=dialog.querySelector('.world-materials-slot');slot.replaceChildren(...(hasGallery?[createMaterialsPreview(photo.gallery)]:[]));
+    const hasGallery=!!photo.gallery?.length;dialog.classList.toggle('world-dialog--gallery',hasGallery);dialog.querySelector('.world-story-photo').hidden=hasGallery||!!photo.showcase;const slot=dialog.querySelector('.world-materials-slot');slot.replaceChildren(...(hasGallery?[createMaterialsPreview(photo.gallery,photo.galleryLayout)]:[]));
     dialog.classList.toggle('world-dialog--av', !!photo.showcase);
     dialog.querySelector('.world-av-slot').replaceChildren(...(photo.showcase ? [createAudiovisualShowcase(photo.showcase)] : []));
     const image = dialog.querySelector('img');
