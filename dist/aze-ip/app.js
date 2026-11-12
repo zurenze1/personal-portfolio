@@ -242,6 +242,30 @@ function setupContact(){
   }
 }
 
+function createClientShowcase(projects){
+  const root=document.createElement('div');root.className='client-showcase';
+  for(const project of projects){
+    const article=document.createElement('article');article.className='client-showcase-project';
+    const label=document.createElement('p');label.className='client-showcase-label';label.textContent=project.label;
+    const title=document.createElement('h3');title.textContent=project.title;
+    const purpose=document.createElement('p');purpose.className='client-showcase-purpose';purpose.textContent=project.purpose;
+    const gallery=createMaterialsPreview(project.gallery);
+    gallery.querySelectorAll('figcaption b').forEach(node=>{node.textContent=node.textContent.replace(/ ↗$/,'');});
+    article.append(label,title,purpose,gallery);
+    const features=document.createElement('ul');features.className='client-showcase-features';
+    for(const text of project.features){const item=document.createElement('li');item.textContent=text;features.append(item);}
+    article.append(features);
+    if(project.film){
+      const figure=document.createElement('figure');figure.className='client-showcase-film';
+      const frame=document.createElement('iframe');frame.src=project.film;frame.title=project.title+'产品演示';frame.loading='lazy';frame.allow='fullscreen';frame.allowFullscreen=true;frame.setAttribute('sandbox','allow-scripts allow-same-origin allow-presentation');
+      const caption=document.createElement('figcaption');caption.textContent='产品演示 · 约2分7秒 · 点击片内播放可开启声音';figure.append(frame,caption);article.append(figure);
+    }
+    if(project.achievement){const award=document.createElement('p');award.className='client-showcase-achievement';award.textContent=project.achievement;article.append(award);}
+    const role=document.createElement('p');role.className='client-showcase-role';role.textContent='我的工作：'+project.role;article.append(role);root.append(article);
+  }
+  return root;
+}
+
 function createMaterialsPreview(items,layout){
   const section=document.createElement('section');section.className='world-materials-gallery';if(layout)section.dataset.layout=layout;section.setAttribute('aria-label','工具与素材界面');
   for(const item of items){const figure=document.createElement('figure'),button=document.createElement('button'),image=document.createElement('img'),caption=document.createElement('figcaption'),title=document.createElement('b'),copy=document.createElement('span');
