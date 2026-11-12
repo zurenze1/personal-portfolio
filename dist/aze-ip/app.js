@@ -27,7 +27,7 @@ const entered = new Promise(resolve => {
 // The first screen starts independently of the content catalog and videos.
 entered.then(()=>document.body.classList.add('intro-visible','scroll-visible'));
 setupHeadlineDrop();
-const content = await fetch('./content.json?v=20261110-iv1').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
+const content = await fetch('./content.json?v=20261112-portfolio').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
 const {setupWorld}=window.__m_world_js;
 
 const openPersonalCard = fillPhotoFan($('#world .photo-fan'));
@@ -61,6 +61,10 @@ setupWorkGallery();
 setupToolbox();
 setupIpBoards();
 setupNowPlaying();
+document.addEventListener('play', event => {
+  if(!event.target.matches?.('audio[controls],video[controls]'))return;
+  document.querySelectorAll('audio,video[controls]').forEach(media=>{if(media!==event.target)media.pause();});
+}, true);
 setupContact();
 setupCharacter();
 
@@ -107,7 +111,7 @@ async function setupToolbox(){
   const scroller = root.querySelector('.toolbox-scroll');
   let catalog = [];
   try {
-    const response = await fetch('./assets/zurenze/tools.json?v=20261031-content');
+    const response = await fetch('./assets/zurenze/tools.json?v=20261112-portfolio');
     if(!response.ok) throw Error('Tool catalog unavailable');
     catalog = (await response.json()).filter(tool => tool.id !== 'markdown');
   } catch(error) { console.warn('Tool catalog unavailable', error); }
@@ -198,9 +202,10 @@ function createToolEntry(tool, compact = false){
   entry.append(actions);
   if(!compact){
     const more = document.createElement('details'), summary = document.createElement('summary');
-    summary.textContent = '使用说明';more.append(summary);
+    summary.textContent = '能力与功能';more.open=true;more.append(summary);
     const description = document.createElement('p');description.textContent=tool.description;more.append(description);
     for(const [label,items,tag] of [['可以做什么',tool.features,'ul'],['开始使用',tool.steps,'ol']]){
+      if(!items?.length)continue;
       const subtitle=document.createElement('h4');subtitle.textContent=label;
       const list=document.createElement(tag);
       for(const text of items || []){const item=document.createElement('li');item.textContent=text;list.append(item);}
@@ -264,6 +269,42 @@ function createAudiovisualShowcase(data){
     audio.setAttribute('aria-label', label); return audio;
   };
   const root = node('div', 'av-showcase');
+  const voice = node('section', 'av-voice');
+  const voiceName = data.voice.name || '祖仁泽';
+  voice.setAttribute('aria-label', `${voiceName}原声与${data.voice.models.length}模型试听对照`);
+  voice.append(node('p', 'av-eyebrow', '01 / 声音克隆'), node('h3', '', data.voice.title || '用我的声音，读新的文案。'));
+  const inputs = node('div', 'av-inputs');
+  const reference = node('article', 'av-input av-reference');
+  reference.append(node('h4', '', data.voice.referenceLabel || '本人参考原声'), node('span', 'av-meta', `${data.voice.referenceMeta || '电脑录音'} · ${data.voice.referenceDuration.toFixed(2)}秒`),
+    player(data.voice.reference, `试听${voiceName}参考原声`), node('blockquote', '', data.voice.referenceText));
+  if(data.voice.fullReference) reference.append(link('完整原声录音 ↓', data.voice.fullReference));
+  if(data.voice.referenceSourceUrl){const source=node('a','av-file','打开原视频 ↗');source.href=data.voice.referenceSourceUrl;source.target='_blank';source.rel='noopener noreferrer';reference.append(source);}
+  if(data.voice.cloningReference) reference.append(link('去伴奏克隆参考 ↓',data.voice.cloningReference));
+  const script = node('article', 'av-input av-script');
+  script.append(node('h4', '', `给${data.voice.models.length}个模型的同一份文案`), node('span', 'av-meta', data.voice.scriptLabel || '统一试音稿'), node('blockquote', '', data.voice.text));
+  inputs.append(reference, script); voice.append(inputs);
+  const flow = node('ol', 'av-flow');
+  (data.voice.flow || ['采集参考原声', '输入新文案', '模型生成', '对照试听']).forEach((text, i) => {
+    const step = node('li', ''); step.append(node('b', '', String(i + 1).padStart(2, '0')), document.createTextNode(text)); flow.append(step);
+  });
+  voice.append(flow, node('p', 'av-listening-note', data.voice.note || '以下为同响度试听；每段保留原始合成。'));
+  const models = node('div', 'av-models');
+  data.voice.models.forEach((model, i) => {
+    const card = node('article', 'av-model');
+    card.append(node('span', 'av-eyebrow', `${model.backend || 'LOCAL'} / ${String(i + 1).padStart(2, '0')}`), node('h4', '', model.name));
+    const wave = node('img', 'av-wave'); wave.src = model.wave; wave.alt = `${model.name}试听音频的实际波形`; wave.width = 900; wave.height = 120; wave.loading = 'lazy';
+    card.append(wave, player(model.src, `试听${voiceName}的${model.name}克隆音`));
+    const facts = node('dl', 'av-facts');
+    const rows=[['音频时长', `${model.duration.toFixed(2)}秒`], ['采样率', `${model.sampleRate / 1000}kHz`]];
+    if(model.elapsed != null) rows.push(['当次用时', `${model.elapsed.toFixed(2)}秒`]);
+    if(model.seed != null) rows.push(['随机种子', String(model.seed)]);
+    rows.forEach(([label, text]) => {const fact = node('div', ''); fact.append(node('dt', '', label), node('dd', '', text)); facts.append(fact);});
+    card.append(facts, link(`下载原始${model.rawFormat || 'WAV'} ↓`, model.raw)); models.append(card);
+  });
+  voice.append(models); root.append(voice);
+  const avatar = node('section', 'av-avatar');
+  avatar.append(node('p', 'av-eyebrow', '02 / 数字人'), node('h3', '', '从脚本、配音，到数字人口播。'), node('p', '', '涉及真人肖像的项目演示暂不公开，可采用原创虚拟形象。'));
+  root.append(avatar);
   const film = node('section', 'av-film');
   film.append(node('p', 'av-eyebrow', '03 / AIGC影像'));
   if(data.shots?.length){
@@ -286,7 +327,7 @@ function createAudiovisualShowcase(data){
   const video = document.createElement('video');
   video.controls = true; video.playsInline = true; video.preload = 'none'; video.poster = data.film.poster; video.src = data.film.src; video.tabIndex = 0;
   video.setAttribute('aria-label', '播放灵珠78秒剧情MV');
-  film.append(video, node('p', 'av-film-credit', '78秒完整成片 · 原作小说：祖仁泽独立创作 · 歌曲与影像：祖仁泽 × AI共创'));
+  film.append(video, node('p', 'av-film-credit', '78秒完整成片 · 16张分镜图 / 13条镜头 / 23段剪辑 · 原作小说：祖仁泽'));
   root.append(film);
   root.addEventListener('play', event => {
     root.querySelectorAll('audio,video').forEach(media => { if(media !== event.target) media.pause(); });
@@ -302,7 +343,7 @@ function fillPhotoFan(gallery){
   dialog.id = 'world-story';
   dialog.setAttribute('aria-labelledby', 'world-story-title');
   dialog.innerHTML = `<button class="world-dialog-close" type="button" aria-label="关闭介绍">×</button>
-    <div class="world-story-layout"><div class="world-story-photo"><img alt=""><span class="world-media-word" aria-hidden="true"></span><div class="world-story-archive" hidden><b></b><strong></strong></div><div class="world-story-tool-covers" hidden></div></div>
+    <div class="world-story-layout"><div class="world-story-photo"><img alt=""><div class="world-work-player" hidden></div><span class="world-media-word" aria-hidden="true"></span><div class="world-story-archive" hidden><b></b><strong></strong></div><div class="world-story-tool-covers" hidden></div></div>
     <div class="world-story-content"><h2 id="world-story-title"></h2>
     <p class="world-story-lead"></p><div class="world-song-grid" hidden></div><div class="world-story-paragraphs"></div><div class="world-materials-slot"></div><div class="world-av-slot"></div><section class="world-story-honors" hidden aria-label="军旅荣誉"><h3>军旅荣誉</h3><div class="honor-grid"></div><p></p></section><dl class="world-story-details"></dl><div class="world-tool-list" hidden></div><div class="world-project-links" hidden></div></div></div>`;
   document.body.append(dialog);
@@ -314,6 +355,7 @@ function fillPhotoFan(gallery){
   dialog.addEventListener('click', event => { if(backdropDown && event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => {
     dialog.querySelectorAll('audio,video').forEach(media => media.pause());
+    dialog.querySelector('.world-work-player').replaceChildren();
     document.documentElement.style.overflow = previousOverflow;
     opener?.setAttribute('aria-expanded', 'false');
     opener?.focus({preventScroll:true});
@@ -326,6 +368,17 @@ function fillPhotoFan(gallery){
     dialog.querySelector('.world-av-slot').replaceChildren(...(photo.showcase ? [createAudiovisualShowcase(photo.showcase)] : []));
     const image = dialog.querySelector('img');
     image.hidden = !photo.src;
+    const playerSlot = dialog.querySelector('.world-work-player');
+    playerSlot.replaceChildren(); playerSlot.hidden = !photo.video;
+    dialog.classList.toggle('world-dialog--work', !!photo.video);
+    if(photo.video){
+      image.hidden = true;
+      const video = document.createElement('video');
+      video.controls = true; video.playsInline = true; video.preload = 'metadata';
+      video.poster = photo.src; video.src = photo.video; video.tabIndex = 0;
+      video.setAttribute('aria-label', '播放' + (photo.displayTitle || photo.title));
+      playerSlot.append(video);
+    }
     const archive = dialog.querySelector('.world-story-archive');
     archive.hidden = Boolean(photo.src) || !!photo.tools?.length;
     const covers = dialog.querySelector('.world-story-tool-covers');
@@ -388,7 +441,7 @@ function fillPhotoFan(gallery){
     const trigger = document.createElement('button');
     trigger.type = 'button'; trigger.className = 'photo-trigger';
     trigger.dataset.look = index < middle ? 'left' : index > middle ? 'right' : 'front';
-    trigger.setAttribute('aria-label', `打开${photo.title || photo.alt}介绍`);
+    trigger.setAttribute('aria-label', photo.video ? `播放代表作${photo.title}` : `打开${photo.title || photo.alt}介绍`);
     trigger.setAttribute('aria-haspopup', 'dialog');
     trigger.setAttribute('aria-controls', dialog.id);
     trigger.setAttribute('aria-expanded', 'false');

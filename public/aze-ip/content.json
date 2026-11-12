@@ -15,14 +15,14 @@
       "number": "03",
       "title": "秘密武器库",
       "english": "MY CREATIVE TOOLBOX",
-      "description": "正在学习的技能、顺手的工具，以及新的可能。"
+      "description": "把选题、制作与业务需求，做成可落地的工作流。"
     },
     {
       "id": "world",
       "number": "04",
-      "title": "生活照片",
-      "english": "MY LITTLE UNIVERSE",
-      "description": "那些让我保持好奇的小事，以及生活里不同的我。"
+      "title": "代表作",
+      "english": "SELECTED WORK",
+      "description": "从选题、稿件到成片，点击观看完整作品。"
     },
     {
       "id": "contact",
@@ -34,162 +34,119 @@
   ],
   "worldPhotos": [
     {
-      "src": "./assets/zurenze/travel.jpg",
-      "alt": "祖仁泽在旅行中穿着红色民族服装留影",
-      "title": "旅行在路上",
-      "description": "从贵阳出发，去看看不同的风景。",
-      "paragraphs": [
-        "在上海读书，在重庆服役，也在不同城市工作和旅行。喜欢看看山海、建筑和当地的生活，把路上的片刻留在照片里。"
-      ],
-      "tags": [
-        "贵阳",
-        "旅行",
-        "生活记录"
-      ],
-      "theme": "home",
+      "title": "给员工发钱",
+      "displayTitle": "给员工发钱，为什么需要勇气？",
+      "src": "./shengongbao/media/sgb-yudonglai.jpg",
+      "alt": "给员工发钱，为什么需要勇气？原视频封面",
+      "width": 528,
+      "height": 936,
+      "theme": "work",
+      "video": "./assets/zurenze/selected-work/employee.mp4",
+      "description": "申公豹 · 选题与主笔文案、口播拍摄、初剪及审片发布",
       "details": [
         [
-          "旅行里的我",
-          "喜欢走出去，也愿意慢下来看看沿途的人和风景。"
-        ],
-        [
-          "认识世界",
-          "读书和旅行，是我保持好奇的两种方式。"
+          "作品表现",
+          "53.1万赞"
         ]
       ],
-      "position": "50% 35%",
-      "mediaWord": "在路上",
-      "width": 1920,
-      "height": 1280
+      "links": [
+        {
+          "label": "抖音看原作",
+          "url": "https://www.douyin.com/video/7616000458192129343"
+        }
+      ]
     },
     {
-      "src": "./assets/zurenze/military-daily.jpg",
-      "alt": "祖仁泽军旅时期戴迷彩帽、穿黑色上衣的日常留影",
-      "title": "军旅时光",
-      "description": "武警退伍 · 文书与内部宣传",
-      "paragraphs": [
-        "军旅经历让我更重视纪律、执行和团队协作。曾参与文书材料、内部宣传文案与视频内容相关工作。"
-      ],
-      "tags": [
-        "武警退伍",
-        "文书与内部宣传",
-        "团队协作"
-      ],
-      "theme": "service",
+      "title": "为什么去外企",
+      "displayTitle": "为什么大家更愿意去外企？",
+      "src": "./shengongbao/media/sgb-waiqi.jpg",
+      "alt": "为什么大家更愿意去外企？原视频封面",
+      "width": 528,
+      "height": 936,
+      "theme": "work",
+      "video": "./assets/zurenze/selected-work/foreign.mp4",
+      "description": "申公豹 · 选题与主笔文案、口播拍摄、初剪及审片发布",
       "details": [
         [
-          "经历与积累",
-          "把事情交代清楚、把任务落实到位，也把经历转化为表达与创作的素材。"
+          "作品表现",
+          "39.7万赞"
         ]
       ],
-      "position": "40% 30%",
-      "width": 1536,
-      "height": 1024
+      "links": [
+        {
+          "label": "抖音看原作",
+          "url": "https://www.douyin.com/video/7585748537548344639"
+        }
+      ]
     },
     {
-      "src": "./assets/zurenze/about.jpg",
-      "cover": {
-        "src": "./assets/zurenze/graduation.jpg",
-        "alt": "祖仁泽穿学士服、手持花束的毕业留影",
-        "position": "44% 38%",
-        "width": 1920,
-        "height": 1280
-      },
-      "alt": "祖仁泽的彩色正式肖像",
-      "title": "我叫祖仁泽",
-      "description": "自媒体创作 · IP 内容策划 · AI 工具开发",
-      "paragraphs": [
-        "我是祖仁泽，叫我阿泽就好。上海外国语大学贤达经济人文学院法学本科，武警退伍，有自媒体和 AI 部门的工作经历。",
-        "围绕人物内容与 IP 创作，参与选题、资料研究、脚本文案、拍摄和剪辑，把内容从想法推进到成片。",
-        "用 AI 开发服务创作的小工具，覆盖热点追踪、选题整理、视频拆解、素材采集、声音合成、数字人与视频制作，把重复工作整理成可复用的工具和流程。"
-      ],
-      "tags": [
-        "自媒体创作",
-        "IP 内容策划",
-        "AI 工具开发"
-      ],
-      "theme": "about",
+      "title": "卷分数的时代",
+      "displayTitle": "为什么说卷分数没用了？",
+      "src": "./shengongbao/media/sgb-gaokao.jpg",
+      "alt": "为什么说卷分数没用了？原视频封面",
+      "width": 528,
+      "height": 936,
+      "theme": "work",
+      "video": "./assets/zurenze/selected-work/score.mp4",
+      "description": "申公豹 · 选题与主笔文案、口播拍摄、初剪及审片发布",
       "details": [
         [
-          "内容创作",
-          "选题研究、资料核查、脚本文案、拍摄与剪辑。"
-        ],
-        [
-          "AI 工具开发",
-          "从创作任务出发梳理需求，开发选题、拆解、采集和声音等工具，并通过实际操作持续改进。"
+          "作品表现",
+          "727.4万播放"
         ]
       ],
-      "position": "50% 25%",
-      "width": 1800,
-      "height": 1200
+      "links": [
+        {
+          "label": "抖音看原作",
+          "url": "https://www.douyin.com/video/7647178142439853338"
+        }
+      ]
     },
     {
-      "src": "./assets/zurenze/reading.jpg",
-      "alt": "祖仁泽坐在桌前阅读的生活照",
-      "title": "读书与听琴",
-      "description": "阅读、古诗词，也给日常留一点安静。",
-      "paragraphs": [
-        "喜欢阅读、写作、传统文化与哲学，最近尤其喜欢苏轼。也喜欢听钢琴音乐，给自己留一点独处和整理思绪的时间。"
-      ],
-      "tags": [
-        "阅读与写作",
-        "古诗词",
-        "钢琴音乐"
-      ],
-      "theme": "reading",
+      "title": "相信奇迹",
+      "displayTitle": "坚定地相信奇迹才有可能创造奇迹",
+      "src": "./fangli/media/fl-qiji.jpg",
+      "alt": "坚定地相信奇迹才有可能创造奇迹原视频封面",
+      "width": 422,
+      "height": 749,
+      "theme": "work",
+      "video": "./assets/zurenze/selected-work/qiji.mp4",
+      "description": "方里菊子 · 创始人IP内容策划与制作",
       "details": [
         [
-          "书架一角",
-          "《遥远的救世主》《平凡的世界》《觉察之道》《命运》《六祖坛经》。"
-        ],
-        [
-          "传统文化",
-          "对儒释道、哲学与古诗词保持兴趣，也喜欢到古寺小住。"
-        ],
-        [
-          "最近在听",
-          "卡农、Flower Dance，以及钢琴演奏的《青空》。"
+          "作品表现",
+          "3万赞"
         ]
       ],
-      "position": "51% 44%",
-      "width": 1440,
-      "height": 960
+      "links": [
+        {
+          "label": "抖音看原作",
+          "url": "https://www.douyin.com/video/7277860434848255232"
+        }
+      ]
     },
     {
-      "src": "./assets/zurenze/running.jpg",
-      "cover": {
-        "src": "./assets/zurenze/baseball.jpg",
-        "alt": "祖仁泽大学棒球队时期的照片",
-        "position": "50% 34%",
-        "width": 1440,
-        "height": 1920
-      },
-      "alt": "祖仁泽穿绿色上衣在户外跑步",
-      "title": "跑步与棒球",
-      "description": "身体在路上，人也继续向前。",
-      "paragraphs": [
-        "大学时是棒球队校队的一员。现在依然喜欢跑步，也在练习游泳，把运动留在日常里。"
-      ],
-      "tags": [
-        "棒球",
-        "跑步",
-        "游泳练习"
-      ],
-      "theme": "sports",
+      "title": "苏东坡的注脚",
+      "displayTitle": "黄州、惠州、儋州：苏东坡的注脚",
+      "src": "./yigongzi/media/yigongzi-sudongpo-poster.jpg",
+      "alt": "黄州、惠州、儋州：苏东坡的注脚原视频封面",
+      "width": 540,
+      "height": 960,
+      "theme": "work",
+      "video": "./yigongzi/media/sudongpo.mp4",
+      "description": "意公子 · 团队作品，参与资料、文案与制作",
       "details": [
         [
-          "球场经历",
-          "校队训练和比赛，让我体会到配合、投入与长期练习。"
-        ],
-        [
-          "日常运动",
-          "会蛙泳，继续练自由泳；也希望以后尝试骑马和滑雪。"
+          "作品表现",
+          "70.7万赞"
         ]
       ],
-      "position": "50% 48%",
-      "mediaWord": "MOVE.",
-      "width": 1080,
-      "height": 1924
+      "links": [
+        {
+          "label": "抖音看原作",
+          "url": "https://www.douyin.com/video/7153557301838777607"
+        }
+      ]
     }
   ],
   "contact": {
@@ -207,7 +164,7 @@
   "toolboxStories": [
     {
       "title": "热点早报",
-      "description": "从人物、文化和行业线索里，找到值得继续研究的选题。",
+      "description": "追踪财经与行业线索，把信息整理成待审核的选题卡。",
       "paragraphs": [],
       "details": [],
       "toolIds": [
@@ -235,38 +192,46 @@
       ],
       "gallery": [
         {
-          "title": "选题库 · 刘翔项目",
-          "src": "./assets/zurenze/tool-showcase/topics.png",
-          "alt": "刘翔第九道封王的真实项目工作区，显示选题、项目资料与制作流程",
+          "src": "./assets/zurenze/tool-showcase/topics-20261112.jpg",
+          "title": "选题研究 · 申公豹方向",
+          "alt": "IP工作台当前选题库，按受众与议题整理",
           "caption": "",
-          "width": 1280,
-          "height": 720
+          "width": 1220,
+          "height": 670
         },
         {
-          "title": "从选题到成片",
-          "src": "./assets/zurenze/tool-showcase/finished-works.png",
-          "alt": "自媒体工作台中的邓稼先与钱学森已有完整视频作品及版本",
+          "src": "./assets/zurenze/tool-showcase/foreign-edit-20261112.jpg",
+          "title": "外企作品 · 拆解工程",
+          "alt": "外企作品拆解工程的画面素材、多轨时间线与声音波形",
           "caption": "",
-          "width": 1280,
-          "height": 720
-        },
-        {
-          "title": "视频拆解 · 辛芷蕾",
-          "src": "./assets/zurenze/tool-showcase/breakdown.jpg",
-          "alt": "辛芷蕾成片拆解工程，含口播、素材、时间线与音频波形",
-          "caption": "",
-          "width": 2984,
-          "height": 1718
+          "width": 3024,
+          "height": 1768
         }
       ]
     },
     {
-      "title": "视频素材采集",
-      "description": "链接解析、画质选择、片段截取与字幕处理。",
-      "paragraphs": [],
-      "details": [],
+      "title": "AI分镜执行",
+      "description": "让文案落到每一句画面、花字、转场与声音。",
       "toolIds": [
-        "capture"
+        "execution"
+      ],
+      "gallery": [
+        {
+          "src": "./assets/zurenze/tool-showcase/execution-20261112.jpg",
+          "title": "文案到分镜 · 执行与导出",
+          "alt": "分镜执行台的文案导入、素材关联与Excel导出入口",
+          "caption": "",
+          "width": 1220,
+          "height": 670
+        },
+        {
+          "src": "./assets/zurenze/tool-showcase/materials-20261112.jpg",
+          "title": "逐句画面 · 素材关联",
+          "alt": "工作台逐句分镜与参考素材关联界面",
+          "caption": "",
+          "width": 1220,
+          "height": 670
+        }
       ]
     },
     {
@@ -296,7 +261,10 @@
       "showcase": {
         "film": {
           "src": "./assets/zurenze/audiovisual/lingzhu-mv-720p.mp4",
-          "poster": "./assets/zurenze/audiovisual/lingzhu-poster.jpg"
+          "poster": "./assets/zurenze/audiovisual/lingzhu-poster.jpg",
+          "boards": 16,
+          "shots": 13,
+          "cuts": 23
         },
         "shots": [
           {
@@ -317,21 +285,77 @@
             "src": "./assets/zurenze/audiovisual/aigc-shots/underwater-fibers.mp4",
             "poster": "./assets/zurenze/audiovisual/aigc-shots/underwater-fibers.jpg"
           }
-        ]
+        ],
+        "voice": {
+          "name": "祖仁泽",
+          "title": "用我的声音，读同一份新文案。",
+          "reference": "./assets/zurenze/audiovisual/reference-original.wav",
+          "referenceDuration": 9.4,
+          "referenceLabel": "本人参考原声",
+          "referenceMeta": "电脑录音 · 节选",
+          "referenceText": "我们来到这个世界，或者是有选择的。不是选择对抗和改变自己的命运，而是选择参与这个世界的命运。",
+          "text": "天道又如何，那便战吧，天要你死，我也要把你抢回来，本尊！你想要灭婉儿元婴，消婉儿痕迹，我王林偏不。",
+          "scriptLabel": "三个本地模型的统一试音稿",
+          "flow": [
+            "采集本人原声",
+            "输入新文案",
+            "本地模型生成",
+            "对照试听"
+          ],
+          "note": "原声参考与合成稿分别展示；每段保留原始合成文件。",
+          "models": [
+            {
+              "name": "VoxCPM2",
+              "duration": 10.56,
+              "sampleRate": 48000,
+              "elapsed": 22.18,
+              "seed": 42,
+              "backend": "本机",
+              "rawFormat": "WAV",
+              "raw": "./assets/zurenze/audiovisual/voxcpm2-original.wav",
+              "src": "./assets/zurenze/audiovisual/voxcpm2-listening.mp3",
+              "wave": "./assets/zurenze/audiovisual/voxcpm2-wave.png"
+            },
+            {
+              "name": "Qwen3 TTS Base",
+              "duration": 11.28,
+              "sampleRate": 24000,
+              "elapsed": 7.9,
+              "seed": 42,
+              "backend": "本机",
+              "rawFormat": "WAV",
+              "raw": "./assets/zurenze/audiovisual/qwen3-base-original.wav",
+              "src": "./assets/zurenze/audiovisual/qwen3-base-listening.mp3",
+              "wave": "./assets/zurenze/audiovisual/qwen3-base-wave.png"
+            },
+            {
+              "name": "F5 TTS",
+              "duration": 10.024,
+              "sampleRate": 24000,
+              "elapsed": 26.24,
+              "seed": 42,
+              "backend": "本机",
+              "rawFormat": "WAV",
+              "raw": "./assets/zurenze/audiovisual/f5-tts-original.wav",
+              "src": "./assets/zurenze/audiovisual/f5-tts-listening.mp3",
+              "wave": "./assets/zurenze/audiovisual/f5-tts-wave.png"
+            }
+          ]
+        }
       }
     },
     {
       "title": "我的素材库",
-      "description": "音效与画面参考，按创作场景整理。",
+      "description": "1700余件Eagle素材，包含1100余个字体文件；按剪辑场景检索。",
       "paragraphs": [],
       "details": [
         [
-          "音效整理",
-          "172条音效，按9类归档，可导入剪映使用。"
+          "素材管理",
+          "Eagle分类收录1700余件，包含1100余个字体文件。"
         ],
         [
-          "画面参考",
-          "在Eagle中整理花字、标题、转场、素材罗列、分屏与画中画。"
+          "剪辑参考",
+          "字幕、花字、标题、转场、素材罗列、分屏与画中画。"
         ]
       ],
       "gallery": [
@@ -340,16 +364,16 @@
           "title": "音效分类",
           "caption": "嗖声、冲击、上升、闪光、纸张、故障、氛围与拟音，按9类查找。",
           "alt": "音效分类的真实界面截图",
-          "width": 4718592,
-          "height": 4292935744
+          "width": 1840,
+          "height": 872
         },
         {
           "src": "./assets/zurenze/material-library/sfx-files.png",
           "title": "可直接导入剪映的音效",
           "caption": "保留WAV / M4A原文件，按镜头需要挑选。",
           "alt": "可直接导入剪映的音效的真实界面截图",
-          "width": 4718592,
-          "height": 4292935744
+          "width": 1840,
+          "height": 872
         },
         {
           "src": "./assets/zurenze/material-library/eagle-type.png",
@@ -369,6 +393,50 @@
         }
       ],
       "toolIds": []
+    },
+    {
+      "title": "业务系统定制",
+      "description": "把实际需求梳理为流程，再用AI协作开发成可用系统。",
+      "paragraphs": [],
+      "details": [
+        [
+          "反舞弊数字稽查官",
+          "茶饮头部品牌监察部门定制，入选内部AI创新大赛前十。"
+        ],
+        [
+          "戏里戏外",
+          "明星客户工作台，整合剧本资料、通告、团队任务与内容运营。"
+        ]
+      ],
+      "toolIds": [],
+      "gallery": [
+        {
+          "title": "戏里戏外",
+          "src": "./client-media/actor-script.png",
+          "alt": "戏里戏外 · 剧本研读工作界面",
+          "caption": "",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "title": "反舞弊数字稽查官",
+          "src": "./client-media/inspection-archives.jpg",
+          "alt": "反舞弊数字稽查官的案件与资料界面预览",
+          "caption": "",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "links": [
+        {
+          "label": "反舞弊数字稽查官 · 看项目",
+          "url": "./client-projects.html#inspection"
+        },
+        {
+          "label": "戏里戏外 · 看项目",
+          "url": "./client-projects.html#actor"
+        }
+      ]
     }
   ],
   "projects": [
@@ -386,11 +454,6 @@
       "title": "意公子",
       "page": "./yigongzi/",
       "role": "内容策划 / 2022.10—2023.06"
-    },
-    {
-      "title": "AIGC与自研",
-      "page": "./aigc/",
-      "role": "AI内容生产 / 自研工具"
     }
   ],
   "clientProjects": [

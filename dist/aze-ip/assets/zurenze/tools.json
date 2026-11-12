@@ -3,19 +3,16 @@
     "id": "radar",
     "name": "热点早报",
     "type": "自媒体工作台 · 本机",
-    "tagline": "收集人物、文化与行业线索，保留时间和出处。",
+    "tagline": "把十余个公开来源的信息，整理成待审核的选题卡。",
     "web": null,
     "localOnly": true,
-    "description": "由工作台原“发现”工作区更名。整理人物、文化、公开活动、评论和 AI 工具资讯，辅助选题判断。",
+    "description": "按账号定位追踪财经与行业线索，保留日期、出处和配图，服务选题判断。",
     "features": [
-      "按日期查看人物与文化线索",
-      "回看资料来源与实际评论",
-      "把线索继续整理为选题"
+      "约2分钟整理近500条信息，形成10张待审核策划卡",
+      "按日期回看热点与来源",
+      "把有价值的线索继续整理为选题"
     ],
-    "steps": [
-      "在这台 Mac 启动自媒体工作台",
-      "进入热点早报，选择对应栏目"
-    ],
+    "steps": [],
     "platform": "需要本机工作台服务。",
     "cover": "./assets/zurenze/tool-showcase/radar-finance-20261112.png",
     "coverTheme": "paper"
@@ -27,18 +24,15 @@
     "tagline": "把选题问题、目标受众、素材与制作进度放在一起。",
     "web": null,
     "localOnly": true,
-    "description": "按账号或实际服务 IP 管理选题和项目，继续到资料、脚本、分镜和发布复盘。",
+    "description": "把IP定位、观众问题、选题角度和参考资料放在一起，再继续到脚本与制作。",
     "features": [
       "选题与项目整理",
       "按账号或 IP 归属",
       "资料与脚本版本关联"
     ],
-    "steps": [
-      "打开项目创作",
-      "选择已有项目或新建选题"
-    ],
+    "steps": [],
     "platform": "本机使用，历史资料与版本持续保留。",
-    "cover": "./assets/zurenze/tool-topics.svg",
+    "cover": "./assets/zurenze/tool-showcase/topics-20261112.jpg",
     "coverTheme": "paper"
   },
   {
@@ -48,40 +42,33 @@
     "tagline": "记录参考作品的选题、结构、镜头与表达方法。",
     "web": null,
     "localOnly": true,
-    "description": "把参考作品中的观察、依据、判断和可迁移方法整理下来，服务下一次内容创作。",
+    "description": "从已发布成片回看钩子、节奏与素材衔接，再把观察用于下一次写稿。",
     "features": [
       "参考作品与出处",
       "结构和表达观察",
       "可迁移方法与选题关联"
     ],
-    "steps": [
-      "打开参考拆解",
-      "选取实际看过的作品，填写观察和依据"
-    ],
-    "platform": "不把未读取的画面表述成已经分析。",
-    "cover": "./assets/zurenze/tool-breakdown.svg",
+    "steps": [],
+    "platform": "",
+    "cover": "./assets/zurenze/tool-showcase/foreign-edit-20261112.jpg",
     "coverTheme": "paper"
   },
   {
-    "id": "capture",
-    "name": "视频素材采集",
-    "type": "工具箱 · Mac",
-    "tagline": "从作品链接，到可继续处理的视频素材。",
-    "web": "https://github.com/zurenze1/screenshot-translate-video-downloader/releases/latest",
-    "webLabel": "查看工具与下载",
-    "description": "工具箱的视频素材入口，支持链接解析、清晰度与保存位置选择，并可继续进行片段截取和字幕处理。",
+    "id": "execution",
+    "name": "AI分镜执行",
+    "type": "IP工作台 · 自研模块",
+    "tagline": "文案 → 分镜 → 素材 → 执行表",
+    "description": "上传文案生成分镜草稿，逐句编排口播、画面、花字、转场与声音，再由人工判断和调整。",
     "features": [
-      "粘贴作品链接并选择画质",
-      "按指定位置保存素材",
-      "片段截取与字幕处理",
-      "保留本机采集记录"
+      "逐句编排画面、花字、转场与音效",
+      "关联主选、备选与参考素材",
+      "保留版本，导出Excel执行表"
     ],
-    "steps": [
-      "打开工具箱的“视频素材采集”或按 ⌥V",
-      "粘贴链接并选择画质与保存位置"
-    ],
-    "platform": "Apple Silicon Mac；下载与转码依赖本机组件及来源平台可用性。",
-    "cover": "./assets/zurenze/tool-capture.svg",
+    "steps": [],
+    "localOnly": true,
+    "web": null,
+    "platform": "本机IP工作台使用；公开页面展示操作界面。",
+    "cover": "./assets/zurenze/tool-showcase/execution-20261112.jpg",
     "coverTheme": "paper"
   }
 ]

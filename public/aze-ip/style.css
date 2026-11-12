@@ -734,3 +734,16 @@ html[data-sound="waiting"] .sound-toggle{border-style:dashed}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.live-ch{transform:none!important}.fan-card{translate:none!important;scale:none!important}.photo-fan,.world-playground{translate:none!important}.introduction,.scroll-cue{opacity:1;transform:none}.work-card-face,.work-record{translate:none!important}.work-record{transform:translateX(-3%) rotate(12deg)!important}.toolbox-box{transform:perspective(1000px) rotateX(-13deg) rotateY(38deg)!important}}
 
 @media(prefers-reduced-motion:reduce){.drop-ch,.drop-shard,.drop-dust,.live-ch{display:none!important}.hero-headline svg>text{visibility:visible!important}}
+
+/* Three experience albums; a separate six-file toolbox and selected films. */
+.module-work .work-slot:nth-of-type(2){left:25%}.module-work .work-slot:nth-of-type(3){left:50%}
+.toolbox-rack{min-width:860px}.toolbox-card[data-cover-theme="green"]{--ink:#e8eedb;--paper:#244e43;--spine:#173a32;--top:#a7ba9a}
+.world-dialog--work{width:min(1020px,calc(100% - 32px));background:#f3f0e8}
+.world-dialog--work .world-story-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.world-dialog--work .world-story-photo{background:#141719;padding:0;min-height:0}
+.world-work-player{height:100%;display:flex;align-items:center;justify-content:center}
+.world-work-player[hidden]{display:none}.world-work-player video{display:block;width:100%;max-height:80vh;object-fit:contain;background:#111}
+.world-dialog--work .world-story-content{padding:64px 35px 30px}.world-dialog--work .world-story-content h2{font-size:clamp(24px,3vw,38px);line-height:1.45}
+.world-dialog--work .world-story-details{margin:26px 0}.world-dialog--work .world-project-links a{font-size:16px}
+.photo-trigger:after{content:'▶';position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:36px;height:36px;border:1px solid #ffffffa0;border-radius:50%;display:grid;place-items:center;background:#10151660;color:white;pointer-events:none}
+@media(max-width:650px){.toolbox-rack{min-width:840px}.world-dialog--work .world-story-layout{grid-template-columns:1fr}.world-work-player video{max-height:58vh}.world-dialog--work .world-story-content{padding:24px}.photo-trigger:after{width:23px;height:23px;font-size:10px}}
