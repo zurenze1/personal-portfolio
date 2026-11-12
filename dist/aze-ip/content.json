@@ -801,20 +801,12 @@
           "height": 872
         },
         {
-          "src": "./assets/zurenze/material-library/eagle-type.png",
-          "title": "Eagle · 花字与文字动效",
-          "caption": "从文字样式到画面节奏，归集可检索的剪辑参考。",
-          "alt": "Eagle · 花字与文字动效界面",
-          "width": 2046,
-          "height": 1578
-        },
-        {
-          "src": "./assets/zurenze/material-library/eagle-montage.png",
-          "title": "Eagle · 素材罗列与信息编排",
-          "caption": "积累分屏、画中画和图文编排参考。",
-          "alt": "Eagle · 素材罗列与信息编排界面",
-          "width": 2092,
-          "height": 1602
+          "src": "./assets/zurenze/material-library/eagle-type.png?v=20261112-182346",
+          "title": "Eagle · 素材库总览",
+          "caption": "1,747条素材；195条AI动效拆解、236条美学与剪辑参考。",
+          "alt": "祖仁泽Eagle素材库原生截图",
+          "width": 2424,
+          "height": 1580
         }
       ],
       "toolIds": []
