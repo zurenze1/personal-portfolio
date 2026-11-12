@@ -27,7 +27,7 @@ const entered = new Promise(resolve => {
 // The first screen starts independently of the content catalog and videos.
 entered.then(()=>document.body.classList.add('intro-visible','scroll-visible'));
 setupHeadlineDrop();
-const content = await fetch('./content.json?v=20261112-cases').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
+const content = await fetch('./content.json?v=20261112-interview').then(r => {if(!r.ok) throw Error('Content unavailable');return r.json();});
 const {setupWorld}=window.__m_world_js;
 
 const openPersonalCard = fillPhotoFan($('#world .photo-fan'));
@@ -111,7 +111,7 @@ async function setupToolbox(){
   const scroller = root.querySelector('.toolbox-scroll');
   let catalog = [];
   try {
-    const response = await fetch('./assets/zurenze/tools.json?v=20261112-cases');
+    const response = await fetch('./assets/zurenze/tools.json?v=20261112-interview');
     if(!response.ok) throw Error('Tool catalog unavailable');
     catalog = (await response.json()).filter(tool => tool.id !== 'markdown');
   } catch(error) { console.warn('Tool catalog unavailable', error); }
@@ -303,7 +303,7 @@ function createAudiovisualShowcase(data){
   });
   voice.append(models); root.append(voice);
   const avatar = node('section', 'av-avatar');
-  avatar.append(node('p', 'av-eyebrow', '02 / 数字人'), node('h3', '', '从脚本、配音，到数字人口播。'), node('p', '', '涉及真人肖像的项目演示暂不公开，可采用原创虚拟形象。'));
+  avatar.append(node('p', 'av-eyebrow', '02 / 数字人'), node('h3', '', '从脚本、配音，到数字人口播。'), node('p', '', '数字人项目因肖像授权范围，暂不公开演示。'));
   root.append(avatar);
   const film = node('section', 'av-film');
   film.append(node('p', 'av-eyebrow', '03 / AIGC影像'));
@@ -343,7 +343,7 @@ function createCaseOverview(data){
   for(const item of data.metrics){const n=caseNode('div','case-metric');
     const value=item.value==null?'—':(item.approximate?'约':'')+(item.value>=10000?(item.value/10000).toFixed(1).replace(/\.0$/,'')+'万':item.value.toLocaleString('zh-CN'));
     n.append(caseNode('dt','',item.label),caseNode('dd','',value));
-    if(item.value!=null)n.title=`${item.approximate?'约':''}${item.value.toLocaleString('zh-CN')} · 采集${item.observedOn}`;
+    if(item.value!=null)n.title=`${item.approximate?'约':''}${item.value.toLocaleString('zh-CN')} · 记录于${item.observedOn}`;
     metrics.append(n);
   }
   root.append(metrics,caseNode('p','case-metric-note',data.metricsNote));

@@ -2,7 +2,7 @@
   {
     "id": "radar",
     "name": "热点早报",
-    "type": "自媒体工作台 · 本机",
+    "type": "自研工作台模块",
     "tagline": "把十余个公开来源的信息，整理成待审核的选题卡。",
     "web": null,
     "localOnly": true,
@@ -13,14 +13,14 @@
       "把有价值的线索继续整理为选题"
     ],
     "steps": [],
-    "platform": "需要本机工作台服务。",
+    "platform": "",
     "cover": "./assets/zurenze/tool-showcase/radar-finance-20261112.png",
     "coverTheme": "paper"
   },
   {
     "id": "topics",
     "name": "选题库",
-    "type": "自媒体工作台 · 本机",
+    "type": "自研工作台模块",
     "tagline": "把选题问题、目标受众、素材与制作进度放在一起。",
     "web": null,
     "localOnly": true,
@@ -31,14 +31,14 @@
       "资料与脚本版本关联"
     ],
     "steps": [],
-    "platform": "本机使用，历史资料与版本持续保留。",
+    "platform": "",
     "cover": "./assets/zurenze/tool-showcase/topics-20261112.jpg",
     "coverTheme": "paper"
   },
   {
     "id": "breakdown",
     "name": "视频拆解",
-    "type": "自媒体工作台 · 本机",
+    "type": "自研工作台模块",
     "tagline": "记录参考作品的选题、结构、镜头与表达方法。",
     "web": null,
     "localOnly": true,
@@ -56,7 +56,7 @@
   {
     "id": "execution",
     "name": "AI分镜执行",
-    "type": "IP工作台 · 自研模块",
+    "type": "自研工作台模块",
     "tagline": "文案 → 分镜 → 素材 → 执行表",
     "description": "上传文案生成分镜草稿，逐句编排口播、画面、花字、转场与声音，再由人工判断和调整。",
     "features": [
@@ -67,7 +67,7 @@
     "steps": [],
     "localOnly": true,
     "web": null,
-    "platform": "本机IP工作台使用；公开页面展示操作界面。",
+    "platform": "",
     "cover": "./assets/zurenze/tool-showcase/execution-20261112.jpg",
     "coverTheme": "paper"
   }
