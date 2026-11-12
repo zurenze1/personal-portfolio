@@ -206,7 +206,7 @@
   },
   "toolboxStories": [
     {
-      "title": "热点雷达",
+      "title": "热点早报",
       "description": "从人物、文化和行业线索里，找到值得继续研究的选题。",
       "paragraphs": [],
       "details": [],
@@ -215,12 +215,12 @@
       ],
       "gallery": [
         {
-          "title": "热点雷达",
-          "src": "./assets/zurenze/tool-showcase/radar.png",
-          "alt": "祖仁泽自媒体工作台中的人物与时尚选题图文卡片",
+          "title": "热点早报",
+          "src": "./assets/zurenze/tool-showcase/radar-finance-20261112.png",
+          "alt": "祖仁泽IP工作台热点早报中的财经资讯卡片",
           "caption": "",
-          "width": 3002,
-          "height": 1888
+          "width": 2938,
+          "height": 1726
         }
       ]
     },

@@ -1,7 +1,7 @@
 [
   {
     "id": "radar",
-    "name": "热点雷达",
+    "name": "热点早报",
     "type": "自媒体工作台 · 本机",
     "tagline": "收集人物、文化与行业线索，保留时间和出处。",
     "web": null,
@@ -14,10 +14,10 @@
     ],
     "steps": [
       "在这台 Mac 启动自媒体工作台",
-      "进入热点雷达，选择对应栏目"
+      "进入热点早报，选择对应栏目"
     ],
     "platform": "需要本机工作台服务。",
-    "cover": "./assets/zurenze/tool-radar.svg",
+    "cover": "./assets/zurenze/tool-showcase/radar-finance-20261112.png",
     "coverTheme": "paper"
   },
   {
