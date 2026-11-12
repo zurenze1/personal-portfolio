@@ -456,7 +456,7 @@ function fillPhotoFan(gallery){
     overview.hidden=!caseData;study.hidden=!caseData;
     overview.replaceChildren(...(caseData?[createCaseOverview(caseData)]:[]));
     study.replaceChildren(...(caseData?[createCaseStudy(caseData)]:[]));
-    const hasGallery=!!photo.gallery?.length;dialog.classList.toggle('world-dialog--gallery',hasGallery);dialog.querySelector('.world-story-photo').hidden=hasGallery||!!photo.showcase;const slot=dialog.querySelector('.world-materials-slot');slot.replaceChildren(...(hasGallery?[createMaterialsPreview(photo.gallery,photo.galleryLayout)]:[]));
+    const hasGallery=!!photo.gallery?.length;dialog.classList.toggle('world-dialog--gallery',hasGallery);dialog.querySelector('.world-story-photo').hidden=hasGallery||!!photo.showcase;const slot=dialog.querySelector('.world-materials-slot');slot.replaceChildren(...(photo.clientShowcase?[createClientShowcase(photo.clientShowcase)]:hasGallery?[createMaterialsPreview(photo.gallery,photo.galleryLayout)]:[]));
     dialog.classList.toggle('world-dialog--av', !!photo.showcase);
     dialog.querySelector('.world-av-slot').replaceChildren(...(photo.showcase ? [createAudiovisualShowcase(photo.showcase)] : []));
     const image = dialog.querySelector('img');
