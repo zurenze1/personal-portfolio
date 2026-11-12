@@ -70,5 +70,41 @@
     "platform": "",
     "cover": "./assets/zurenze/tool-showcase/execution-20261112.jpg",
     "coverTheme": "paper"
+  },
+  {
+    "id": "calendar",
+    "name": "日程与任务",
+    "type": "IP工作台 · 自研模块",
+    "tagline": "按环节区分颜色，把重点安排标出来。",
+    "description": "日程、拍摄和任务可以自选颜色与重点标记，保存后同步到月历与列表。",
+    "features": [
+      "预设色、自选HEX颜色",
+      "重点独立标记，旧记录可编辑",
+      "保留原日期、正文与进度"
+    ],
+    "steps": [],
+    "localOnly": true,
+    "web": null,
+    "platform": "本机IP工作台使用；图为当前功能界面。",
+    "cover": "./assets/zurenze/tool-showcase/calendar-colors-20261112.jpg",
+    "coverTheme": "paper"
+  },
+  {
+    "id": "data-film",
+    "name": "数据出片",
+    "type": "IP工作台 · 本机工具",
+    "tagline": "工资、工时、收入与时薪，改完即可预览出片。",
+    "description": "自填同口径数据并保留来源，用前后对比和重点色生成口播数据画面。",
+    "features": [
+      "三种可编辑模板、重点色与横竖屏",
+      "月工时与到手时薪自动计算",
+      "H.264 MP4导出，预览与成片共用画面"
+    ],
+    "steps": [],
+    "localOnly": true,
+    "web": null,
+    "platform": "图中金额为功能演示数据，非本人收入。",
+    "cover": "./assets/zurenze/tool-showcase/data-film-v3-ui-20261112.jpg",
+    "coverTheme": "paper"
   }
 ]
