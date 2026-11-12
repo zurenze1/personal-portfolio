@@ -682,13 +682,13 @@
       ]
     },
     {
-      "title": "选题与素材策划",
-      "description": "从观众问题确定选题，从长视频中找到可用原话。",
+      "title": "选题与观众研究",
+      "description": "从竞品高赞评论中找到观众问题，再整理成可拍的选题。",
       "paragraphs": [],
       "details": [],
       "toolIds": [
         "topics",
-        "quotes"
+        "research-comments"
       ],
       "gallery": [
         {
@@ -700,12 +700,12 @@
           "height": 365
         },
         {
-          "src": "./assets/zurenze/tool-showcase/quote-library-20261112.jpg",
-          "title": "金句切片 · 原话检索与视频片段",
-          "alt": "金句切片真实素材库中的主题筛选、原话和原片缩略图",
-          "caption": "搜索原话、筛选主题，预览并导出带时间对应关系的视频片段。",
-          "width": 1280,
-          "height": 720
+          "src": "./assets/zurenze/tool-showcase/high-comments-content-20261112.jpg",
+          "title": "高赞评论 · 原话、点赞与作品依据",
+          "alt": "竞品高赞评论的真实原话、92与52点赞显示、原作品来源和建选题入口",
+          "caption": "当前财经对标中的工资与就业议题，保留原评论与作品来源。",
+          "width": 1240,
+          "height": 375
         }
       ],
       "galleryLayout": "content"

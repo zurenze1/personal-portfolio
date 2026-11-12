@@ -36,21 +36,21 @@
     "coverTheme": "paper"
   },
   {
-    "id": "quotes",
-    "name": "金句切片",
-    "type": "IP工作台 · 本机工具",
-    "tagline": "从长视频中找原话，把能用的片段留下来。",
-    "description": "导入视频后转写并生成候选切片，按主题或来源检索；对照原片校正后，导出可继续剪辑的 MP4。",
+    "id": "research-comments",
+    "name": "竞品高赞评论",
+    "type": "IP工作台 · 观众研究",
+    "tagline": "把观众关注的具体问题，变成下一期选题的依据。",
+    "description": "读取已登记竞品近5条作品的实际可见评论，保存原话、赞数与作品出处；先看高赞样本，再判断问题是否适合当前IP。",
     "features": [
-      "原话、主题、素材来源与时码关联",
-      "预览原片片段，逐条校正文字",
-      "下载 MP4，继续放入剪辑流程"
+      "默认优先展示点赞最高的5条",
+      "按50、100、1000赞及关键词筛选",
+      "由评论建立选题，补充受众与切入角度"
     ],
     "steps": [],
     "localOnly": true,
     "web": null,
     "platform": "",
-    "cover": "./assets/zurenze/tool-showcase/quote-library-20261112.jpg",
+    "cover": "./assets/zurenze/tool-showcase/high-comments-content-20261112.jpg",
     "coverTheme": "paper"
   },
   {
