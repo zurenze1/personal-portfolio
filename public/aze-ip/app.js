@@ -351,6 +351,50 @@ function createCaseOverview(data){
   const tags=caseNode('div','case-role-tags');for(const text of data.role)tags.append(caseNode('span','',text));
   role.append(tags,caseNode('p','',data.roleNote));root.append(role);return root;
 }
+function createTranscriptDocument(data){
+  const root=caseNode('section','case-transcript-document');
+  root.setAttribute('aria-label',data.title+'逐字稿Word文档');
+  const bar=caseNode('div','transcript-document-toolbar');
+  const download=caseNode('a','', '下载 Word ↗');
+  download.href=data.file;download.download=data.downloadName;
+  download.setAttribute('aria-label','下载'+data.title+'逐字稿Word文档');
+  bar.append(caseNode('span','',`Word 文档 · ${data.pages.length} 页`),download);root.append(bar);
+  const pages=caseNode('div','transcript-document-pages');
+  data.pages.forEach((page,i)=>{
+    const figure=caseNode('figure','transcript-document-page');
+    const button=caseNode('button','transcript-page-open');button.type='button';
+    button.setAttribute('aria-label',`放大${data.title}逐字稿第${i+1}页`);
+    const image=caseNode('img','');image.src=page.src;image.width=page.width;image.height=page.height;
+    image.loading='lazy';image.alt=`${data.title}逐字稿 第${i+1}页`;
+    button.append(image);button.addEventListener('click',()=>openTranscriptPage(data,page,i,button));
+    figure.append(button,caseNode('figcaption','',`第 ${i+1} / ${data.pages.length} 页 · 点击放大`));pages.append(figure);
+  });root.append(pages);return root;
+}
+let transcriptPageViewer,transcriptPageOpener;
+function openTranscriptPage(data,page,index,trigger){
+  if(!transcriptPageViewer){
+    const dialog=caseNode('dialog','transcript-page-viewer');
+    dialog.setAttribute('aria-label','逐字稿文档页面');
+    dialog.innerHTML='<header><p></p><div><button type="button" class="transcript-page-zoom">放大阅读</button><button type="button" class="transcript-page-close">关闭 ×</button></div></header><div class="transcript-page-canvas"><img alt=""></div>';
+    document.body.append(dialog);transcriptPageViewer=dialog;
+    dialog.querySelector('.transcript-page-close').addEventListener('click',()=>dialog.close());
+    dialog.querySelector('.transcript-page-zoom').addEventListener('click',()=>{
+      const zoomed=dialog.classList.toggle('is-zoomed');
+      dialog.querySelector('.transcript-page-zoom').textContent=zoomed?'适应宽度':'放大阅读';
+      dialog.querySelector('.transcript-page-canvas').scrollTo(0,0);
+    });
+    dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+    dialog.addEventListener('close',()=>{dialog.querySelector('img').removeAttribute('src');transcriptPageOpener?.focus({preventScroll:true});});
+  }
+  const dialog=transcriptPageViewer;transcriptPageOpener=trigger;
+  dialog.classList.remove('is-zoomed');dialog.querySelector('.transcript-page-zoom').textContent='放大阅读';
+  dialog.querySelector('header p').textContent=`${data.title}逐字稿 · 第 ${index+1} / ${data.pages.length} 页`;
+  const image=dialog.querySelector('img');image.src=page.src;image.alt=`${data.title}逐字稿 第${index+1}页`;
+  image.width=page.width;image.height=page.height;dialog.showModal();
+  dialog.querySelector('.transcript-page-canvas').scrollTo(0,0);
+  dialog.querySelector('.transcript-page-close').focus();
+}
+
 function createCaseStudy(data){
   const root=caseNode('section','case-study');root.setAttribute('aria-label','作品阅读拆解');
   root.append(caseNode('p','case-study-kicker','CASE STUDY / 阅读拆解'));
@@ -369,8 +413,11 @@ function createCaseStudy(data){
   data.structure.forEach((stage,i)=>{const li=caseNode('li','');li.append(caseNode('span','case-stage-no',String(i+1).padStart(2,'0')),caseNode('h4','',stage.title),caseNode('p','',stage.action));const why=caseNode('p','case-stage-purpose');why.append(caseNode('b','','这一步的作用'),document.createTextNode(stage.purpose));li.append(why);stages.append(li);});
   bodies[0].append(stages);
   const thoughts=caseNode('div','case-thinking');data.thinking.forEach(item=>{const article=caseNode('article','');article.append(caseNode('h3','',item.title),caseNode('p','',item.text));thoughts.append(article);});bodies[1].append(thoughts);
-  bodies[2].append(caseNode('p','case-transcript-note',data.transcriptNote));
-  const script=caseNode('div','case-transcript');data.transcript.forEach((text,i)=>{const p=caseNode('p','',text);p.id='case-paragraph-'+i;script.append(p);});bodies[2].append(script);
+  if(data.transcriptDocument){bodies[2].append(createTranscriptDocument(data.transcriptDocument));}
+  else{
+    bodies[2].append(caseNode('p','case-transcript-note',data.transcriptNote));
+    const script=caseNode('div','case-transcript');data.transcript.forEach((text,i)=>{const p=caseNode('p','',text);p.id='case-paragraph-'+i;script.append(p);});bodies[2].append(script);
+  }
   root.append(nav,panels);select(0);return root;
 }
 
@@ -394,6 +441,7 @@ function fillPhotoFan(gallery){
   dialog.addEventListener('click', event => { if(backdropDown && event.target === dialog) dialog.close(); });
   dialog.addEventListener('close', () => {
     dialog.querySelectorAll('audio,video').forEach(media => media.pause());
+    dialog.querySelector('.world-materials-slot').replaceChildren();
     dialog.querySelector('.world-work-player').replaceChildren();
     document.documentElement.style.overflow = previousOverflow;
     opener?.setAttribute('aria-expanded', 'false');
