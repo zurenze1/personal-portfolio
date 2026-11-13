@@ -37,18 +37,6 @@ const monthly=$('#monthly-chart'),m=D.monthly,bottom=295,top=35,left=50,right=10
 m.forEach((r,i)=>{const x=left+step*(i+.5),y=bottom-r.count/max*(bottom-top),g=el('g',{class:'monthly-group',tabindex:0,role:'button','aria-label':r.month+'，'+r.count+'条'},monthly);el('rect',{x:x-step*.3,y,width:step*.6,height:bottom-y,rx:3,class:'monthly-bar',style:'--delay:'+i*50+'ms'},g);el('rect',{x:x-step*.45,y:top,width:step*.9,height:bottom-top,fill:'transparent',class:'monthly-hit'},g);txt(g,x,y-13,String(r.count),{'text-anchor':'middle',style:'fill:#9c7054;font-size:13px'});txt(g,x,bottom+27,r.month.slice(2).replace('-','.'),{'text-anchor':'middle',style:'font-size:13px'});interact(g,()=>readout($('#month-detail'),[r.month,r.count+'条作品','视频与图文合计']));});
 
 
-// The platform snapshot is local data, so the charts also work from file://.
-const P=D.platformUpdate;
-const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function displayNumber(value){const match=String(value).match(/^([\d.]+)(.*)$/);return '<strong class="number">'+escapeText(match[1])+'<small>'+escapeText(match[2])+'</small></strong>';}
-function renderPeers(rows){$('#peer-bars').innerHTML=rows.map(r=>'<div class="peer-row"><div class="peer-labels"><span>'+escapeText(r.label)+'</span><strong>'+escapeText(r.display)+'</strong><span>优于 <b>'+escapeText(r.percentile)+'</b> 同类达人</span></div><div class="peer-track" role="meter" aria-label="'+escapeText(r.label)+'，优于同类达人" aria-valuemin="0" aria-valuemax="100" aria-valuenow="'+parseFloat(r.percentile)+'" aria-valuetext="优于'+escapeText(r.percentile)+'同类达人"><i style="width:'+parseFloat(r.percentile)+'%"></i></div></div>').join('');}
-renderPeers(P.xingtu.performance);
-
-$('#audience-donut').style.setProperty('--female',P.audience.female);
-function profileBars(rows,max){return rows.map(r=>'<div class="profile-row'+(['24-30','31-40'].includes(r.label)?' age-focus':'')+'"><span>'+escapeText(r.label?r.label.replace('-','–')+'岁':r.name)+'</span><div aria-hidden="true"><i style="width:'+(parseFloat(r.display||r.percent)/max*100)+'%"></i></div><strong>'+escapeText(r.display||r.percent)+'</strong></div>').join('');}
-$('#age-bars').innerHTML=profileBars(P.audience.age,50);
-$('#city-bars').innerHTML=profileBars(P.audience.cities,15);
-$('#reach-values').innerHTML=[['月连接用户',P.xingtu.connected],['月深度用户',P.xingtu.deep]].map(([label,value])=>'<div>'+displayNumber(value)+'<span>'+label+'</span></div>').join('');
 const spread=$('#founder-stage'),spreadImage=spread.querySelector('img');let parallaxQueued=false;
 function parallax(){parallaxQueued=false;if(motionOff){spreadImage.style.transform='none';return;}const rect=spread.getBoundingClientRect();if(rect.bottom>0&&rect.top<innerHeight){const offset=Math.max(-20,Math.min(20,(innerHeight/2-rect.top-rect.height/2)*.07));spreadImage.style.transform='translateY('+offset+'px)';}}
 window.addEventListener('scroll',()=>{if(!parallaxQueued){parallaxQueued=true;requestAnimationFrame(parallax);}},{passive:true});
