@@ -36,5 +36,5 @@
 @media(max-width:620px){.bilibili-totals{grid-template-columns:1fr;gap:32px}.bilibili-totals>div{display:flex;justify-content:space-between;align-items:baseline;gap:16px}.bilibili-totals>div>span{margin:0}.bilibili-row{grid-template-columns:28px 96px minmax(0,1fr);gap:12px;padding-block:24px}.bilibili-cover,.bilibili-cover img{width:96px}.bilibili-play{grid-template-columns:minmax(0,1fr) 80px;gap:12px}.bilibili-rank{font-size:var(--h3)}.funnel-row{grid-template-columns:32px minmax(0,1fr) 72px;gap:12px}.funnel-row>span,.funnel-row strong{font-size:var(--aux)}.connection-values{grid-template-columns:1fr;gap:32px}.connection-values .number small{font-size:var(--body);margin-left:8px}}
 
 /* Keep representative works aligned and close to the following section. */
-.works-section{padding-block:80px 48px}.works-section .interview-scope{margin-top:24px}#storyboard-proof{padding-top:48px}
-@media(max-width:620px){.works-section{padding-block:64px 32px}.work-wall{gap:40px}#storyboard-proof{padding-top:32px}}
+.works-section{padding-block:80px 48px}.works-section .interview-scope{margin-top:24px}.works-section + .commercial{padding-top:48px}
+@media(max-width:620px){.works-section{padding-block:64px 32px}.work-wall{gap:40px}.works-section + .commercial{padding-top:32px}}

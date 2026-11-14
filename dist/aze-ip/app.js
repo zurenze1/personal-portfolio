@@ -251,7 +251,7 @@ function createClientShowcase(projects){
     const purpose=document.createElement('p');purpose.className='client-showcase-purpose';purpose.textContent=project.purpose;
     const gallery=createMaterialsPreview(project.gallery);
     gallery.querySelectorAll('figcaption b').forEach(node=>{node.textContent=node.textContent.replace(/ ↗$/,'');});
-    article.append(label,title,purpose,gallery);
+    article.append(label,title,purpose);if(project.gallery.length)article.append(gallery);
     const features=document.createElement('ul');features.className='client-showcase-features';
     for(const text of project.features){const item=document.createElement('li');item.textContent=text;features.append(item);}
     article.append(features);
@@ -420,8 +420,7 @@ function openTranscriptPage(data,page,index,trigger){
 }
 
 function createCaseStudy(data){
-  const root=caseNode('section','case-study');root.setAttribute('aria-label','作品阅读拆解');
-  root.append(caseNode('p','case-study-kicker','CASE STUDY / 阅读拆解'));
+  const root=caseNode('section','case-study');root.setAttribute('aria-label','作品创作内容');
   const nav=caseNode('div','case-study-tabs');nav.setAttribute('role','tablist');nav.setAttribute('aria-label','案例内容');
   const panels=caseNode('div','case-study-panels');
   const labels=['结构与节奏','写作思路','逐字稿'];const buttons=[],bodies=[];
@@ -558,7 +557,7 @@ function fillPhotoFan(gallery){
     const trigger = document.createElement('button');
     trigger.type = 'button'; trigger.className = 'photo-trigger';
     trigger.dataset.look = index < middle ? 'left' : index > middle ? 'right' : 'front';
-    trigger.setAttribute('aria-label', photo.video ? `查看${photo.title}视频拆解` : `打开${photo.title || photo.alt}介绍`);
+    trigger.setAttribute('aria-label', photo.video ? `查看${photo.title}作品详情` : `打开${photo.title || photo.alt}介绍`);
     trigger.setAttribute('aria-haspopup', 'dialog');
     trigger.setAttribute('aria-controls', dialog.id);
     trigger.setAttribute('aria-expanded', 'false');
