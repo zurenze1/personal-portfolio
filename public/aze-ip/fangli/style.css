@@ -34,3 +34,35 @@ h1,h2,h3{font-family:var(--serif);font-weight:500}.hero{grid-template-columns:1f
 .entering .entry-word{animation:entry-word-v4 .9s .95s ease-out forwards}
 @keyframes entry-word-v4{0%{opacity:0;filter:blur(18px);transform:translate(-50%,-35%)}60%,100%{opacity:1;filter:blur(0);transform:translate(-50%,-50%)}}
 @media(prefers-reduced-motion:reduce){.entry-word{display:none}}
+
+/* A small dressing-room scene around the existing compact. */
+.entrance{background:radial-gradient(ellipse at 20% 35%,#f3dcdd 0,transparent 52%),radial-gradient(ellipse at 85% 25%,#f6ead5 0,transparent 50%),#f7f2ec}
+.entry-scenery{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.vanity-mirror{position:absolute;left:50%;top:49%;width:min(58vw,620px);height:min(76vh,650px);transform:translate(-50%,-50%);border:1px solid #c8ac8a;border-radius:48% 48% 9px 9px;background:linear-gradient(125deg,#cfc5b928,#fffdfbcc 34%,#eedbd24d 65%,#f5eddf90);box-shadow:0 0 0 8px #fffaf64d,0 0 0 9px #d4b99b50,0 22px 70px #b2907520}
+.vanity-mirror:before{content:"";position:absolute;inset:14px;border:1px solid #fffaf9c9;border-radius:inherit}
+.vanity-mirror:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 24%,#fff9 42%,transparent 60%);border-radius:inherit;opacity:.65}
+.vanity-mirror i{position:absolute;bottom:-12px;left:-12%;width:124%;height:12px;border-radius:50%;background:#d4b99b50;filter:blur(4px)}
+.vanity-light{position:absolute;top:17%;width:2px;height:51%;background:linear-gradient(transparent,#fff 20%,#fff 80%,transparent);box-shadow:0 0 20px 9px #fff9;opacity:.75}
+.light-left{left:24%;transform:rotate(-6deg)}.light-right{right:24%;transform:rotate(6deg)}
+.powder-ribbon{position:absolute;width:60vw;height:26vw;max-height:260px;border:1px solid #d6b49535;border-radius:50%;bottom:12%;left:-20%;transform:rotate(-22deg)}
+.ribbon-two{left:auto;right:-22%;bottom:17%;transform:rotate(19deg);border-color:#ce9fa33d}
+.vanity-brush{position:absolute;width:24px;height:185px;right:19%;bottom:18%;border-radius:5px 5px 14px 14px;background:linear-gradient(90deg,#9f836a,#ddc2a4 38%,#b5987c);transform:rotate(27deg);box-shadow:12px 12px 24px #7a533015}
+.vanity-brush:before{content:"";position:absolute;bottom:142px;width:30px;height:38px;left:-3px;background:linear-gradient(90deg,#a78565,#edcfad,#b99a7a);border-radius:3px}
+.vanity-brush i{position:absolute;width:65px;height:80px;bottom:176px;left:-21px;border-radius:48% 48% 24% 24%;background:repeating-linear-gradient(88deg,#a2786577 0 1px,transparent 1px 3px),linear-gradient(#d0ae9c,#a17a67);box-shadow:inset 0 12px 18px #f7e6da80}
+.entry-detail{position:absolute;letter-spacing:.26em;font-size:11px;color:#a38979;white-space:nowrap}
+.detail-left{left:10%;top:43%;writing-mode:vertical-rl}.detail-right{right:9%;top:35%;writing-mode:vertical-rl}
+.entry-number{z-index:3}.entry-halo{width:min(90vw,760px);height:min(90vw,760px);background:radial-gradient(circle,#fff9,#ead3bc22 50%,transparent 70%)}
+.entry-word{top:70%;font-size:clamp(45px,6vw,72px);letter-spacing:.4em;padding-left:.4em;color:#9b7460}
+.entry-audio-hint{display:none;position:absolute;bottom:0;left:50%;translate:-50% 0;white-space:nowrap;font:12px/1.5 var(--sans);letter-spacing:.1em;color:#97745e}
+.sound-blocked .entry-audio-hint{display:block}.compact-trigger:focus-visible{outline:1px solid #b18a70;outline-offset:12px;border-radius:24px}
+.entrance.entering{animation:atelier-reveal .8s 3.85s ease-in-out forwards}
+.entrance.entering .compact-lid{animation:open-lid 1.2s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.entrance.entering .puff{animation:puff-press 1.6s 1.05s ease-in-out forwards}
+.entrance.entering .compact-trigger{animation:compact-away .75s 3.8s ease-in forwards}
+.entrance.entering .entry-word{animation:atelier-word 2.2s 1.25s ease both}
+.entrance.entering .entry-scenery{animation:atelier-breathe 4s ease both}
+@keyframes atelier-reveal{0%{opacity:1}100%{opacity:0;visibility:hidden}}
+@keyframes atelier-word{0%{opacity:0;transform:translateY(14px)}25%,80%{opacity:.72;transform:translateY(0)}100%{opacity:0;transform:translateY(-7px)}}
+@keyframes atelier-breathe{from{opacity:0;scale:1.025}25%,85%{opacity:1}to{opacity:.5;scale:1}}
+@media(max-width:620px){.vanity-mirror{width:75vw;height:63vh;max-height:550px}.light-left{left:14%}.light-right{right:14%}.vanity-light{top:20%;height:45%}.vanity-brush{right:12%;bottom:19%;scale:.65;transform-origin:bottom}.detail-left{left:5%;font-size:9px}.detail-right{right:5%;font-size:9px}.entry-word{top:72%}.compact-trigger{scale:.83}}
+@media(prefers-reduced-motion:reduce){.entrance{display:none!important}}

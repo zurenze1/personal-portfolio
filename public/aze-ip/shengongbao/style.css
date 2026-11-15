@@ -38,3 +38,29 @@
 /* Keep representative works aligned and close to the following section. */
 .works-section{padding-block:80px 48px}.works-section .interview-scope{margin-top:24px}.works-section + .commercial{padding-top:48px}
 @media(max-width:620px){.works-section{padding-block:64px 32px}.work-wall{gap:40px}.works-section + .commercial{padding-top:32px}}
+
+/* Editorial paper and abstract market lines frame the existing coin. */
+.entrance{background:radial-gradient(ellipse at 50% 45%,#302918 0,#141613 35%,#080909 75%)}
+.entry-scenery{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.finance-orbit{position:absolute;left:50%;top:50%;width:min(70vw,760px);aspect-ratio:1;border:1px solid #e2ba5c28;border-radius:50%;transform:translate(-50%,-50%)}
+.orbit-one:before,.orbit-one:after{content:"";position:absolute;background:#d9bb71;box-shadow:0 0 12px #f4cc63;width:4px;height:4px;border-radius:50%;left:10%;top:20%}.orbit-one:after{left:auto;top:auto;right:10%;bottom:20%}.orbit-two{width:min(84vw,920px);border-style:dashed;border-color:#d6bb6c18;transform:translate(-50%,-50%) rotateX(56deg) rotateZ(-18deg)}
+.entry-newspaper{position:absolute;left:9%;top:26%;width:240px;padding:23px 22px 28px;background:linear-gradient(135deg,#d6c8a5,#a99b7a);color:#302e25;transform:rotate(-12deg);box-shadow:15px 25px 60px #0008;opacity:.7}
+.entry-newspaper small{font:9px/2 var(--mono);letter-spacing:.12em;display:block;border-bottom:1px solid #49433288;padding-bottom:8px}.entry-newspaper strong{display:block;font:27px/1.55 var(--serif);letter-spacing:.05em;margin-block:15px}
+.newspaper-columns{display:flex;gap:7px}.newspaper-columns i{display:block;flex:1;height:78px;background:repeating-linear-gradient(#615b4470 0 1px,transparent 1px 5px)}
+.entry-market{position:absolute;width:33vw;max-width:460px;right:5%;top:40%;overflow:visible;transform:rotate(-9deg);opacity:.7}
+.market-grid{stroke:#a2976135;stroke-width:.5;fill:none}.market-line{stroke:#e1c474;stroke-width:1.5;fill:none;stroke-dasharray:500;stroke-dashoffset:500}.market-candles{stroke:#d7bb65;fill:#ddbe6855;stroke-width:1.2}
+.finance-word{position:absolute;left:10%;bottom:17%;font:12px/2 var(--sans);letter-spacing:.34em;color:#ab9a6a}.finance-number{position:absolute;right:6%;top:24%;font:10px/2 var(--mono);letter-spacing:.18em;color:#9c8d67}
+.entrance-edition{z-index:3}.entrance-grid{background-size:25px 25px;mask-image:radial-gradient(ellipse,#000,transparent 75%)}
+.entry-audio-hint{display:none;position:absolute;left:50%;bottom:-42px;translate:-50% 0;white-space:nowrap;font:12px/1.5 var(--sans);letter-spacing:.1em;color:#d4bc87}
+.sound-blocked .entry-audio-hint{display:block}.coin-trigger:focus-visible{outline:1px solid #cbb46a;outline-offset:15px;border-radius:50%}
+.entrance.entering{animation:money-hole .85s 3.5s cubic-bezier(.55,0,.85,.4) forwards}
+.entrance.entering .coin{animation:coin-turn 3.1s .05s cubic-bezier(.22,.7,.25,1) both}
+.entrance.entering .coin-trigger{animation:coin-zoom .85s 3.5s cubic-bezier(.55,0,.85,.4) forwards}
+.entrance.entering .entrance-edition,.entrance.entering .entrance-grid,.entrance.entering .entry-rule{opacity:1;animation:finance-fade .65s 3.1s ease forwards}
+.entrance.entering .entry-scenery{animation:finance-scene 3.8s ease both}
+.entrance.entering .market-line{animation:market-draw 2.5s .3s ease forwards}
+@keyframes finance-fade{to{opacity:0}}
+@keyframes finance-scene{0%{opacity:0;scale:1.045}20%,78%{opacity:1}100%{opacity:0;scale:1}}
+@keyframes market-draw{to{stroke-dashoffset:0}}
+@media(max-width:760px){.entry-newspaper{left:-6%;top:24%;scale:.7;transform-origin:left top;opacity:.46}.entry-market{width:52vw;right:-9%;top:57%;opacity:.45}.finance-word{left:7%;bottom:17%;font-size:9px}.finance-number{right:5%;top:23%;font-size:8px}.coin-trigger{scale:.9}.finance-orbit{width:88vw}.orbit-two{width:120vw}}
+@media(prefers-reduced-motion:reduce){.entrance{display:none!important}}

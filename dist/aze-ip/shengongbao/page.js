@@ -1,22 +1,24 @@
 (function(){'use strict';
 const D=window.SGB_DATA, $=s=>document.querySelector(s), reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
 let motionOff=reduced.matches,soundOn=true,timers=[],entered=false,powderFrame=0;
+const entryAudio=document.querySelector('#entry-sound');entryAudio.volume=.9;
 const audio=[$('#sound-one'),$('#sound-two')],entry=$('#entrance'),main=$('#main');
 try{soundOn=localStorage.getItem('aze-case-sound')!=='off';}catch(_){}
 let returning=false;try{returning=sessionStorage.getItem('aze-v4-shengongbao')==='seen';}catch(_){}
-entry.classList.toggle('returning',returning);
-function soundUI(){audio.forEach(a=>a.muted=!soundOn);$('#sound').setAttribute('aria-pressed',String(soundOn));$('#sound span').textContent=soundOn?'开':'关';}
-function stopAudio(){audio.forEach(a=>{a.pause();a.currentTime=0;});}
+entry.classList.remove('returning');
+function soundUI(){entryAudio.muted=!soundOn;audio.forEach(a=>a.muted=!soundOn);$('#sound').setAttribute('aria-pressed',String(soundOn));$('#sound span').textContent=soundOn?'开':'关';}
+function stopAudio(){entryAudio.pause();entryAudio.currentTime=0;audio.forEach(a=>{a.pause();a.currentTime=0;});}
 function play(a){if(soundOn){a.currentTime=0;const promise=a.play();if(promise)promise.catch(()=>{});}}
-// An autoplay rejection is intentionally silent. No gesture handler retries entry audio.
+function playEntrance(){if(!soundOn)return;entryAudio.currentTime=0;entryAudio.play().then(()=>entry.classList.remove('sound-blocked')).catch(()=>entry.classList.add('sound-blocked'));}
+document.querySelector('#enter').addEventListener('click',()=>{if(!entered&&soundOn)playEntrance();});
 soundUI();$('#sound').addEventListener('click',()=>{soundOn=!soundOn;try{localStorage.setItem('aze-case-sound',soundOn?'on':'off');}catch(_){}soundUI();if(!soundOn)stopAudio();});
 function finish(focus){if(entered)return;entered=true;timers.forEach(clearTimeout);stopAudio();entry.classList.add('hidden');entry.classList.remove('entering');entry.setAttribute('aria-hidden','true');entry.removeAttribute('aria-modal');main.inert=false;document.body.classList.remove('entry-lock');document.body.classList.add('just-entered');$('#breaking').classList.add('flash');if(focus)main.focus({preventScroll:true});}
-function begin(){if(entered)return;if(motionOff){finish(false);return;}try{sessionStorage.setItem('aze-v4-shengongbao','seen');}catch(_){}entry.classList.add('entering');audio.forEach(play);timers.push(setTimeout(()=>finish(false),returning?500:1900));}
+function begin(){if(entered)return;if(motionOff){finish(false);return;}try{sessionStorage.setItem('aze-v4-shengongbao','seen');}catch(_){}entry.classList.add('entering');playEntrance();timers.push(setTimeout(()=>finish(false),4800));}
 $('#skip').addEventListener('click',()=>{stopAudio();finish(true);});
 function motionUI(){document.documentElement.classList.toggle('motion-off',motionOff);$('#motion').setAttribute('aria-pressed',String(motionOff));$('#motion span').textContent=motionOff?'关':'开';if(motionOff){stopAudio();finish(false);document.querySelectorAll('[data-reveal]').forEach(n=>n.classList.add('is-visible'));}}
 $('#motion').addEventListener('click',()=>{motionOff=!motionOff;motionUI();});reduced.addEventListener('change',e=>{motionOff=e.matches;motionUI();});
 if(reduced.matches){finish(false);motionUI();}else{document.body.classList.add('entry-lock');main.inert=true;const schedule=()=>timers.push(setTimeout(begin,300));if(document.readyState==='complete')schedule();else window.addEventListener('load',schedule,{once:true});}
-document.addEventListener('keydown',e=>{if(!entered&&e.key==='Escape')$('#skip').click();if(!entered&&e.key==='Tab'){const list=[$('#skip'),$('#motion'),$('#sound')];const current=list.indexOf(document.activeElement);e.preventDefault();list[(current+(e.shiftKey?-1:1)+list.length)%list.length].focus();}});
+document.addEventListener('keydown',e=>{if(!entered&&e.key==='Escape')$('#skip').click();if(!entered&&e.key==='Tab'){const list=[$('#enter'),$('#skip'),$('#motion'),$('#sound')];const current=list.indexOf(document.activeElement);e.preventDefault();list[(current+(e.shiftKey?-1:1)+list.length)%list.length].focus();}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAudio();if(entry.classList.contains('entering'))finish(false);document.documentElement.classList.add('tab-hidden');}else document.documentElement.classList.remove('tab-hidden');});
 const tick=['抖音主号 129.5万→196万 <b>▲</b>','小号“申公豹的悄悄话” 7.7万→10.3万 <b>▲</b>','B站 41.5万→57.2万 <b>▲</b>','任期作品约300条','242条点赞过万','26条破10万','《景区到底该给谁看？》B站播放205.7万 · 全站排行榜第49名','奕境X9 播放374万'];
 $('#ticker').innerHTML=[0,1].map((v)=>'<div class="ticker-part"'+(v?' aria-hidden="true"':'')+'>'+tick.map(t=>'<span>'+t+'</span>').join('')+'</div>').join('');
