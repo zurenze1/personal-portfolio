@@ -12,8 +12,14 @@
   <script src="./sound.js" defer></script><script src="./world.js" defer></script><script defer src="./app.js?v=20261114-interview"></script>
   <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("js-drop");if(!location.hash||location.hash==="#home")document.documentElement.classList.add("has-gate")}</script>
 <link rel="canonical" href="https://zurenze1.github.io/personal-portfolio/aze-ip/"><style>/* Published covers retain the complete original composition. */
-.photo-fan{aspect-ratio:1200/460}.fan-card{aspect-ratio:323/430;background:#171818}.fan-card img{object-fit:contain}.fan-card .photo-caption{font-size:clamp(9px,1vw,13px)}#work-card-shengongbao .case-sleeve-image{object-position:50% 22%}
-</style></head>
+.photo-fan{aspect-ratio:1200/460}.fan-card{aspect-ratio:323/430;background:#171818}.fan-card img{object-fit:contain}.fan-card .photo-caption{font-size:clamp(9px,1vw,13px)}#work-card-shengongbao .case-sleeve-image{overflow:hidden;mask-image:linear-gradient(to bottom,transparent 0%,#000 17%,#000 100%)}
+</style><style>
+/* Shorten the empty handoff while keeping both existing gradient endpoints. */
+#work.module-work{padding-bottom:clamp(44px,5vw,64px)}
+#skills.module-skills{padding-top:clamp(44px,5vw,64px)}
+#world .world-section-title{position:relative;z-index:2;align-self:stretch;width:min(100%,1200px);margin:0 auto clamp(38px,5vw,64px);font-size:clamp(36px,4.5vw,64px);font-weight:500;line-height:1.2;letter-spacing:-2px;color:#fffaf4}
+@media(max-width:650px){#world .world-section-title{font-size:38px;margin-bottom:38px}}
+</style><style>#work-card-shengongbao .case-sleeve-portrait{position:absolute;left:50%;top:-57%;width:auto;height:177.7778%;max-width:none;transform:translateX(-50%);object-fit:fill}</style></head>
 <body>
   <!-- Enter page: browsers only allow sound after a click, so this one click lets the headline drop play with sound -->
   <div class="enter-gate" id="enter-gate" role="dialog" aria-label="进入阿泽的个人空间">
@@ -70,7 +76,7 @@
           <div class="work-sleeves">
           <article class="work-slot album-yigongzi" id="work-card-yigongzi"><a class="work-select" href="./yigongzi/index.html" aria-label="打开意公子案例"></a><div class="work-record" aria-hidden="true"><span class="record-print">ZURENZE / VOL. 01</span><span class="record-label"><b>意公子</b><small>01 / CASE</small></span></div><div class="work-card-face"><div class="work-cover"><div class="sleeve-meta"><span>人文 · 艺术 · 内容档案</span><b class="sleeve-number">01</b></div><img class="album-garden" src="./yigongzi/images/bamboo-real-v3.webp" alt="" loading="lazy"><img class="album-portrait" src="./yigongzi/images/yigongzi-editorial-v4.webp" alt="" loading="lazy"><div class="sleeve-title"><h3>意公子 <span class="sleeve-open" aria-hidden="true">↗</span></h3><span>内容策划 / 2022.10—2023.06</span></div></div></div></article>
           <article class="work-slot album-fangli" id="work-card-fangli"><a class="work-select" href="./fangli/index.html" aria-label="打开方里菊子案例"></a><div class="work-record" aria-hidden="true"><span class="record-print">ZURENZE / VOL. 02</span><span class="record-label"><b>方里菊子</b><small>02 / CASE</small></span></div><div class="work-card-face"><div class="work-cover"><div class="sleeve-meta"><span>创始人IP</span><b class="sleeve-number">02</b></div><img class="case-sleeve-image" src="./fangli/media/photos/portrait-pro.jpg" alt="方里菊子公开职业人像" loading="lazy"><span class="sleeve-signature" aria-hidden="true">Juzi</span><div class="sleeve-title"><h3>方里菊子 <span class="sleeve-open" aria-hidden="true">↗</span></h3><span>创始人IP编导 / 2023.07—2024.08</span></div></div></div></article>
-          <article class="work-slot album-shengongbao" id="work-card-shengongbao"><a class="work-select" href="./shengongbao/index.html" aria-label="打开申公豹案例"></a><div class="work-record" aria-hidden="true"><span class="record-print">ZURENZE / VOL. 03</span><span class="record-label"><b>申公豹</b><small>03 / CASE</small></span></div><div class="work-card-face"><div class="work-cover"><div class="sleeve-meta"><span>财经IP</span><b class="sleeve-number">03</b></div><img class="case-sleeve-image" src="./shengongbao/media/sgb-profile-color.jpg" alt="堵钱眼的申公豹本人肖像" loading="lazy"><div class="sleeve-title"><h3>申公豹 <span class="sleeve-open" aria-hidden="true">↗</span></h3><span>IP编导 / 2025.03—2026.09</span></div></div></div></article>
+          <article class="work-slot album-shengongbao" id="work-card-shengongbao"><a class="work-select" href="./shengongbao/index.html" aria-label="打开申公豹案例"></a><div class="work-record" aria-hidden="true"><span class="record-print">ZURENZE / VOL. 03</span><span class="record-label"><b>申公豹</b><small>03 / CASE</small></span></div><div class="work-card-face"><div class="work-cover"><div class="sleeve-meta"><span>财经IP</span><b class="sleeve-number">03</b></div><span class="case-sleeve-image"><img class="case-sleeve-portrait" src="./shengongbao/media/sgb-editorial-v2.jpg" alt="申公豹本人蓝色西装、红色领带的原作品封面画面" loading="lazy"></span><div class="sleeve-title"><h3>申公豹 <span class="sleeve-open" aria-hidden="true">↗</span></h3><span>IP编导 / 2025.03—2026.09</span></div></div></div></article>
           </div>
         </div>
 
@@ -89,7 +95,7 @@
       </div>
     </section>
     <section class="world-page" id="world" data-module="04" aria-labelledby="world-title">
-      <h2 class="visually-hidden" id="world-title">代表作</h2>
+      <h2 class="world-section-title" id="world-title">代表作</h2>
       <div class="world-light" aria-hidden="true"></div>
       <ul class="photo-fan" aria-label="五条代表作品，点击查看视频与创作内容"></ul>
       <div class="world-stage">

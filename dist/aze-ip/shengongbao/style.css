@@ -64,3 +64,12 @@
 @keyframes market-draw{to{stroke-dashoffset:0}}
 @media(max-width:760px){.entry-newspaper{left:-6%;top:24%;scale:.7;transform-origin:left top;opacity:.46}.entry-market{width:52vw;right:-9%;top:57%;opacity:.45}.finance-word{left:7%;bottom:17%;font-size:9px}.finance-number{right:5%;top:23%;font-size:8px}.coin-trigger{scale:.9}.finance-orbit{width:88vw}.orbit-two{width:120vw}}
 @media(prefers-reduced-motion:reduce){.entrance{display:none!important}}
+
+
+/* Two-second finance entrance; retain the paper and chart scene. */
+.entrance.entering{animation:money-hole .5s 1.35s cubic-bezier(.55,0,.85,.4) forwards}
+.entrance.entering .coin{animation:coin-turn 1.15s 0s cubic-bezier(.22,.7,.25,1) both}
+.entrance.entering .coin-trigger{animation:coin-zoom .5s 1.35s cubic-bezier(.55,0,.85,.4) forwards}
+.entrance.entering .entrance-edition,.entrance.entering .entrance-grid,.entrance.entering .entry-rule{animation:finance-fade .35s 1.25s ease forwards}
+.entrance.entering .entry-scenery{animation:finance-scene 1.85s ease both}
+.entrance.entering .market-line{animation:market-draw 1.05s .1s ease forwards}
