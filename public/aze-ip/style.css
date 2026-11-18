@@ -637,8 +637,8 @@ html[data-sound="waiting"] .sound-toggle{border-style:dashed}
 
 /* Confirmed career dates, kept alongside the personal introduction. */
 .hero{min-height:1020px}.reference-marketing{top:31%}.hero-profile{top:37%}
-.profile-career{margin:20px 0 0;border-top:1px solid #fffaf74d;padding-top:4px}
-.profile-career>div{display:grid;grid-template-columns:124px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid #fffaf729}
+.profile-career{width:max-content;max-width:100%;margin:20px 0 0;border-top:1px solid #fffaf74d;padding-top:4px}
+.profile-career>div{display:grid;grid-template-columns:124px max-content;gap:10px;padding:9px 0;border-bottom:1px solid #fffaf729}
 .profile-career dt{font-size:12px;line-height:1.8;font-variant-numeric:tabular-nums;white-space:nowrap}
 .profile-career dd{margin:0;line-height:1.55}.profile-career strong{display:block;font-size:14px;font-weight:600}.profile-career dd span{display:block;font-size:12px;color:#fffaf4}
 @media(max-width:650px){.hero{height:1080px;min-height:1080px}.hero-profile{top:25%}.reference-marketing{top:calc(85px + 20vw + 25px)}.profile-career{margin-top:18px}.profile-career>div{grid-template-columns:1fr;gap:2px;padding:9px 0}.profile-career dt{font-size:11px}.profile-career strong{font-size:13px}.profile-career dd span{font-size:12px;line-height:1.6}}
