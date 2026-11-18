@@ -19,7 +19,7 @@
       #ecebe72e calc(100% - var(--section-fade)*.72),#ecebe778 calc(100% - var(--section-fade)*.52),
       #ecebe7b8 calc(100% - var(--section-fade)*.30),#ecebe7ef calc(100% - var(--section-fade)*.12),
       #ecebe7 calc(100% - 2px),#ecebe7 100%),
-    radial-gradient(ellipse 60% 70% at 82% 100%,#3a3a3f 0%,#232327 45%,#1b1b1e 100%),#ecebe7;overflow:hidden;color:#fffaf4;display:flex;flex-direction:column;justify-content:center}
+    radial-gradient(ellipse 60% 70% at 82% 100%,#3a3a3f 0%,#232327 45%,#1b1b1e 100%),#1b1b1e;overflow:hidden;color:#fffaf4;display:flex;flex-direction:column;justify-content:center}
 /* The remaining five modules are content structures awaiting visual references. */
 .content-module{padding:100px 8%;scroll-margin-top:0}
 .module-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:50px}
@@ -179,12 +179,22 @@
 /* 03 秘密武器库 — over the existing cream-to-charcoal background. */
 .module-skills.ip-board{
   --section-fade:clamp(120px,12vw,180px);
+  --arsenal-fade:clamp(230px,25vw,340px);
   grid-template-columns:1fr minmax(260px,36%);
   background:linear-gradient(180deg,
-    #f2efe8 0%,#ebe7df calc(100% - var(--section-fade)),
-    #e5e1d9 calc(100% - var(--section-fade)*.88),#cbc8c2 calc(100% - var(--section-fade)*.72),
-    #969491 calc(100% - var(--section-fade)*.52),#565658 calc(100% - var(--section-fade)*.30),
-    #29292c calc(100% - var(--section-fade)*.12),#1b1b1e calc(100% - 2px),#1b1b1e 100%),#1b1b1e;
+    #f2efe8 0%,
+    #f2efe8 calc(100% - var(--arsenal-fade)*1.00),
+    #eeebe5 calc(100% - var(--arsenal-fade)*0.90),
+    #e1ded8 calc(100% - var(--arsenal-fade)*0.80),
+    #cbc8c3 calc(100% - var(--arsenal-fade)*0.70),
+    #afada8 calc(100% - var(--arsenal-fade)*0.60),
+    #8e8b88 calc(100% - var(--arsenal-fade)*0.50),
+    #6a6867 calc(100% - var(--arsenal-fade)*0.40),
+    #4a494a calc(100% - var(--arsenal-fade)*0.30),
+    #313133 calc(100% - var(--arsenal-fade)*0.20),
+    #202023 calc(100% - var(--arsenal-fade)*0.10),
+    #1b1b1e calc(100% - var(--arsenal-fade)*0.03),
+    #1b1b1e 100%),#1b1b1e;
   color:#1c2a48;padding-bottom:0;--shadow:transparent;
 }
 .module-skills .board-body{padding-bottom:calc(var(--section-fade) + 32px)}
@@ -197,8 +207,8 @@
 .board-ip--bust .ip-stage{
   max-width:430px;margin-bottom:0;
   /* Fade only the cut-off hem into the background; keep the face and cards sharp. */
-  -webkit-mask-image:linear-gradient(180deg,#000 calc(100% - var(--section-fade)),#000b calc(100% - var(--section-fade)*.4),transparent 100%);
-  mask-image:linear-gradient(180deg,#000 calc(100% - var(--section-fade)),#000b calc(100% - var(--section-fade)*.4),transparent 100%);
+  -webkit-mask-image:linear-gradient(180deg,#000 calc(100% - var(--section-fade)),#000f calc(100% - var(--section-fade)*.85),#000d calc(100% - var(--section-fade)*.65),#0008 calc(100% - var(--section-fade)*.40),#0003 calc(100% - var(--section-fade)*.18),transparent 100%);
+  mask-image:linear-gradient(180deg,#000 calc(100% - var(--section-fade)),#000f calc(100% - var(--section-fade)*.85),#000d calc(100% - var(--section-fade)*.65),#0008 calc(100% - var(--section-fade)*.40),#0003 calc(100% - var(--section-fade)*.18),transparent 100%);
 }
 .module-skills .skill-rows li.is-looked{background:#f1eee80d;padding-left:14px}
 .module-skills .skill-rows li.is-looked h3{color:#fff}
@@ -206,6 +216,7 @@
 .module-contact.ip-board{grid-template-columns:minmax(240px,34%) 1fr;background:linear-gradient(180deg,#ecebe7 0%,#e2e0db 100%);color:#202024;--shadow:#20202440}
 /* Overlap the matching end colours to prevent subpixel seams at fractional zoom. */
 #work + #skills,#skills + #world,#world + #contact{margin-top:-2px}
+#skills + #world::before{content:"";position:absolute;inset:0 0 auto;height:24px;background:linear-gradient(#1b1b1e,#1b1b1e00);pointer-events:none;z-index:1}
 .module-contact .eyebrow{color:#77767a}
 .board-ip--seat .ip-stage{max-width:330px;--seat-x:36%;--seat-w:58%}
 /* the source block was keyed out with the white backdrop; this one sits behind his legs, top at his seat (68%) */
