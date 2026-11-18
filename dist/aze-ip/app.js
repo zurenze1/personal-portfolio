@@ -696,13 +696,11 @@ async function setupIpBoards(){
   if(arsenal&&manifest.arsenal?.gaze&&!reducedMotion)setupGaze(arsenal,manifest.arsenal);
   // No separate probe download: the first board clip that decodes is itself the alpha check.
   // Until then (and on a slow connection) each board shows its poster.
-  const seated=stages.find(s=>s.dataset.ip==='talk');
-  const seatedEyes=seated&&await setupSeatedEyes(seated,manifest.talk);
   const order=alphaOrder().map(k=>k==='vp9'?'webm':'mov');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   // The arsenal clip is replaced by the mouse-following frames, so its loop video is not loaded.
   const gazes=s=>s.dataset.ip==='arsenal'&&manifest.arsenal?.gaze;
-  const boards=stages.filter(s=>!gazes(s)&&!(s===seated&&seatedEyes)&&s.querySelector('video'));
+  const boards=stages.filter(s=>!gazes(s)&&s.querySelector('video'));
   let verified=false;
   const load=s=>{const v=s.querySelector('video');v.dataset.kind=order[0];v.src=manifest[s.dataset.ip].assets[order[0]].path;};
   // This format shows no alpha here (or will not decode): move every loaded board to the next one.
@@ -732,49 +730,6 @@ async function setupIpBoards(){
   if(order.length&&!reduced)boards.forEach(s=>observer.observe(s));
   const talk=boards.find(s=>s.dataset.ip==='talk');
   if(talk&&manifest.talk?.greetEnd&&order.length&&!reduced)setupTalk(talk,manifest.talk);
-}
-
-// The contact character keeps the original seated portrait. Only his textured irises move.
-// A failed image load leaves the existing transparent video path available as a fallback.
-async function setupSeatedEyes(stage,clip){
-  if(!clip?.assets?.png?.path)return false;
-  const still=new Image();still.width=clip.size[0];still.height=clip.size[1];
-  still.className='ip-talk-still';still.alt='坐着微笑、眼珠慢悠悠转圈的阿泽潮玩形象';
-  still.decoding='async';
-  const loaded=new Promise(resolve=>{still.onload=()=>resolve(true);still.onerror=()=>resolve(false);});
-  still.src=clip.assets.png.path;
-  if(!await loaded)return false;
-  const ns='http://www.w3.org/2000/svg';
-  const eyes=document.createElementNS(ns,'svg');
-  eyes.setAttribute('viewBox','0 0 508 900');eyes.setAttribute('aria-hidden','true');
-  eyes.setAttribute('focusable','false');eyes.classList.add('talk-eye-layer');
-  const left='M226 164 C228 155.5 238 151.5 247 153 C255 154 260 163 260 171 C251 178 231 176.5 226 167 Z';
-  const right='M301 163 C304 154 317 154 324 157 C331 160 333 167 330 173 C322 179 307 177.5 301 171 Z';
-  eyes.innerHTML=`<defs>
-    <linearGradient id="talk-white-left" x1="0" y1="0" x2="1" y2=".6" gradientUnits="objectBoundingBox"><stop stop-color="#9d908c"/><stop offset=".5" stop-color="#c4b2ad"/><stop offset="1" stop-color="#dec9c2"/></linearGradient>
-    <linearGradient id="talk-white-right" x1="0" y1="0" x2=".7" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#e6dad8"/><stop offset=".65" stop-color="#e7dddb"/><stop offset="1" stop-color="#cdbab5"/></linearGradient>
-    <clipPath id="talk-socket-left"><path d="${left}"/></clipPath>
-    <clipPath id="talk-socket-right"><path d="${right}"/></clipPath>
-    <clipPath id="talk-source-left"><ellipse cx="250.5" cy="166" rx="8.3" ry="8.6"/></clipPath>
-    <clipPath id="talk-source-right"><ellipse cx="310.3" cy="166.7" rx="8.2" ry="8.6"/></clipPath>
-  </defs>
-  <g clip-path="url(#talk-socket-left)"><path d="${left}" fill="url(#talk-white-left)"/>
-    <g transform="translate(-6.5 0)"><g class="talk-iris talk-iris-left"><image href="${clip.assets.png.path}" width="508" height="900" clip-path="url(#talk-source-left)"/></g></g>
-  </g>
-  <g clip-path="url(#talk-socket-right)"><path d="${right}" fill="url(#talk-white-right)"/>
-    <g transform="translate(5.7 0)"><g class="talk-iris talk-iris-right"><image href="${clip.assets.png.path}" width="508" height="900" clip-path="url(#talk-source-right)"/></g></g>
-  </g>`;
-  const video=stage.querySelector('video');video.pause();
-  stage.insertBefore(still,video);stage.append(eyes);stage.dataset.eyeMode='wander';
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');let visible=false;
-  const sync=()=>{
-    const run=visible&&!document.hidden&&!reduced.matches;
-    stage.classList.toggle('eyes-running',run);stage.classList.toggle('eyes-reduced',reduced.matches);
-    stage.dataset.eyeMotion=run?'running':'paused';
-  };
-  new IntersectionObserver(entries=>{visible=entries.at(-1).isIntersecting;sync();},{threshold:.05}).observe(stage);
-  document.addEventListener('visibilitychange',sync);reduced.addEventListener('change',sync);sync();
-  return true;
 }
 
 // 05: he sits and smiles; when you come near (and each time the board comes into view) he leans
